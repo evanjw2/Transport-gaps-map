@@ -48,6 +48,8 @@ Suggested workstreams: product/design, extension/frontend, data/backend, and QA/
 
 The [future backlog](docs/PLAN.md#future-updates--not-mvp-commitments) records live weather/rainfall integration and production category styling, including legends and accessibility requirements. The v0.2 demo now illustrates category colours and an optional rain patch using fictional fixtures only; licensed sources, true geographic alignment, and operational reliability remain future work. Rerouting is deferred to a separate feasibility phase.
 
+Additional planned ideas include source-backed advance warnings from news and official online notices, plus opt-in saved-route/history matching to notify users when their usual journeys may be affected. These require source verification, honest location uncertainty, explicit consent and route-data controls; the current extension does not collect travel history or send alerts. See F03 and F04 in the future backlog.
+
 ## Development
 
 The visual demo uses plain JavaScript, CSS, and SVG with no build step or dependencies. Its installation and development checks are in the [demo guide](extension/README.md#files-and-development-checks). The planned side-panel/live-data MVP is not implemented and does not yet have a toolchain or automated test suite.

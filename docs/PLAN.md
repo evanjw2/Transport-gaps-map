@@ -124,6 +124,45 @@ Idea recorded October 30, 2026. Status: category colours, icons, numbered marker
 
 The current extension illustrates these ideas with five fictional transport updates and one opt-in fictional rain update. It has no actual weather observations, forecasts, live incidents, or geographic anchoring. Team members can turn the remaining F01 and F02 work into issues after agreeing scope and dependencies; these IDs are not GitHub issue numbers.
 
+### F03: Advance disruption intelligence from news and online notices
+
+Idea recorded October 30, 2026. Status: proposed, not implemented. Owner and delivery date: unassigned.
+
+**User benefit:** learn about a possible strike or other planned disruption before it begins, including when it may happen and which places, services or routes could be affected.
+
+- Evaluate licensed news feeds and permitted online information sources alongside official operator, authority and union notices. Record access rights, attribution, coverage, update cadence and maintenance ownership before integration; do not assume public articles can be scraped or republished.
+- Extract candidate event type, announced start/end times and time zone, named locations, operators, lines, stops and affected travel modes. Preserve the original source link, publication time, source update time and last successful check.
+- Distinguish a possible or proposed strike from an announced/confirmed action, an active disruption, a postponement, a cancellation and a resolved event. An article discussing a strike must not automatically create a confirmed closure.
+- Aim for precise affected locations only when supported by evidence. A network-wide strike may affect services across a region rather than one blocked street. Show route/stop/agency scope or an approximate area when exact geometry is unavailable, and label uncertainty instead of inventing a precise polygon.
+- Deduplicate repeated reporting while retaining provenance; flag conflicting reports for review. Any automated extraction or summarization must remain source-grounded and must not invent dates, locations or service impacts.
+- Provide an upcoming-disruptions view and optional advance reminders. Let users choose lead time, categories and areas; issue corrections or cancellation updates when the evidence changes, and make stale information visible.
+- Keep the wording neutral and focused on transport effects. Do not collect participant identities or track individuals attending public events.
+
+**Dependencies:** validated source permissions, event/lifecycle contract, geographic/entity resolution, freshness monitoring, and a review/correction workflow. Notification delivery needs its own permission and reliability assessment; no delivery guarantee is assumed.
+
+**Acceptance target:** a source-backed scheduled strike can be shown before it starts with affected services, timing and location precision; duplicate, ambiguous, conflicting, postponed and cancelled reports have tested behavior; reminders expose their evidence and uncertainty; stale or unconfirmed news never appears as a verified current blockage.
+
+### F04: Opt-in route history and personal impact notifications
+
+Idea recorded October 30, 2026. Status: proposed, not implemented. Owner and delivery date: unassigned.
+
+**User benefit:** receive a relevant heads-up when a disruption may affect a usual commute, a previously travelled route, or a saved future journey, rather than having to inspect every incident manually.
+
+- Start with routes users explicitly save, including travel mode and optional usual travel windows. Later evaluate voluntarily imported previous journeys or explicitly enabled in-app route history. A past journey alone must not be treated as evidence that the user will repeat it.
+- Do not assume access to Google Maps Timeline, past journeys or route geometry. Investigate a supported, permissioned import or user-provided route workflow first; no silent browsing-history collection, Maps scraping or background tracking.
+- Match a disruption's affected geometry or agency-scoped route/stop/service identifiers against an opted-in route, travel mode and expected journey time. Distinguish a direct service match from an approximate nearby-area match; geographical proximity alone is not proof of impact.
+- Explain every notification: which saved route may be affected, the relevant segment or service, the disruption window, why it matched, source freshness and uncertainty. Use “may affect your usual route” for inferred future travel, not a claim that the user is travelling now.
+- Make collection, history-based suggestions and notifications separately opt-in. Offer local-only route storage and matching as the first design to evaluate; any server processing needs explicit disclosure, minimization and a security/privacy review.
+- Allow users to inspect, edit and delete saved routes/history, choose retention, stop collection and revoke alert permissions. Do not infer or label sensitive destinations or infer home/work addresses from history without explicit user action.
+- Add lead-time controls, quiet hours, per-route/category preferences, deduplication, snooze and cancellation/correction handling. Use generic lock-screen notification text by default so exact journey details are not unnecessarily exposed.
+- Keep notification permission separate from transport awareness: users who decline history or notifications must still be able to browse the information layer. This feature alerts about potential impact; it does not calculate a replacement route.
+
+**Dependencies:** reliable incident timing and geographic/service scope from the live-data work and F03, a consented route representation, retention/deletion design, matching-quality evaluation, and a tested notification channel. Feasibility and operating costs remain open.
+
+**Acceptance target:** an opted-in saved route receives an explained alert for a matching disruption and travel window; unrelated modes, services and times do not trigger it; approximate matches are labeled; cancellations update existing alerts; quiet hours, duplicate suppression, consent withdrawal and deletion work; no history is collected by default.
+
+F03 and F04 extend the future backlog only. The current extension does not read news, collect previous routes, infer a commute or send notifications. These planning IDs are not GitHub issue numbers, and no delivery dates are committed.
+
 ### Rerouting
 
 **Rerouting needs its own feasibility phase:** select a routing engine with appropriate avoidance support, obtain usable road-network/closure geometry and transit effects, test restriction semantics and timing, review licensing and safety, and measure route quality. Do not assume drawing an incident or opening a Maps link makes Google's route avoid it. No rerouting schedule is committed.
