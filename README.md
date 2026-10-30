@@ -6,7 +6,11 @@ Potential disruptions include protests, strikes, vehicle or infrastructure break
 
 ## Project status
 
-**Planning only — no extension, backend, live feeds, or installation package exists yet.** The initial feasibility review was completed on October 30, 2026. Its recommendation is a desktop Chrome extension with a side panel; a geographically anchored overlay on Google's consumer map remains experimental, not a promised feature.
+**A quick visual demo is available; the live-data product is still in planning.** The [pink-area demo extension](extension/README.md) draws three fictional, clickable plots over Google Maps. They stay fixed on screen, not on geographic locations. There is no backend, live feed, rerouting, or store release. The initial feasibility review was completed on October 30, 2026. Its recommendation for the eventual MVP remains a desktop Chrome extension with a side panel; a geographically anchored overlay on Google's consumer map remains experimental, not a promised feature.
+
+## Try the pink-area demo
+
+In desktop Chrome, open `chrome://extensions`, enable **Developer mode**, choose **Load unpacked**, and select the repository's `extension` folder. Open or refresh Google Maps to see the sample plots. See the [demo guide](extension/README.md) for supported domains, controls, checks, and limitations. All plotted disruptions are fictional and must not be used for travel decisions.
 
 ## Why build this?
 
@@ -38,9 +42,13 @@ We need to validate this hypothesis with users and a specific city's available d
 
 Suggested workstreams: product/design, extension/frontend, data/backend, and QA/privacy. People can own more than one; all ownership is currently unassigned.
 
+## Future ideas
+
+The [future backlog](docs/PLAN.md#future-updates--not-mvp-commitments) records an optional weather/rainfall overlay and category-specific colours for strikes, protests, closures, breakdowns, and congestion, including legends and accessibility requirements. These are planning ideas, not implemented features; the current demo remains all pink. Rerouting is also deferred to a separate feasibility phase.
+
 ## Development
 
-There are no dependencies, build commands, or tests yet. Do not assume `npm install` or an extension installation flow is available. The first engineering milestone will add the scaffold and document exact setup, test, and unpacked-extension steps here.
+The visual demo uses plain JavaScript, CSS, and SVG with no build step or dependencies. Its installation and development checks are in the [demo guide](extension/README.md#development-checks). The planned side-panel/live-data MVP is not implemented and does not yet have a toolchain or automated test suite.
 
 ## Trust and safety
 

@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Transport Gaps — Pink Area Demo",
+  "version": "0.1.0",
+  "description": "A visual prototype showing fictional transport disruption areas over Google Maps. Not live or geographically anchored.",
+  "action": {
+    "default_title": "Transport Gaps demo",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.google.com/maps*",
+        "https://maps.google.com/*",
+        "https://www.google.de/maps*",
+        "https://www.google.co.uk/maps*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

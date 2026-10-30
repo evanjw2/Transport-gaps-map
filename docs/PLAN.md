@@ -2,6 +2,8 @@
 
 Created October 30, 2026. Status: proposed first plan for team review. Owners, pilot city, budget, stack, and dates are **not assigned or approved**. This is not an implementation claim.
 
+Prototype update: the [pink-area visual demo](../extension/README.md) now provides a no-build extension for trying fictional plots and click interactions on Google Maps. It is screen-positioned, not geographically anchored, and does not complete M1's planned side-panel scaffold or any live-data milestone.
+
 ## Objective and scope
 
 Help a person planning travel in one pilot city answer: **What is disrupted, where or on which service, why, and how reliable is the report?**
@@ -96,5 +98,30 @@ Record decisions with date, owner, evidence, alternatives, and implications. Do 
 ## Future updates — not MVP commitments
 
 After a successful awareness pilot: additional sources/cities, a supported hosted spatial view, and moderated reporting if justified.
+
+### F01: Weather and rainfall overlay
+
+Idea recorded October 30, 2026. Status: proposed, not implemented. Owner and delivery date: unassigned.
+
+- Add an optional weather layer showing where rain is observed or forecast, with an intensity legend and a separate weather visibility toggle.
+- Clearly distinguish observations from forecasts and display the provider, observation/forecast valid time, last successful refresh, and stale/unavailable states.
+- Keep weather separate from disruption reports: rain by itself must not be labeled as a confirmed transport blockage.
+- Before implementation, evaluate pilot-area coverage, spatial resolution, update frequency, licensing/attribution, costs, and how to geographically anchor the layer. The current screen-positioned demo cannot represent real rainfall locations.
+- Acceptance target: weather and disruption layers can be toggled independently; timestamps and units are understandable; overlapping layers remain readable; provider failure never implies no rain or no disruption.
+
+### F02: Disruption-specific colours and legend
+
+Idea recorded October 30, 2026. Status: proposed, not implemented. Owner and delivery date: unassigned.
+
+- Replace the all-pink visual language with a consistent colour per disruption category: strikes, protests/public events, transport blocks/closures, breakdowns, and congestion.
+- Starting palette for design review only: hot pink for blocks/closures, amber for strikes, purple for protests/public events, red for breakdowns, and orange for congestion; reserve a separate blue scale for rainfall. Final colours require contrast and colour-vision checks, not just visual preference.
+- Add a visible legend, category filters, and text labels/icons or patterns so colour is never the only way to understand an area.
+- Keep category separate from severity and verification. Changing a category colour must not imply that an incident became more severe or more trustworthy.
+- Define how overlapping categories appear and how unknown categories fall back to an explicitly labeled neutral style.
+- Acceptance target: every plotted area matches its card and legend; category changes update both together; keyboard users can inspect the same information; weather and transport colours remain distinguishable.
+
+These are future backlog ideas, not changes to the current extension. The demo intentionally remains three fictional pink plots. Team members can turn F01 and F02 into issues after agreeing scope and dependencies; these IDs are not GitHub issue numbers.
+
+### Rerouting
 
 **Rerouting needs its own feasibility phase:** select a routing engine with appropriate avoidance support, obtain usable road-network/closure geometry and transit effects, test restriction semantics and timing, review licensing and safety, and measure route quality. Do not assume drawing an incident or opening a Maps link makes Google's route avoid it. No rerouting schedule is committed.

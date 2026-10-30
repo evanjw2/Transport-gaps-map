@@ -18,7 +18,7 @@ This repository is currently a planning workspace. Start with the [README](READM
 - Update documentation when setup, contracts, decisions, or user-visible behavior changes.
 - Request review from another team member before merging; this is a team convention, not a claim that branch protection is configured.
 
-No executable project or test suite exists yet. For documentation changes, check relative links, Markdown, and factual sources. The scaffold milestone must establish build, lint, and test commands before contributors are expected to run them.
+The [visual demo extension](extension/README.md) runs without a build step; its guide includes syntax checks and a manual acceptance checklist. There is no automated test suite yet. For documentation changes, check relative links, Markdown, and factual sources. The live-data scaffold milestone must establish build, lint, and test commands before contributors are expected to run them.
 
 ## Data and security
 
