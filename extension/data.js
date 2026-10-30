@@ -1,0 +1,55 @@
+globalThis.TransportGapsDemoData = Object.freeze({
+  categories: {
+    closure: { label: 'Closures', icon: 'barrier', color: '#bc155a', tint: '#ffe1ed' },
+    protest: { label: 'Public events', icon: 'flag', color: '#6940a6', tint: '#eee3ff' },
+    strike: { label: 'Strikes', icon: 'bus', color: '#86580b', tint: '#ffedbb' },
+    breakdown: { label: 'Access & faults', icon: 'tool', color: '#ae432d', tint: '#ffe4da' },
+    congestion: { label: 'Traffic', icon: 'car', color: '#94571b', tint: '#ffe8cc' },
+    weather: { label: 'Rain sample', icon: 'rain', color: '#236a9b', tint: '#ddecff' },
+  },
+  modes: { all: 'All ways to travel', drive: 'Driving', transit: 'Public transport', walk: 'Walking', cycle: 'Cycling' },
+  incidents: [
+    {
+      id: 'closure', number: '01', type: 'closure', title: 'Bridge taking a break', place: 'Little Bridge · fictional location',
+      impact: 'Avoid this area', priority: 'avoid', status: 'now', modes: ['drive', 'walk', 'cycle'], affected: 'Bridge crossing and approach roads',
+      description: 'A fictional bridge closure shows how a blocked crossing could appear in the information layer.',
+      note: 'Example travel note: check an official closure notice before choosing another crossing. No alternative route is calculated here.',
+      timing: 'Active in the demo scenario · end unknown', points: '235,240 295,213 350,242 335,302 263,320 225,282', marker: { x: 286, y: 265 },
+    },
+    {
+      id: 'protest', number: '02', type: 'protest', title: 'A busy square ahead', place: 'Clover Square · fictional location',
+      impact: 'Plan ahead', priority: 'check', status: 'upcoming', modes: ['drive', 'transit', 'walk', 'cycle'], affected: 'Square entrances and nearby bus stops',
+      description: 'A fictional planned demonstration illustrates event-related access changes. It does not identify a real gathering or its participants.',
+      note: 'Example travel note: check transport notices for access restrictions. An event alone does not establish that every nearby road is blocked.',
+      timing: 'Upcoming in the demo scenario · no real date', points: '412,148 479,130 533,168 516,229 445,240 401,199', marker: { x: 466, y: 183 },
+    },
+    {
+      id: 'strike', number: '03', type: 'strike', title: 'Trams on a time-out', place: 'Sunflower Line · fictional service',
+      impact: 'Service interrupted', priority: 'avoid', status: 'now', modes: ['transit'], affected: 'Sample tram line and interchange',
+      description: 'A fictional strike interrupts a tram service. This plot illustrates a service area, not a claim that every road inside it is closed.',
+      note: 'Example travel note: confirm which services are running with the operator before setting off. Other travel modes may still be available.',
+      timing: 'Active in the demo scenario · end unknown', points: '338,350 400,323 451,355 442,414 371,434 327,392', marker: { x: 390, y: 376 },
+    },
+    {
+      id: 'access', number: '04', type: 'breakdown', title: 'Step-free access hiccup', place: 'Acorn Station · fictional station',
+      impact: 'Check accessibility', priority: 'check', status: 'now', modes: ['transit', 'walk'], affected: 'Sample station lift and step-free entrance',
+      description: 'A fictional lift fault highlights accessibility and transport functionality, even when the station itself is still open.',
+      note: 'Example travel note: check the operator’s accessibility information and assistance options. Do not assume another entrance is step-free.',
+      timing: 'Active in the demo scenario · repair time unknown', points: '179,430 228,412 267,445 254,499 199,511 166,472', marker: { x: 216, y: 460 },
+    },
+    {
+      id: 'traffic', number: '05', type: 'congestion', title: 'The slow lane club', place: 'Willow Avenue · fictional road',
+      impact: 'Expect delays', priority: 'check', status: 'now', modes: ['drive', 'transit'], affected: 'Sample road corridor and buses using it',
+      description: 'A fictional traffic queue shows delay information without presenting congestion as a full closure.',
+      note: 'Example travel note: allow extra time and check current road or operator updates. No travel-time estimate is available in this demo.',
+      timing: 'Active in the demo scenario · duration unknown', points: '481,468 547,447 590,484 571,543 506,558 467,514', marker: { x: 530, y: 502 },
+    },
+    {
+      id: 'rain', number: '06', type: 'weather', title: 'A little umbrella weather', place: 'Cloudy Corner · fictional weather area',
+      impact: 'Weather information', priority: 'info', status: 'now', modes: ['drive', 'transit', 'walk', 'cycle'], affected: 'Illustrative rain area only',
+      description: 'A fictional rain patch demonstrates a separate layer. It is neither an observation nor a forecast, and does not confirm a transport blockage.',
+      note: 'Example travel note: check an actual weather service before travelling. Rain alone is not evidence that an area must be avoided.',
+      timing: 'Illustration only · no observation or forecast time', points: '536,285 592,267 645,302 637,361 579,387 528,344', marker: { x: 585, y: 326 },
+    },
+  ],
+});

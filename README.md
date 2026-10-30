@@ -1,22 +1,24 @@
 # Transport Gaps Map
 
-An early-stage project to help people understand **where transport is disrupted, why, and how current the information is**, alongside Google Maps.
+An early-stage project to help people understand **where transport is disrupted, what to avoid, which services or facilities are affected, and how current the information is**, alongside Google Maps.
 
 Potential disruptions include protests, strikes, vehicle or infrastructure breakdowns, road closures, and congestion. The first release focuses on awareness, not rerouting.
 
 ## Project status
 
-**A quick visual demo is available; the live-data product is still in planning.** The [pink-area demo extension](extension/README.md) draws three fictional, clickable plots over Google Maps. They stay fixed on screen, not on geographic locations. There is no backend, live feed, rerouting, or store release. The initial feasibility review was completed on October 30, 2026. Its recommendation for the eventual MVP remains a desktop Chrome extension with a side panel; a geographically anchored overlay on Google's consumer map remains experimental, not a promised feature.
+**The v0.2 transport-awareness demo is available; the live-data product is still in planning.** The [extension](extension/README.md) has a playful bus mascot, colour-coded plots, search and travel-mode filters, incident details, and an optional fictional rain layer. Five transport examples and one optional weather example stay fixed on screen, not on geographic locations. There is no backend, live feed, rerouting, or store release. The initial feasibility review was completed on October 30, 2026. Its recommendation for the eventual MVP remains a desktop Chrome extension with a side panel; a geographically anchored overlay on Google's consumer map remains experimental, not a promised feature.
 
-## Try the pink-area demo
+## Try the transport demo
 
-In desktop Chrome, open `chrome://extensions`, enable **Developer mode**, choose **Load unpacked**, and select the repository's `extension` folder. Open or refresh Google Maps to see the sample plots. See the [demo guide](extension/README.md) for supported domains, controls, checks, and limitations. All plotted disruptions are fictional and must not be used for travel decisions.
+In desktop Chrome, open `chrome://extensions`, enable **Developer mode**, choose **Load unpacked**, and select the repository's `extension` folder. Open or refresh Google Maps to see the sample plots. If already installed, reload the extension and refresh Maps. You can also open `extension/preview.html` directly for an offline sandbox with an original illustrative map. See the [demo guide](extension/README.md) for controls, checks, and limitations. All plotted disruptions are fictional and must not be used for travel decisions.
 
 ## Why build this?
 
 The hypothesis is that people need clearer, locally relevant explanations of disruptions than they can consistently find in their existing travel workflow. Google already provides traffic information in supported regions, so the opportunity is **context, provenance, freshness, and coverage gaps**, not claiming Google has no traffic data. See the official sources in the [feasibility review](docs/FEASIBILITY.md#official-sources).
 
 We need to validate this hypothesis with users and a specific city's available data before investing in a large build.
+
+The longer-term vision is a transport information layer, not just a blockage map: closures and areas to avoid, strikes and event-related changes, service reliability, accessibility/facility faults, and relevant weather context. A delay, a broken lift, or rainfall must not automatically be described as an area-wide closure.
 
 ## First release: disruption awareness
 
@@ -44,11 +46,11 @@ Suggested workstreams: product/design, extension/frontend, data/backend, and QA/
 
 ## Future ideas
 
-The [future backlog](docs/PLAN.md#future-updates--not-mvp-commitments) records an optional weather/rainfall overlay and category-specific colours for strikes, protests, closures, breakdowns, and congestion, including legends and accessibility requirements. These are planning ideas, not implemented features; the current demo remains all pink. Rerouting is also deferred to a separate feasibility phase.
+The [future backlog](docs/PLAN.md#future-updates--not-mvp-commitments) records live weather/rainfall integration and production category styling, including legends and accessibility requirements. The v0.2 demo now illustrates category colours and an optional rain patch using fictional fixtures only; licensed sources, true geographic alignment, and operational reliability remain future work. Rerouting is deferred to a separate feasibility phase.
 
 ## Development
 
-The visual demo uses plain JavaScript, CSS, and SVG with no build step or dependencies. Its installation and development checks are in the [demo guide](extension/README.md#development-checks). The planned side-panel/live-data MVP is not implemented and does not yet have a toolchain or automated test suite.
+The visual demo uses plain JavaScript, CSS, and SVG with no build step or dependencies. Its installation and development checks are in the [demo guide](extension/README.md#files-and-development-checks). The planned side-panel/live-data MVP is not implemented and does not yet have a toolchain or automated test suite.
 
 ## Trust and safety
 

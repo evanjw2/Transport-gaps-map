@@ -2,11 +2,13 @@
 
 Created October 30, 2026. Status: proposed first plan for team review. Owners, pilot city, budget, stack, and dates are **not assigned or approved**. This is not an implementation claim.
 
-Prototype update: the [pink-area visual demo](../extension/README.md) now provides a no-build extension for trying fictional plots and click interactions on Google Maps. It is screen-positioned, not geographically anchored, and does not complete M1's planned side-panel scaffold or any live-data milestone.
+Prototype update: the [v0.2 awareness demo](../extension/README.md) provides a no-build extension with category colours, travel-mode/category/timing filters, search, details, accessibility information, and an optional fictional rain patch. A cartoon bus mascot, brief animations with reduced-motion support, and an offline illustrative-map sandbox make the concept easier to explore. This is screen-positioned, not geographically anchored, and does not complete M1's planned side-panel scaffold or any live-data milestone.
 
 ## Objective and scope
 
 Help a person planning travel in one pilot city answer: **What is disrupted, where or on which service, why, and how reliable is the report?**
+
+The broader use case is a transport information layer: help people identify places to avoid while also understanding delays, service changes, accessibility and facility functionality, and relevant weather context. Clearly distinguish a blocked area from a service-specific issue or information-only update. The current demo illustrates this distinction, but does not offer real travel advice.
 
 The MVP is a user-opened desktop Chrome side panel alongside Google Maps. Start with incident cards, filters, source links, and location links. Direct map overlays are optional research. Rerouting is explicitly a future update; the MVP does not calculate alternatives or modify Google navigation.
 
@@ -101,7 +103,7 @@ After a successful awareness pilot: additional sources/cities, a supported hoste
 
 ### F01: Weather and rainfall overlay
 
-Idea recorded October 30, 2026. Status: proposed, not implemented. Owner and delivery date: unassigned.
+Idea recorded October 30, 2026. Status: fictional rain-layer interaction illustrated in v0.2; live weather integration not implemented. Owner and delivery date for live integration: unassigned.
 
 - Add an optional weather layer showing where rain is observed or forecast, with an intensity legend and a separate weather visibility toggle.
 - Clearly distinguish observations from forecasts and display the provider, observation/forecast valid time, last successful refresh, and stale/unavailable states.
@@ -111,7 +113,7 @@ Idea recorded October 30, 2026. Status: proposed, not implemented. Owner and del
 
 ### F02: Disruption-specific colours and legend
 
-Idea recorded October 30, 2026. Status: proposed, not implemented. Owner and delivery date: unassigned.
+Idea recorded October 30, 2026. Status: category colours, icons, numbered markers and filters illustrated in v0.2; production validation and overlap handling remain open. Owner and delivery date for production work: unassigned.
 
 - Replace the all-pink visual language with a consistent colour per disruption category: strikes, protests/public events, transport blocks/closures, breakdowns, and congestion.
 - Starting palette for design review only: hot pink for blocks/closures, amber for strikes, purple for protests/public events, red for breakdowns, and orange for congestion; reserve a separate blue scale for rainfall. Final colours require contrast and colour-vision checks, not just visual preference.
@@ -120,7 +122,7 @@ Idea recorded October 30, 2026. Status: proposed, not implemented. Owner and del
 - Define how overlapping categories appear and how unknown categories fall back to an explicitly labeled neutral style.
 - Acceptance target: every plotted area matches its card and legend; category changes update both together; keyboard users can inspect the same information; weather and transport colours remain distinguishable.
 
-These are future backlog ideas, not changes to the current extension. The demo intentionally remains three fictional pink plots. Team members can turn F01 and F02 into issues after agreeing scope and dependencies; these IDs are not GitHub issue numbers.
+The current extension illustrates these ideas with five fictional transport updates and one opt-in fictional rain update. It has no actual weather observations, forecasts, live incidents, or geographic anchoring. Team members can turn the remaining F01 and F02 work into issues after agreeing scope and dependencies; these IDs are not GitHub issue numbers.
 
 ### Rerouting
 

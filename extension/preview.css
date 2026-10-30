@@ -1,0 +1,13 @@
+* { box-sizing: border-box; }
+body { margin: 0; background: #eaeedc; color: #253731; font: 14px/1.5 ui-rounded, "SF Pro Rounded", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+.map { position: fixed; inset: 0; width: 100%; height: 100%; }
+.sandbox-note { position: fixed; z-index: 1; top: 20px; left: 24px; right: 24px; display: flex; align-items: center; gap: 18px; width: fit-content; max-width: calc(100% - 48px); border: 1px solid #b8c2aa; border-radius: 10px; background: #fffdf7ee; padding: 10px 14px; }
+.sandbox-note strong { font-size: 10px; letter-spacing: 1.5px; }
+.sandbox-note span { font-size: 10px; color: #64716b; }
+.sandbox-caption { position: fixed; bottom: 36px; left: 30px; padding: 18px; border: 1px solid #c7d0b9; border-radius: 18px; background: #fffdf7e8; }
+.sandbox-caption > span { color: #5a8057; font-size: 28px; }
+h1 { margin: 5px 0 10px; font-size: 26px; letter-spacing: -.8px; line-height: 1.15; }
+p { font-size: 12px; color: #64716b; }
+a { color: #365c3d; font-size: 11px; }
+a:focus-visible { outline: 3px solid #236a9b; outline-offset: 3px; }
+@media (max-width: 700px) { .sandbox-note { top: 12px; left: 12px; padding: 8px; flex-direction: column; align-items: flex-start; gap: 3px; } .sandbox-caption { display: none; } }
