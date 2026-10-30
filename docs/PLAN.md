@@ -2,6 +2,8 @@
 
 Created October 30, 2026. Status: proposed first plan for team review. Owners, pilot city, budget, stack, and dates are **not assigned or approved**. This is not an implementation claim.
 
+The [Munich source audit and database proposal](MUNICH_DATA_PLAN.md) recommends Munich as the pilot candidate and municipal roadworks as the first live slice. It records source evidence, one bounded GeoJSON payload check, access/licensing gaps, ingestion architecture, and proposed tasks D01–D07. Use it for M0/T02 and the future F03/F04 work; it does not approve a city or implement a backend.
+
 Prototype update: the [v0.2 awareness demo](../extension/README.md) provides a no-build extension with category colours, travel-mode/category/timing filters, search, details, accessibility information, and an optional fictional rain patch. A cartoon bus mascot, brief animations with reduced-motion support, and an offline illustrative-map sandbox make the concept easier to explore. This is screen-positioned, not geographically anchored, and does not complete M1's planned side-panel scaffold or any live-data milestone.
 
 ## Objective and scope

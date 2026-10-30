@@ -44,7 +44,7 @@ Google documents a traffic layer with region-dependent coverage and updates that
 
 GTFS Realtime alerts include active periods and affected entities; do not assume they include a road blockage polygon. Resolve agency-scoped identifiers against the matching static GTFS dataset when available. Show an alert as a route/stop description if a reliable location cannot be derived. [D1]
 
-For every proposed feed, record owner, URL, license/permission evidence, attribution, allowed retention, authentication, rate limits, time zone, sample payload, last successful fetch, and freshness expectations. Publicly reachable does not mean freely reusable. **No pilot feed or coverage claim has been verified in this repository.**
+For every proposed feed, record owner, URL, license/permission evidence, attribution, allowed retention, authentication, rate limits, time zone, sample payload, last successful fetch, and freshness expectations. Publicly reachable does not mean freely reusable. **The [Munich data audit](MUNICH_DATA_PLAN.md) now documents official source research and a successful bounded roadworks GeoJSON fetch. Production ingestion, sustained reliability, comprehensive coverage and authorized realtime transit-alert access remain unverified.**
 
 ## Proposed architecture
 

@@ -23,7 +23,7 @@ The longer-term vision is a transport information layer, not just a blockage map
 ## First release: disruption awareness
 
 - Desktop Chrome side panel opened by the user while planning a journey in Google Maps.
-- One pilot city, selected after a data and licensing audit; no city is assumed yet.
+- One pilot city, selected after a data and licensing audit; Munich is now the researched candidate, not yet a team-approved commitment.
 - Incident cards showing the affected place or service, disruption type, impact, source, verification status, and update time.
 - Filters for disruption type, travel mode, and active or upcoming incidents.
 - Clear loading, empty, stale, partial-coverage, and source-unavailable states.
@@ -41,6 +41,8 @@ The longer-term vision is a transport information layer, not just a blockage map
 1. Read [the MVP and delivery plan](docs/PLAN.md) for milestones, workstreams, acceptance criteria, and starter tasks.
 2. Read [the feasibility review](docs/FEASIBILITY.md) before choosing an integration or data source.
 3. Use [the contribution guide](CONTRIBUTING.md) to propose work and submit a pull request.
+
+For the proposed Munich pilot, read [the source audit and database plan](docs/MUNICH_DATA_PLAN.md). It recommends municipal roadworks first, documents a successful bounded GeoJSON polygon fetch, separates static transit data from permission-gated realtime access, and plans reviewed advance-event intelligence. No live-data backend has been implemented.
 
 Suggested workstreams: product/design, extension/frontend, data/backend, and QA/privacy. People can own more than one; all ownership is currently unassigned.
 
