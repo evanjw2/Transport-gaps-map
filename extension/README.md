@@ -1,71 +1,92 @@
-# Transport Gaps · friendly transport layer
+# Transport Gaps · map-first explorer and compact companion
 
-A no-build Manifest V3 extension, version 0.2.0. A small cartoon bus welcomes users to a transport-awareness layer: what to avoid, what might delay a journey, and which services or facilities need attention.
+Version **0.6.0**, no build step. The primary experience is now our own Munich geographic explorer; the Google Maps panel remains a compact companion. Read [the direction decision](../docs/MAP_FIRST_DECISION.md). The explorer uses a Bavarian basemap, not Google tiles or consumer-Maps overlays. Awareness comes before rerouting.
 
-**Everything is fictional and screen-positioned.** Plots stay fixed when the map moves. They do not identify real roads, stations, events, services, weather, or the user's location. This is not navigation or travel advice, and does not implement the planned live-data MVP.
+**Transit notices are illustrative scenarios, not live operator alerts.** The separate Roadworks tab contains selected saved municipal source records. Do not describe either as independently verified current travel information. No random-area plots are drawn over Google Maps in this version.
 
-## Install or update in desktop Chrome
+## Try it without installing
 
-1. Open `chrome://extensions` and turn on **Developer mode**.
-2. Choose **Load unpacked**, then select this `extension` directory containing `manifest.json`. On the original computer: `/Users/evanong/Downloads/Transport-gaps-map/extension`.
-3. If already installed, click **Reload** on its extension card instead.
-4. Open or refresh a supported Google Maps tab. Find the **Transport Gaps / Sample City** panel on the right.
+Open **`munich-map.html`** in Chrome. Search `U3`, select a card or station marker, or switch to Roadworks. All eight transit notices are fictional: four have approximate station centres, four intentionally have no map position. Shared stations expose each matching example. Markers are not track traces or exact entrances. Mode/timing/access filters affect markers and cards; the transit list is not restricted by the viewport. **Show example places** brings matching markers back into view.
 
-The toolbar popup links to Google Maps and the offline sandbox. Nothing is installed into your browser automatically. See Chrome's official [unpacked-extension instructions](https://developer.chrome.com/docs/extensions/get-started/tutorial/hello-world#load-unpacked).
+Street tiles and external links need internet. Data, markers and UI are local, with no server, API key or package installation required. `preview.html` retains the offline compact-panel presentation. Roadworks defaults to construction; choose temporary no-parking explicitly. Its search/type/schedule, map-view list filter and KML export remain available.
 
-## Preview without installing
+See [the pitch walkthrough](../docs/PITCH_DEMO.md) and [product/coverage guide](../docs/PROTOTYPE_GUIDE.md).
 
-Open `extension/preview.html` in a browser, or choose **Explore the offline sandbox** in the toolbar popup. It uses the same packaged code and an original illustrative map, not Google Maps content. No server, internet connection, API key, package installation, or build step is needed. The sandbox is useful for UI evaluation, not proof of live Google Maps compatibility.
+## Install or update in Chrome
 
-## What's in v0.2
+1. Open `chrome://extensions` and enable **Developer mode**.
+2. Select **Load unpacked** and choose `/Users/evanong/Downloads/Transport-gaps-map/extension` (this directory).
+3. If already installed, click **Reload** on its extension card.
+4. Click the extension toolbar icon, then **Open the disruption explorer** for the map-first prototype.
+5. Optionally refresh a supported Google Maps tab for the compact panel. It does not draw geographic overlays there; its header link opens our explorer. Dismiss Google's consent screen if present. **−** minimizes the panel; the small Transport Gaps button restores it.
 
-- Warm paper-like cards, rounded controls, a cartoon bus mascot, a short welcome wiggle, and gentle hover feedback. No continuous flashing or pulsing.
-- Five transport examples: a bridge closure, a planned demonstration, a tram strike, a station lift fault, and road congestion.
-- An opt-in sixth example: a dashed blue rain area, clearly labeled neither an observation nor a forecast. Rain is information, not evidence of a transport block.
-- Category colours paired with icons, text labels and numbered plots; the category chips also form a legend.
-- Search by fictional place, service, type or description; filter by travel mode, category, and active/upcoming sample status.
-- **All updates** versus **Avoid & plan ahead** focus. The latter excludes information-only weather. Updates are sorted by impact, with current examples before upcoming ones within the same priority.
-- Details explain the affected facility/service, relevant travel modes, timing uncertainty, illustrative travel notes, and lack of a live source or freshness time.
-- Independent transport/rain layer toggles. Only matching updates appear in both the list and the plots; disabling a layer also removes its cards.
-- Adjustable plot opacity, collapse/restore, narrow and short viewport layouts, keyboard controls, and explicit empty states that never say an area is clear.
+Chrome's [unpacked-extension instructions](https://developer.chrome.com/docs/extensions/get-started/tutorial/hello-world#load-unpacked) describe the installation mechanism. This prototype is not a Chrome Web Store release or a native mobile Maps integration.
 
-## Try the interactions
+## Compact companion: public transport comes first
 
-1. Click an update or matching numbered plot to open its details. Use **Back to updates** or **Escape** to return.
-2. Search for `Acorn` to find the accessibility example, or choose a travel mode to narrow the list and plots together.
-3. Select **Upcoming** to see the fictional event. The timing is a scenario state, not an actual event schedule.
-4. Enable **Rain sample** in the footer. Use **All updates** and **Everything** to include it with transport examples.
-5. Open **Display settings** to change opacity or disable animations. The system reduced-motion preference always overrides the animation toggle.
-6. Minimize the panel with **−** or **Escape** from the list. The **Transport Gaps · DEMO** pill or a visible plot restores it.
+- Eight clearly labeled scenarios: U3 segment interruption, S8 partial interruption, U6 delay, Tram 19 stop/service change, Bus 58 departure cancellation, U3/U6 lift fault, an upcoming strike scenario and an event with unconfirmed transport impact.
+- Filter by **U-Bahn, S-Bahn, tram or bus**, choose an example line, filter scenario timing, search stations/impacts, or show only step-free access examples.
+- Cards show the affected line/mode, selected place/segment, impact, timing category and a useful next check **without leaving the panel**.
+- Details retain source/uncertainty labels and display selected stations as a schematic only when supplied. A delay is not a closure; a lift fault is not a station closure; an announced event is not a confirmed block.
+- Official MVG and S-Bahn links are places to check independently, **not sources confirming the fictional scenarios**. Delay minutes, disruptions and relative dates are illustrative. Station/line names are real references, not evidence of a current problem.
+- Manual line filtering is not route matching. No Google route, browsing history, saved journey or departure feed is read. The example line list is not a full Munich line directory.
 
-Preferences reset on refresh. Missing data is not evidence of a clear or safe area. Sample travel notes describe what a future product might communicate; no alternative route is computed.
+## Real municipal highlights, separately
 
-## Permissions, data and limitations
+The **Roadworks** tab includes 12 selected original source features from the November 15, 2026 full municipal snapshot: nine construction records and three temporary no-parking notices. Parking notices are **off by default**. Selection emphasizes a small readable set, not representative or complete coverage. Multiple features may describe the same works.
 
-Static content scripts match HTTPS Maps pages on `www.google.com`, `maps.google.com`, `www.google.de`, and `www.google.co.uk`. No added extension API permissions, broad all-sites access, third-party libraries, remote fonts, analytics, storage, geolocation, scraping, or data-source requests are used. All executable code, SVG artwork, and fixtures are packaged locally.
+Cards retain the original German impact, affected facility and source dates. Details show provider, retrieval/response timestamps, the dataset and license, and optional map links. Unknown impact fields stay unknown. A source schedule does not establish that the restriction is currently in place; a parking-bay restriction is not an entire-street closure.
 
-Other country domains, embedded Maps frames and the native mobile app are unsupported. Maps must load as a matching document: refresh if an in-page navigation from another Google page does not show the extension. Dismiss any Google cookie/consent screen first. Overlay shapes deliberately intercept clicks inside their areas; interactions outside the controls and plots pass through to the map. To see underlying controls, switch off the plots or minimize the panel as needed.
+Source: Landeshauptstadt München, Mobilitätsreferat; [dataset](https://opendata.muenchen.de/dataset/baustellen_4_weeks_opendata), [dl-de/by-2-0](https://www.govdata.de/dl-de/by-2-0). Retrieved `2026-11-15T22:12:31.304Z`; source response `2026-11-15T22:12:11.319Z`. Changes: selection of records/fields, formatting and display styling. Source contacts/HTML-link fields are excluded.
 
-This remains a prototype, not a Chrome Web Store-approved release. We have not implemented geographic alignment, a supported Maps side-panel integration, real feed health, incident verification/expiry, actual weather, or rerouting. A static content-script UI is not a supported Google Maps map-layer API.
+For all source footprints open **Roadworks** in `munich-map.html`, or use `munich-map.html#roads`. The explorer retains all 5,790 source features, actual source polygons, street basemap, filters and split KML export for **manual Google My Maps import**. Its transit view adds fictional station-level examples, not a live feed. See [the map guide](../docs/MUNICH_MAP.md). No signed-in Google import or installed-extension integration is claimed as verified by the offline preview.
 
-## Files and development checks
+## About, accessibility and privacy
 
-- `data.js`: fictional incidents, category palette, and travel modes.
-- `styles.js`: isolated Shadow DOM styling and reduced-motion rules.
-- `content.js`: UI rendering, filtering, plot interaction and detail state.
-- `popup.html` / `popup.css`: extension entry point.
-- `preview.html` / `preview.css`: offline illustrative-map sandbox using the same scripts.
+**About** explains what works, what is fictional/unconnected, advance-warning evidence, next steps and privacy. A factual January/February 2026 strike example links to the historical operator notice; it is not displayed as current.
 
-From the repository root:
+The panel uses soft sage/cream backgrounds, compact line badges, clear text alongside colour, one small bus welcome animation, keyboard-accessible controls, focus restoration, scrolling layouts and reduced-motion support. Escape returns from details, otherwise minimizes the panel. The animation can be disabled in About; system reduced motion always overrides it.
+
+Preferences reset on refresh; filters are retained between tabs in the same page session. There is no location tracking, storage, analytics, route/history reading, notifications, scraping or runtime feed request. The panel itself makes no network requests. It is a content-script companion, **not** Chrome's native Side Panel API or a supported Google Maps map-layer integration. Page keyboard/wheel events inside the panel are isolated from underlying map controls.
+
+Supported content-script targets remain HTTPS Maps documents on `www.google.com`, `maps.google.com`, `www.google.de`, and `www.google.co.uk`. Other country domains, embedded frames and native apps are unsupported. Refresh after loading/reloading the extension or after navigating from another Google page.
+
+No extension API or broad host permissions are requested. The map HTML is web-accessible to supported Google hostnames so its launcher can work; executable code is bundled. The geographic explorer uses local Leaflet/fflate and online Bavarian street tiles, with a provider/privacy notice and off switch. No Google tiles or map internals are scraped. New external feeds would require a separate rights/security audit.
+
+## Files and refresh
+
+- `transit-data.js`: clearly fictional line/mode/service scenarios and official reference links.
+- `munich-highlights.js`: selected official features and full source provenance; not a live feed.
+- `content.js` / `styles.js`: isolated Shadow DOM companion and styling.
+- `preview.html` / `preview.css`: offline pitch frame using the same panel scripts.
+- `popup.html` / `popup.css`: transit-first extension entry point.
+- `munich-map.*`, `transit-map.js`, `munich-snapshot.js`, `munich-export.js`, `vendor/`: geographic explorer, fictional station locations, full snapshot and licensed local dependencies.
+- `data.js` and `munich-evidence.js`: older fixture/evidence files retained for history; **not loaded by the active panel**.
+
+With Node 18+, refresh the full municipal snapshot and rebuild the small panel subset from the repo root:
 
 ```sh
-node --check extension/data.js
-node --check extension/styles.js
+node scripts/import-munich.mjs
+node scripts/build-munich-highlights.mjs
+```
+
+Review source terms, payload changes, dates, selection and attribution before committing. The subset builder does not fetch or independently verify anything; it preserves original snapshot metadata. Reload the extension/pages afterward. This does not refresh fictional transit scenarios or create a live backend.
+
+Development checks:
+
+```sh
+node --check extension/transit-data.js
+node --check extension/munich-highlights.js
 node --check extension/content.js
-node -e "const manifest = require('./extension/manifest.json'); if (manifest.manifest_version !== 3) throw new Error('Expected Manifest V3'); console.log('Manifest JSON valid')"
+node --check extension/styles.js
+node --check extension/munich-map.js
+node --check extension/transit-map.js
+node --check extension/munich-export.js
+node --check scripts/import-munich.mjs
+node --check scripts/build-munich-highlights.mjs
 git diff --check
 ```
 
-Manual acceptance: confirm synchronized filtering/list/plots, all detail views, empty-state recovery, independent layers, category labels, keyboard activation and Escape/back focus, opacity, collapse/restore, repeated-script protection, reduced motion, and narrow/short viewport access. Recheck the actual unpacked extension on Maps before claiming compatibility. The offline sandbox and isolated headless Chrome checks do not establish real Maps integration or store approval.
+Manual acceptance: check every mode/line/timing/access filter, search and empty recovery, details/back/Escape/focus, tab/filter retention, real-versus-demo labels, source fields/links, parking opt-in, missing-source state, collapse/restore, repeated injection, narrow/short layouts and reduced motion. Rehearse the actual unpacked extension on Google Maps separately from offline checks.
 
-Only packaged static templates and predefined SVG icon paths use `innerHTML`. Search and incident content are rendered with `textContent`; no fetched input is interpreted as markup. Any future external data will need schema validation and safe rendering. Chrome documents this architecture in its [content-script guide](https://developer.chrome.com/docs/extensions/develop/concepts/content-scripts).
+Only fixed templates and packaged SVG use `innerHTML`; incident/source/search text uses `textContent`. Dynamic links reject non-HTTPS URLs except explicitly constructed local companion-page links. No fetched source content is interpreted as executable markup. This is a travel-information prototype, not navigation or a safety guarantee; missing reports never mean an area or service is clear.

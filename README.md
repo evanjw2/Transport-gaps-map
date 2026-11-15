@@ -1,16 +1,22 @@
 # Transport Gaps Map
 
+> **Work in progress — team review branch:** `prototype/munich-map-v0.6`. This is an experimental alternative, not an approved release or presentation choice. The team's v0.2 baseline remains on `main`; existing slides do not need to change yet. Start with [the team review guide](docs/TEAM_REVIEW.md) to compare and try this prototype.
+
 An early-stage project to help people understand **where transport is disrupted, what to avoid, which services or facilities are affected, and how current the information is**, alongside Google Maps.
 
 Potential disruptions include protests, strikes, vehicle or infrastructure breakdowns, road closures, and congestion. The first release focuses on awareness, not rerouting.
 
 ## Project status
 
-**The v0.2 transport-awareness demo is available; the live-data product is still in planning.** The [extension](extension/README.md) has a playful bus mascot, colour-coded plots, search and travel-mode filters, incident details, and an optional fictional rain layer. Five transport examples and one optional weather example stay fixed on screen, not on geographic locations. There is no backend, live feed, rerouting, or store release. The initial feasibility review was completed on October 30, 2026. Its recommendation for the eventual MVP remains a desktop Chrome extension with a side panel; a geographically anchored overlay on Google's consumer map remains experimental, not a promised feature.
+**The v0.6 prototype is map-first, with the extension as a launcher and compact companion.** Open the Munich explorer for approximate station markers representing fictional transit examples, or switch to Roadworks for saved official source polygons. The map uses Leaflet and a Bavarian basemap—not Google tiles or an overlay inside Google's website. The [direction decision](docs/MAP_FIRST_DECISION.md) explains why this better supports transport awareness and future layers without fragile consumer-map integration.
+
+Eight transit scenarios remain fictional; four have approximate station locations and four remain list-only rather than inventing geography. The road snapshot retains 5,790 municipal source features and manual Google My Maps KML export; these are not comprehensive coverage or that many confirmed closures. No live transit backend, route reading, notifications, rerouting or store release is implemented.
 
 ## Try the transport demo
 
-In desktop Chrome, open `chrome://extensions`, enable **Developer mode**, choose **Load unpacked**, and select the repository's `extension` folder. Open or refresh Google Maps to see the sample plots. If already installed, reload the extension and refresh Maps. You can also open `extension/preview.html` directly for an offline sandbox with an original illustrative map. See the [demo guide](extension/README.md) for controls, checks, and limitations. All plotted disruptions are fictional and must not be used for travel decisions.
+Open **`extension/munich-map.html` in Chrome**, or install/reload the unpacked `extension` folder at `chrome://extensions` and click **Open the disruption explorer** in the toolbar popup. Click a station marker or card, search `U3`, and switch to **Roadworks** for saved source footprints. Street tiles require internet; packaged data and UI do not. Transit coordinates are approximate station centres, not exact entrances or affected track paths.
+
+On the normal Google Maps website, the extension still shows the compact companion, with a link to the explorer; it does not inject geographic overlays there. `extension/preview.html` retains the offline compact-panel presentation. See the [pitch walkthrough](docs/PITCH_DEMO.md), [product/coverage guide](docs/PROTOTYPE_GUIDE.md), [demo guide](extension/README.md) and [map/export guide](docs/MUNICH_MAP.md).
 
 ## Why build this?
 
@@ -22,13 +28,13 @@ The longer-term vision is a transport information layer, not just a blockage map
 
 ## First release: disruption awareness
 
-- Desktop Chrome side panel opened by the user while planning a journey in Google Maps.
+- Map-first transport-awareness explorer, with a lightweight Chrome companion beside Google Maps.
 - One pilot city, selected after a data and licensing audit; Munich is now the researched candidate, not yet a team-approved commitment.
 - Incident cards showing the affected place or service, disruption type, impact, source, verification status, and update time.
 - Filters for disruption type, travel mode, and active or upcoming incidents.
 - Clear loading, empty, stale, partial-coverage, and source-unavailable states.
 - An **Open in Google Maps** action for incidents with reliable coordinates, plus route/stop descriptions when geometry is unavailable.
-- A map view in a separately hosted companion app only if the pilot demonstrates that spatial context is essential; provider and budget require team approval.
+- A geographic view with explicit source precision and real/demo separation. Hosting, production provider and budget still require team approval.
 
 **Not in the first release:** alternative-route calculation, automatic navigation changes, guaranteed real-time or worldwide coverage, public crowdsourcing, continuous location tracking, or native Google Maps mobile integration.
 
@@ -42,19 +48,21 @@ The longer-term vision is a transport information layer, not just a blockage map
 2. Read [the feasibility review](docs/FEASIBILITY.md) before choosing an integration or data source.
 3. Use [the contribution guide](CONTRIBUTING.md) to propose work and submit a pull request.
 
+Read [the map-first direction decision](docs/MAP_FIRST_DECISION.md) before adding features: public-transport relevance, useful geographic context and source honesty come before bigger parking datasets or decorative blocked areas.
+
 For the proposed Munich pilot, read [the source audit and database plan](docs/MUNICH_DATA_PLAN.md). It recommends municipal roadworks first, documents a successful bounded GeoJSON polygon fetch, separates static transit data from permission-gated realtime access, and plans reviewed advance-event intelligence. No live-data backend has been implemented.
 
 Suggested workstreams: product/design, extension/frontend, data/backend, and QA/privacy. People can own more than one; all ownership is currently unassigned.
 
 ## Future ideas
 
-The [future backlog](docs/PLAN.md#future-updates--not-mvp-commitments) records live weather/rainfall integration and production category styling, including legends and accessibility requirements. The v0.2 demo now illustrates category colours and an optional rain patch using fictional fixtures only; licensed sources, true geographic alignment, and operational reliability remain future work. Rerouting is deferred to a separate feasibility phase.
+The [future backlog](docs/PLAN.md#future-updates--not-mvp-commitments) records live weather/rainfall integration and category styling, including legends and accessibility requirements. The active v0.6 explorer prioritizes transit impacts and source-backed roadworks; it does not paint fictional rain or area-closure patches. Weather feeds, authorized live transit data and operational reliability remain future work. Rerouting is deferred to a separate feasibility phase.
 
 Additional planned ideas include source-backed advance warnings from news and official online notices, plus opt-in saved-route/history matching to notify users when their usual journeys may be affected. These require source verification, honest location uncertainty, explicit consent and route-data controls; the current extension does not collect travel history or send alerts. See F03 and F04 in the future backlog.
 
 ## Development
 
-The visual demo uses plain JavaScript, CSS, and SVG with no build step or dependencies. Its installation and development checks are in the [demo guide](extension/README.md#files-and-development-checks). The planned side-panel/live-data MVP is not implemented and does not yet have a toolchain or automated test suite.
+The demo uses JavaScript, CSS, SVG/canvas and bundled Leaflet/fflate with no build step or runtime package installation. The snapshot importer uses Node 18+. Installation and development checks are in the [demo guide](extension/README.md#files-and-development-checks). The planned side-panel/live-data backend is not implemented; there is no committed automated test suite.
 
 ## Trust and safety
 

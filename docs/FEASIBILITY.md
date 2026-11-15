@@ -2,6 +2,8 @@
 
 Reviewed: October 30, 2026. Status: research-backed proposal, **not a tested integration or legal clearance**. Recheck platform documentation and applicable terms before implementation and release.
 
+**November 16, 2026 prototype decision:** the [v0.6 map-first direction](MAP_FIRST_DECISION.md) supersedes the side-panel-first product recommendation below, not the API/privacy boundaries. Use our geographic explorer as the main prototype and retain the Chrome companion. The current explorer reuses a Bavarian basemap with Leaflet; it is not a Maps JavaScript API integration. No Google account, new billing or credentials are set up. Direct consumer-Maps anchoring remains a separate unproven research path.
+
 ## Conclusion
 
 Proceed with a **desktop Chrome Manifest V3 side-panel prototype**, conditional on a usable, licensed local disruption feed. The side panel can provide useful incident information without drawing directly onto Google's map. Chrome documents both side panels and content scripts. [C1, C2]
