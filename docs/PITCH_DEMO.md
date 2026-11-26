@@ -1,28 +1,44 @@
-# Transit-first pitch walkthrough
+# Pitch walkthrough · v0.7 “Munich this morning”
 
-Updated November 16, 2026 for prototype v0.6. Product goal: a map-first awareness explorer with a compact Google Maps companion. See [the direction decision](MAP_FIRST_DECISION.md). This uses a Bavarian basemap, not Google's map. Awareness first; rerouting is a future phase.
+A 90-second live demo, plus a backup plan.
 
-## Rehearse a 60–90 second story
+## Before you present (10 minutes, same morning)
 
-1. Open `extension/munich-map.html` in Chrome. **Public transport** opens first. Street tiles need internet; packaged examples do not. Begin by stating that all transit notices are fictional.
-2. Search `U3`. Explain: “Imagine this is my usual line. I want to know what might affect the service or station access before leaving.” This is manual filtering, not a read of a Google route.
-3. Select the interruption card. Show the two approximate station positions, affected segment, next check and DEMO provenance. Pan/zoom: markers remain geographically anchored. No rail track path, station entrance or district closure is claimed.
-4. Reset, click Marienplatz and choose either of its two scenarios. Then select **Step-free access examples only**: show Odeonsplatz and explain a lift fault is not a whole-station closure.
-5. Reset and choose **Upcoming · demo**. Both advance notices remain in the list but no location is invented. Explain: “A strike or event lead needs confirmed scope before we paint an area as blocked.” The sample MVG strike excludes S-Bahn.
-6. Choose **Roadworks**, search `Ohlmüllerstraße`, select a card and show the actual source footprint. Explain that the affected facility is a parking bay, not the entire road. These are saved municipal records from November 15, 2026, not independently verified current conditions. Parking notices are opt-in. See [the map guide](MUNICH_MAP.md).
+1. `git pull`, then `npm run morning`. Check every source shows ✓, then commit and push `extension/data/today.*` (or let the Action do it). The badge in the page should say **Updated HH:MM** in green.
+2. Open the published page on your **own phone over mobile data** and check that it loads.
+3. On the laptop, open the page and click **Share** so the QR code is ready to show.
+4. Make a 60-second screen recording as a backup (venue Wi-Fi fails more often than code).
 
-To demonstrate the compact companion on Google's website, reload the extension at `chrome://extensions`, refresh the Maps tab and use its panel. It links to our explorer but does not overlay Google's geography. Rehearse at the projector resolution. The panel minimizes with **−** and restores from a small button. Make a backup recording; do not rely on network links, street tiles or a first-time My Maps import during the pitch.
+## The story
 
-## Suggested pitch
+> “Google Maps tells you how to get somewhere. It doesn't tell you *why* today might be different.”
 
-“Transport disruption information is scattered across operators, city notices and news. Transport Gaps brings the relevant context alongside the journey you're planning: which line or stop is affected, what that means, and where the information came from. This prototype demonstrates public-transport interruptions, delays, accessibility and advance warnings, with clearly labeled scenarios. We have also connected a saved Munich roadworks dataset to prove source-backed geographic display. Next comes authorized operator data, with freshness and correction handling. Rerouting comes later.”
+1. **Scan.** Show the QR code (Share button). “No app, no extension. Scan it now.” Let people open it on their phones.
+2. **The verdict.** Point at the status card: *🟠 Allow extra time* or *🔴 Expect disruption*. “Every morning at 6 our script checks MVG, the German weather service, live weather in 14 districts, city roadworks, local news and our own event list, and boils it down to this.”
+3. **Weather.** “Right now it's −2 °C with light snow, and the DWD has an ice warning.” Tap a district weather chip on the map to show snow per district. This part refreshes live.
+4. **Lines right now.** Scroll to the 🚦 board: “Every U-Bahn, S-Bahn and tram line, live. S3 is 4 minutes late, U6 has cancellations.” Tap a delayed line: its route lights up on the map in its own colour, with its end stations, and everything else fades. Tap a station on it for live departures.
+5. **A real disruption, in detail.** Open a **Live** card (e.g. *Tram 16/17: 9 stops not served · traffic accident*). Point at the red ✕ stops on the map, the translated *What MVG says* (“replacement buses, free taxis, until about 10:00”) and **Ways around it**: “walk 2 minutes to Arabellapark for the U4”. Tap **Live departures** to show the real board, then **Walking route in Google Maps**.
+6. **Why it matters: stacking.** Open the hotspot heads-up (*Odeonsplatz: expect disruption*). “A demo march (an example), the Christmas market crowds, roadworks nearby, and snow. Any one of these is fine. Together, they cost you 20 minutes.” Show the dashed ring on the map.
+7. **Into Google Maps.** Tap **Open in Google Maps ↗** on a phone. It jumps into the Google Maps app at that spot. “We don't replace Google Maps; we give it the context it's missing.”
+8. **Plan ahead.** Scroll to *Plan ahead: Warning strike* and *FC Bayern – Hertha, U6 Fröttmaning*. “Strikes and matches are announced days ahead, so you see them before they hit.”
+9. **Honesty.** Untick *Show example scenarios*. “Everything left is real data from this morning.”
+10. **Laptop bonus (optional).** Open Google Maps in Chrome to show the extension's small card, then the toolbar popup.
 
-## Questions to answer honestly
+## One-line pitch
 
-- **Is it live?** No. Transit scenarios and delay minutes are fictional. Roadworks are saved official source records with retrieval times, not verified current conditions.
-- **Does it read my route or travel history?** No. Line selection is manual; no Google route/history is read or stored. Saved-journey alerts are a separate future opt-in feature.
-- **Why not put everything on Google Maps?** Owning the geographic view gives us reliable anchoring, layer selection and source-precision controls. The extension stays as a compact companion. A dedicated Google API map is a future provider choice, not an automatic overlay in Google's consumer map.
-- **Does it cover all disruptions?** No. The municipal source does not comprehensively cover transit failures, strikes, protests, congestion or lift faults. A feature count is not a count of independent road closures. No matches never means “all clear.”
-- **What is the next engineering milestone?** Authorized transit alert access, one end-to-end source adapter, source-specific freshness/expiry/corrections and affected-line/stop mappings—not more simulated real-time styling.
+“Transport Gaps is a morning briefing for your commute: one place that tells Munich what might slow them down today (strikes, protests, breakdowns, events, roadworks, snow) and opens straight into Google Maps.”
 
-The About tab links a historical MVG notice showing that advance strike announcements exist. Do not describe that January/February 2026 example as a current warning. Source permissions and ingestion plans remain in [the Munich data plan](MUNICH_DATA_PLAN.md).
+## Questions you'll get
+
+- **Is it live?** Line delays and departure boards are live (every 2 minutes), and so is the weather (every 10 minutes). The written MVG notices, events and roadworks are refreshed each morning and on demand; next step is every 15 minutes.
+- **Is “ways around it” a route planner?** No. It finds nearby stops with other lines and estimates the walk. That's quick and transparent, and Google Maps does the actual routing.
+- **Where does strike and protest information come from?** Announced strikes and events are curated in a simple file with a source link for each. News headlines appear as unconfirmed leads. Next: semi-automatic extraction from MVG and police press releases, with a human check.
+- **Is MVG data allowed?** We use MVG's public notices (headline, lines, times) with a link back. For a real launch we'd ask MVG for permission or use an official feed.
+- **Why not draw inside Google Maps?** Google doesn't allow third-party layers in its app or website. A web page plus Google Maps deep links works on every phone today.
+- **Rerouting?** Out of scope for the MVP. The next step after awareness is personal saved routes and alerts.
+
+## Backup if the internet fails
+
+Open `extension/index.html` directly from the laptop. All of the morning's data is bundled; only map tiles, live weather and live delays need a connection (the line board then shows the morning's numbers).
+
+> Live data changes by the minute: the tram accident above may be gone by the time you present. Open the board first and pick whichever **Live** card has red stops or ways around it.

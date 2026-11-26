@@ -3,18 +3,18 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Your friendly transport layer</title>
+    <title>Munich this morning</title>
     <link rel="stylesheet" href="popup.css">
+    <script defer src="data/today.js"></script>
+    <script defer src="popup.js"></script>
   </head>
   <body>
-    <div class="eyebrow">TRANSPORT GAPS <span>v0.6</span></div>
-    <div class="ticket" aria-hidden="true">🚎 <span>a little heads-up goes a long way</span></div>
-    <h1>Less “oh no.”<br>More “good to know.”</h1>
-    <p>See example transit issues at approximate station locations, then explore saved roadworks footprints. One geographic explorer; clear impact and source details.</p>
-    <a class="primary" href="munich-map.html" target="_blank" rel="noopener noreferrer">Open the disruption explorer <span aria-hidden="true">↗</span></a>
-    <a class="secondary" href="munich-map.html#roads" target="_blank" rel="noopener noreferrer">Explore saved roadworks <span aria-hidden="true">↗</span></a>
-    <a class="secondary" href="https://www.google.com/maps/@48.1250,11.5806,16z" target="_blank" rel="noopener noreferrer">Try alongside Google Maps <span aria-hidden="true">↗</span></a>
-    <p class="tip">The explorer uses a Bavarian street map, not Google's basemap. On the normal Google Maps website we show a compact companion—not geographic overlays. Reload the extension after updating.</p>
-    <div class="notice"><strong>TRANSIT SCENARIOS ≠ LIVE ALERTS</strong><br>Transit disruptions are illustrative. Roadworks uses selected saved city records. No live transit feed, route reading, tracking, notifications or rerouting.</div>
+    <div class="eyebrow">🚎 TRANSPORT GAPS <span>v0.7 · München</span></div>
+    <div class="status" id="status"><span id="emoji">⏳</span><div><h1 id="title">Loading…</h1><p id="updated"></p></div></div>
+    <ul class="ups" id="ups"></ul>
+    <a class="primary" href="index.html" target="_blank" rel="noopener noreferrer">Open today’s briefing <span aria-hidden="true">↗</span></a>
+    <a class="secondary" href="index.html#share" target="_blank" rel="noopener noreferrer">Show QR code for phones <span aria-hidden="true">▦</span></a>
+    <a class="secondary" href="https://www.google.com/maps/@48.1372,11.5755,13z/data=!5m1!1e2" target="_blank" rel="noopener noreferrer">Google Maps with transit layer <span aria-hidden="true">↗</span></a>
+    <p class="tip">Updated every morning from MVG notices, DWD warnings, live weather, city roadworks, news headlines and our team’s event list. Awareness, not rerouting.</p>
   </body>
 </html>

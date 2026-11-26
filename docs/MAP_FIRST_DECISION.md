@@ -1,5 +1,7 @@
 # Direction decision: map-first awareness, extension as companion
 
+> **Historical (v0.6).** The current prototype is the v0.7 morning briefing on `prototype/munich-briefing-v0.7`. See [MORNING_BRIEFING.md](MORNING_BRIEFING.md). Files mentioned below such as `preview.html`, `content.js` and `munich-highlights.js` were removed in v0.7.
+
 Implemented as an experimental direction for prototype v0.6 on November 16, 2026. **Not a team-approved product direction, release or presentation choice.** This work is shared on `prototype/munich-map-v0.6` for review; the v0.2 baseline and existing presentation remain on `main`. See [the team review guide](TEAM_REVIEW.md). No production-platform or budget approval is implied.
 
 ## Recommendation

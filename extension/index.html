@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#253731">
+    <meta name="description" content="Munich this morning: transport disruptions, strikes, protests, big events, roadworks and snow or rain, in one friendly map that opens straight into Google Maps.">
+    <title>Munich this morning · Transport Gaps</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🚎%3C/text%3E%3C/svg%3E">
+    <link rel="stylesheet" href="vendor/leaflet.css">
+    <link rel="stylesheet" href="app.css">
+    <script defer src="vendor/leaflet.js"></script>
+    <script defer src="vendor/qrcode.js"></script>
+    <script defer src="weather-codes.js"></script>
+    <script defer src="network.js"></script>
+    <script defer src="data/lines.js"></script>
+    <script defer src="data/today.js"></script>
+    <script defer src="app.js"></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="./"><span class="logo" aria-hidden="true">🚎</span> TRANSPORT GAPS <small>· München</small></a>
+      <span class="fresh" id="freshness" role="status">Loading…</span>
+      <button class="icon-btn" id="share-btn" type="button" aria-haspopup="dialog"><span aria-hidden="true">▦</span> <span class="label">Share</span></button>
+      <button class="icon-btn" id="about-btn" type="button" aria-haspopup="dialog" aria-label="About and sources"><span aria-hidden="true">ⓘ</span></button>
+    </header>
+
+    <main class="layout" id="app">
+      <div class="side" id="side">
+        <section class="hero" aria-labelledby="status-title">
+          <div class="eyebrow" id="hero-date">Munich this morning</div>
+          <div class="status-card" id="status-card">
+            <div class="status-line"><span class="status-emoji" id="status-emoji" aria-hidden="true">⏳</span><h1 id="status-title">Loading the briefing…</h1></div>
+            <p class="status-sentence" id="status-sentence"></p>
+            <div class="weather-strip" id="weather-strip" hidden></div>
+            <div id="alerts"></div>
+            <div class="stats" id="stats" aria-label="What we found, by cause"></div>
+            <p class="examples-note" id="examples-note" hidden></p>
+          </div>
+        </section>
+
+        <section class="feed">
+          <section class="netboard" id="netboard" aria-labelledby="net-title" hidden>
+            <div class="section-head"><h2 id="net-title">🚦 Lines right now</h2><span id="net-updated"></span></div>
+            <p class="net-summary" id="net-summary"></p>
+            <div id="net-rows"></div>
+            <div class="line-focus" id="line-focus" hidden></div>
+          </section>
+
+          <div class="section-head"><h2>Today’s heads-ups</h2><span id="headsup-count"></span></div>
+          <div id="headsups"></div>
+
+          <div class="section-head"><h2>Everything we found</h2><span id="list-count" role="status" aria-live="polite"></span></div>
+          <label class="sr-only" for="search">Search lines, stations or streets</label>
+          <input class="search" id="search" type="search" placeholder="Search U6, Marienplatz, strike…" autocomplete="off" maxlength="80">
+          <div class="chips" id="filters" aria-label="Filter by cause"></div>
+          <div class="toggle-row">
+            <label><input type="checkbox" id="show-examples" checked> Show example scenarios</label>
+            <label><input type="checkbox" id="show-ongoing"> Long-running works</label>
+          </div>
+          <div id="list"></div>
+
+          <footer class="foot">
+            <p><strong>Awareness, not rerouting.</strong> Missing reports never mean all clear. Always check the operator before travelling.</p>
+            <p id="foot-sources"></p>
+            <p><a href="munich-map.html#roads">Advanced roadworks explorer &amp; Google My Maps export</a> · <a href="https://github.com/evanjw2/Transport-gaps-map" target="_blank" rel="noopener noreferrer">GitHub</a></p>
+          </footer>
+        </section>
+      </div>
+
+      <section class="map-wrap" aria-label="Map of today’s disruptions">
+        <div id="map" tabindex="0" aria-label="Interactive map. Drag to move, use plus and minus to zoom."></div>
+        <div class="map-tools">
+          <label class="map-toggle"><input type="checkbox" id="layer-hubs" checked> 🚉 Live delays</label>
+          <label class="map-toggle"><input type="checkbox" id="layer-weather" checked> 🌨️ Weather</label>
+          <label class="map-toggle"><input type="checkbox" id="layer-roads"> 🦺 All roadworks</label>
+          <button class="map-toggle" id="fit-all" type="button">⤢ Show all</button>
+        </div>
+        <div class="map-note" id="map-note">✕ red = stop not served · 🚉 = live delays at big stations · rings = busy areas, not closures.</div>
+      </section>
+    </main>
+
+    <dialog id="share-dialog" aria-labelledby="share-title">
+      <div class="dialog-head"><h2 id="share-title">Scan to open on your phone</h2><button class="close" type="button" data-close aria-label="Close">✕</button></div>
+      <div class="dialog-body">
+        <div class="qr-box" id="qr"></div>
+        <div class="share-url"><input id="share-url" readonly aria-label="Link to this page"><button class="btn primary" id="copy-url" type="button">Copy</button></div>
+        <p class="hint" id="share-hint" hidden></p>
+        <p style="font-size:13px;color:var(--muted)">Works in any phone browser, with no app or extension needed. Tap any pin’s <strong>Open in Google Maps</strong> to jump into the Google Maps app.</p>
+      </div>
+    </dialog>
+
+    <dialog id="about-dialog" aria-labelledby="about-title">
+      <div class="dialog-head"><h2 id="about-title">How this works</h2><button class="close" type="button" data-close aria-label="Close">✕</button></div>
+      <div class="dialog-body">
+        <p>Every morning a small script checks MVG service notices, official weather warnings, live weather for 14 districts, city roadworks, a few local news headlines and our team’s list of strikes, protests and big events. It stacks them up and tells you where your journey might be slowed down.</p>
+        <h3>What the labels mean</h3>
+        <ul class="legend">
+          <li><span class="tag live">Live</span><span>From the operator’s current notices, as of the last update.</span></li>
+          <li><span class="tag official">Official</span><span>Published plans: MVG timetable changes, DWD warnings, city roadworks.</span></li>
+          <li><span class="tag announced">Announced</span><span>Dated event with a public source (matches, markets, announced strikes).</span></li>
+          <li><span class="tag lead">News lead</span><span>A headline that might matter. Not confirmed, so open the article.</span></li>
+          <li><span class="tag demo">Example</span><span>Made-up scenario showing how protests, strikes or lift faults would appear. Not real.</span></li>
+        </ul>
+        <h3>Sources in this briefing</h3>
+        <table class="sources"><tbody id="sources"></tbody></table>
+        <h3>Reading the map</h3>
+        <ul class="legend">
+          <li><span>🟢 +3′ chips</span><span>Live average delay at 17 big stations (next 40 min). Tap one for its departure board.</span></li>
+          <li><span>✕ red stops</span><span>Stops MVG says are not served right now. ⇥ orange = where a line turns back.</span></li>
+          <li><span>✓ green stops</span><span>Nearby stops with other lines, a way around it. The dotted line is a straight-line walk, not a route.</span></li>
+          <li><span>Coloured line</span><span>Tap a line in “Lines right now” (or a line badge under “Ways around it”) to draw its route through its stations, from MVV's timetable. Ends are labelled; tap any station for live departures.</span></li>
+          <li><span>Dashed rings</span><span>Busy areas where several things stack up. Not closures.</span></li>
+        </ul>
+        <h3>Privacy</h3>
+        <p>No location tracking, accounts or analytics. Weather is refreshed from Open-Meteo in your browser; map tiles come from the Bavarian mapping service.</p>
+        <p style="font-size:12px;color:var(--muted)">Independent student prototype, not affiliated with Google or MVG. Map: © Bayerische Vermessungsverwaltung. Weather: Open-Meteo (CC BY 4.0), DWD. Roadworks: Landeshauptstadt München, dl-de/by-2-0. Line routes: Münchner Verkehrs- und Tarifverbund GmbH (MVV), GTFS, CC BY.</p>
+      </div>
+    </dialog>
+
+    <noscript><div class="no-data">This page needs JavaScript to show the map and briefing.</div></noscript>
+  </body>
+</html>

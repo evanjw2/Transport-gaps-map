@@ -1,50 +1,43 @@
-# Team review: experimental Munich prototype
+# Team review: Munich morning briefing (v0.7)
 
-Status: **work in progress, not approved for the presentation**. Shared November 16, 2026 on `prototype/munich-map-v0.6`. This branch preserves the current implementation for teammates to inspect and contribute to; it is not a request to replace the existing slides or merge into `main`.
+Status: **working prototype for the presentation, not merged into `main`**. Branch `prototype/munich-briefing-v0.7`, built on top of `prototype/munich-map-v0.6`. `main` still holds the v0.2 baseline used by the existing slides.
 
-## What stays unchanged
+## What changed since v0.6
 
-- `main` remains the v0.2.0 extension baseline. At branch creation it points to commit `2fb34e8`.
-- Existing teammate slides and the choice of presentation version are unchanged. No new slide deck is included.
-- The team can keep presenting v0.2 while evaluating this alternative separately.
+| v0.6 | v0.7 |
+| --- | --- |
+| 8 fictional transit scenarios | **Real MVG notices every morning** (incidents + planned changes), placed on stations |
+| No weather | **Live weather for 14 districts** + official DWD warnings |
+| Saved roadworks from Nov 15 | **Fresh roadworks summary every morning**; full layer weekly |
+| No strikes, protests or events | **Team-curated `data/events.json`** (Christmas market, Tollwood, Bayern home games) + 3 clearly labelled examples |
+| Desktop-only explorer | **Phone-first website + QR code**, Chrome popup, small card on Google Maps |
+| Lists only | **Heads-up rules** that stack causes into 🟢 / 🟠 / 🔴 and “Plan ahead” |
+| No delay detail | **Live line board** (every line, every 2 min), **stops not served highlighted**, live departure boards, MVG advice in English, **ways around it** + `data/tips.json` |
 
-## What this branch explores
-
-- A standalone map-first explorer, with the Chrome extension retained as launcher/compact companion.
-- Actual saved Munich municipal roadwork polygons, rather than v0.2's screen-positioned illustrative patches. The 5,790 source features are not 5,790 verified closures or comprehensive disruption coverage.
-- Eight fictional transit scenarios. Four have approximate station locations; four stay list-only. No actual train-track paths, exact entrances or live transit incidents are claimed.
-- Search, mode/timing/accessibility filters, shared-station selection, source details, responsive layouts and manual roadworks KML export.
-- The existing Bavarian basemap with Leaflet—not Google's basemap or an automatic overlay inside Google's website. No paid Google integration is set up.
-
-The prototype has no live transit feed, source-backed current strike warnings, saved-journey matching, notifications, weather feed or rerouting. Those remain future work, not presentation claims.
-
-## Try it locally
-
-In an existing clone, first commit or stash your own work; do not discard local changes to switch branches. Then:
+## Try it
 
 ```sh
 git fetch origin
-git switch prototype/munich-map-v0.6
+git switch prototype/munich-briefing-v0.7
+npm run morning        # optional: refresh today's data
+open extension/index.html
 ```
 
-If you already have this local branch, update it with `git pull --ff-only`. Open `extension/munich-map.html` in Chrome. No build step, server or API key is needed; street tiles need internet. Search `U3`, click a card/marker, then choose Roadworks and search `Ohlmüllerstraße`. All transit scenarios are fictional, and road records are a November 15, 2026 snapshot—not verified live conditions.
+Commit or stash your own work before switching branches. If you use the unpacked Chrome extension, reload it after switching.
 
-To test the Chrome companion, load this checkout's `extension` folder at `chrome://extensions`, or reload an existing unpacked installation and refresh the Maps tab. The toolbar popup opens the explorer; the normal Google Maps page shows a compact panel, not geographic overlays. Switching Git branches changes the files used by an unpacked extension, so reload it after switching. For side-by-side comparison, use separate checkout folders and clearly distinguish which extension folder is loaded.
+## How to contribute
 
-To return to the existing baseline, first save any edits, run `git switch main`, and reload the unpacked extension if applicable. That does not remove this prototype branch from GitHub.
+- **Add a real strike, protest or event:** edit `data/events.json` on GitHub. The format is in [MORNING_BRIEFING.md](MORNING_BRIEFING.md#adding-a-strike-protest-or-event-no-coding-needed). Always add a source link.
+- **Add a local workaround tip:** edit `data/tips.json`.
+- **Improve the rules:** `scripts/briefing.mjs`, then run `npm test`.
+- **Design:** `extension/app.css`, `extension/app.js`.
+- Open pull requests against `prototype/munich-briefing-v0.7`, not `main`.
 
-## Review before choosing a presentation version
+## Decisions for the team
 
-1. Does the standalone explorer communicate the transport-awareness idea better than the v0.2 Google Maps demonstration?
-2. Is the transition between Google's compact companion and our own map acceptable?
-3. Are demo transit notices, approximate locations and saved official source footprints unmistakably different?
-4. Which one or two scenarios best tell the story without implying live coverage?
-5. Should any selected improvements be adopted into the presentation baseline, or should this remain exploratory?
+1. Present v0.7 instead of v0.2? If yes, slides need: problem → QR demo → how the morning script works → honest limits → next steps.
+2. Turn on GitHub Pages for this branch so the QR code works for everyone (Settings → Pages → branch `prototype/munich-briefing-v0.7`, folder `/`).
+3. Ask MVG about permission to reuse service notices before any public launch.
+4. Who owns `data/events.json` each week (checking MVG press releases, city notices, match calendars)?
 
-Keep contributions isolated: create a feature branch from this prototype branch and target any proposed pull request at `prototype/munich-map-v0.6`, not `main`. A team decision is needed before merging the prototype into `main` or replacing the slide narrative.
-
-## Optional later slides
-
-If the team chooses to make a separate prototype deck, label it **experimental / under evaluation**. Suggested story: user problem → transport-awareness goal → geographic transit/roadworks demo → what is real versus simulated → data/integration limits → next validation milestone. Keep the existing v0.2 deck intact until the team explicitly chooses otherwise.
-
-Implementation rationale and local checks: [map-first direction](MAP_FIRST_DECISION.md). Presentation walkthrough: [pitch guide](PITCH_DEMO.md). Source limits and attribution: [map guide](MUNICH_MAP.md).
+Older notes: [v0.6 map-first decision](MAP_FIRST_DECISION.md).

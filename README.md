@@ -1,73 +1,71 @@
-# Transport Gaps Map
+# Transport Gaps Map · Munich this morning
 
-> **Work in progress — team review branch:** `prototype/munich-map-v0.6`. This is an experimental alternative, not an approved release or presentation choice. The team's v0.2 baseline remains on `main`; existing slides do not need to change yet. Start with [the team review guide](docs/TEAM_REVIEW.md) to compare and try this prototype.
+> **Prototype branch `prototype/munich-briefing-v0.7`** for team review. `main` still holds the v0.2 baseline the current slides use.
 
-An early-stage project to help people understand **where transport is disrupted, what to avoid, which services or facilities are affected, and how current the information is**, alongside Google Maps.
+Google Maps tells you *how* to get somewhere. It rarely tells you that the tram is replaced by buses after an accident, that a march is crossing Odeonsplatz this afternoon, that the Christmas market makes Marienplatz a crush, or that 4 cm of snow is coming. **Transport Gaps gathers that every morning into one friendly briefing**: what's happening, where, why it matters, and one tap to open the spot in Google Maps.
 
-Potential disruptions include protests, strikes, vehicle or infrastructure breakdowns, road closures, and congestion. The first release focuses on awareness, not rerouting.
+**Scan a QR code → see today's Munich → tap a pin → it opens in your Google Maps app.** It works in any phone browser with no install, plus a Chrome extension for laptops.
 
-## Project status
+## What it shows
 
-**The v0.6 prototype is map-first, with the extension as a launcher and compact companion.** Open the Munich explorer for approximate station markers representing fictional transit examples, or switch to Roadworks for saved official source polygons. The map uses Leaflet and a Bavarian basemap—not Google tiles or an overlay inside Google's website. The [direction decision](docs/MAP_FIRST_DECISION.md) explains why this better supports transport awareness and future layers without fragile consumer-map integration.
+| | Cause | From | Label |
+| --- | --- | --- | --- |
+| 🚦 | Every U-Bahn, S-Bahn and tram line: on time / +4′ / ✕2 cancelled, refreshed every 2 min | MVG departure boards at 17 big stations | **Live** |
+| 🚨💥🚑🔧 | Breakdowns, accidents, emergency stops, heavy traffic, with **stops not served highlighted**, sections, MVG's advice in English and **ways around it** | MVG service notices + station/line lists | **Live** |
+| 🚧 | Planned works, replacement buses, moved stops | MVG service notices | **Official** |
+| 🦺 | Roadworks on the carriageway today | City of Munich open data | **Official** |
+| ❄️🌧️ | Snow, rain, ice for 14 districts + DWD warnings | Open-Meteo (live in browser), Deutscher Wetterdienst | **Live / Official** |
+| ✊📣🎟️ | Strikes, protests, matches, markets, festivals | Team-curated [`data/events.json`](data/events.json) | **Announced** |
+| 📰 | Headlines about strikes, demos, closures | Local news RSS, headline + link only | **News lead** |
+| 🧪 | Example protest, strike and lift fault to show the idea | `data/events.json` | **Example** (can be hidden) |
 
-Eight transit scenarios remain fictional; four have approximate station locations and four remain list-only rather than inventing geography. The road snapshot retains 5,790 municipal source features and manual Google My Maps KML export; these are not comprehensive coverage or that many confirmed closures. No live transit backend, route reading, notifications, rerouting or store release is implemented.
+Tap a line to **highlight its route** through its stations (from MVV's timetable), with its ends labelled and disrupted stops marked. Tap any highlighted stop or big station for its **live departure board** (delays, cancellations). Each disruption suggests **ways around it**: nearby stations with other lines, walking time, a one-tap walking route in Google Maps, and local tips from [`data/tips.json`](data/tips.json).
 
-## Try the transport demo
+On top of the list, **heads-up rules** stack causes together: *“Odeonsplatz: expect disruption, because demonstration march + Christmas market crowds + roadworks + snow.”* The overall status for the city is 🟢 smooth / 🟠 allow extra time / 🔴 expect disruption.
 
-Open **`extension/munich-map.html` in Chrome**, or install/reload the unpacked `extension` folder at `chrome://extensions` and click **Open the disruption explorer** in the toolbar popup. Click a station marker or card, search `U3`, and switch to **Roadworks** for saved source footprints. Street tiles require internet; packaged data and UI do not. Transit coordinates are approximate station centres, not exact entrances or affected track paths.
+## Try it (1 minute)
 
-On the normal Google Maps website, the extension still shows the compact companion, with a link to the explorer; it does not inject geographic overlays there. `extension/preview.html` retains the offline compact-panel presentation. See the [pitch walkthrough](docs/PITCH_DEMO.md), [product/coverage guide](docs/PROTOTYPE_GUIDE.md), [demo guide](extension/README.md) and [map/export guide](docs/MUNICH_MAP.md).
+- **Just open it:** double-click [`extension/index.html`](extension/index.html). No server or install needed.
+- **Phone on the same Wi-Fi:** `npm run serve`, then open `http://<your-laptop-ip>:8080/extension/` on the phone.
+- **Anyone, anywhere:** once GitHub Pages is on, use <https://evanjw2.github.io/Transport-gaps-map/>. The **Share** button in the page shows its QR code.
+- **Chrome extension:** `chrome://extensions` → Developer mode → *Load unpacked* → choose the `extension` folder. The toolbar popup shows today's status, and Google Maps gets a small “Munich: Allow extra time” card.
 
-## Why build this?
+## Update the data
 
-The hypothesis is that people need clearer, locally relevant explanations of disruptions than they can consistently find in their existing travel workflow. Google already provides traffic information in supported regions, so the opportunity is **context, provenance, freshness, and coverage gaps**, not claiming Google has no traffic data. See the official sources in the [feasibility review](docs/FEASIBILITY.md#official-sources).
+```sh
+npm run morning      # fetch everything, rebuild extension/data/today.* (~2 s)
+npm test             # 19 tests for parsing, stops, alternatives, line paths and heads-up rules
+npm run lines        # rebuild line routes from MVV's timetable (weekly in the Action)
+```
 
-We need to validate this hypothesis with users and a specific city's available data before investing in a large build.
+A GitHub Action ([`.github/workflows/morning-briefing.yml`](.github/workflows/morning-briefing.yml)) runs this every morning and whenever `data/events.json` changes. Full details, including how to add a strike or protest in 2 minutes, are in **[docs/MORNING_BRIEFING.md](docs/MORNING_BRIEFING.md)**.
 
-The longer-term vision is a transport information layer, not just a blockage map: closures and areas to avoid, strikes and event-related changes, service reliability, accessibility/facility faults, and relevant weather context. A delay, a broken lift, or rainfall must not automatically be described as an area-wide closure.
+## Project layout
 
-## First release: disruption awareness
+```
+data/events.json              team-curated strikes, protests, events (edit me)
+data/tips.json                local workaround tips (edit me)
+scripts/morning-update.mjs    fetches sources, writes the briefing
+scripts/briefing.mjs          pure parsing + heads-up rules (tested in briefing.test.mjs)
+scripts/import-munich.mjs     validated import of the city roadworks dataset
+extension/index.html|app.js   the briefing website / phone view / extension page
+extension/network.js          live line status + departure boards (browser and script)
+scripts/build-lines.mjs       MVV GTFS → extension/data/lines.js (line routes through stations)
+extension/data/today.*        generated briefing (do not edit by hand)
+extension/companion.js        small card on google.com/maps
+extension/munich-map.html     advanced roadworks explorer + Google My Maps KML export
+```
 
-- Map-first transport-awareness explorer, with a lightweight Chrome companion beside Google Maps.
-- One pilot city, selected after a data and licensing audit; Munich is now the researched candidate, not yet a team-approved commitment.
-- Incident cards showing the affected place or service, disruption type, impact, source, verification status, and update time.
-- Filters for disruption type, travel mode, and active or upcoming incidents.
-- Clear loading, empty, stale, partial-coverage, and source-unavailable states.
-- An **Open in Google Maps** action for incidents with reliable coordinates, plus route/stop descriptions when geometry is unavailable.
-- A geographic view with explicit source precision and real/demo separation. Hosting, production provider and budget still require team approval.
+## Honest limits
 
-**Not in the first release:** alternative-route calculation, automatic navigation changes, guaranteed real-time or worldwide coverage, public crowdsourcing, continuous location tracking, or native Google Maps mobile integration.
+- Morning snapshot plus live weather, not second-by-second. MVG's own app is the source of truth for departures.
+- MVG notices are used from MVG's public website endpoint without a written reuse agreement. That's fine for a student demo, but needs permission before a public launch ([details](docs/MORNING_BRIEFING.md#sources-and-permissions-read-before-going-public)).
+- Example scenarios are clearly marked and can be hidden with one toggle.
+- Awareness, not rerouting. Missing reports never mean “all clear”.
+- No tracking, accounts or analytics. Not affiliated with Google or MVG.
 
-## Is a Google Maps extension feasible?
+## More
 
-**Yes, as a browser companion; a supported plug-in inside the consumer map has not been established.** Chrome supports side panels and content scripts. Google's documented custom-overlay API applies to a map our application creates using Maps JavaScript API, not automatically to the map at `maps.google.com`. We should not depend on undocumented map internals or scrape Google traffic data. Evidence, trade-offs, policy constraints, and open questions are in the [feasibility review](docs/FEASIBILITY.md).
+[Pitch walkthrough](docs/PITCH_DEMO.md) · [Team review notes](docs/TEAM_REVIEW.md) · [Feasibility review](docs/FEASIBILITY.md) · [Munich data plan](docs/MUNICH_DATA_PLAN.md) · [Delivery plan](docs/PLAN.md) · [Contributing](CONTRIBUTING.md)
 
-## Read and contribute
-
-1. Read [the MVP and delivery plan](docs/PLAN.md) for milestones, workstreams, acceptance criteria, and starter tasks.
-2. Read [the feasibility review](docs/FEASIBILITY.md) before choosing an integration or data source.
-3. Use [the contribution guide](CONTRIBUTING.md) to propose work and submit a pull request.
-
-Read [the map-first direction decision](docs/MAP_FIRST_DECISION.md) before adding features: public-transport relevance, useful geographic context and source honesty come before bigger parking datasets or decorative blocked areas.
-
-For the proposed Munich pilot, read [the source audit and database plan](docs/MUNICH_DATA_PLAN.md). It recommends municipal roadworks first, documents a successful bounded GeoJSON polygon fetch, separates static transit data from permission-gated realtime access, and plans reviewed advance-event intelligence. No live-data backend has been implemented.
-
-Suggested workstreams: product/design, extension/frontend, data/backend, and QA/privacy. People can own more than one; all ownership is currently unassigned.
-
-## Future ideas
-
-The [future backlog](docs/PLAN.md#future-updates--not-mvp-commitments) records live weather/rainfall integration and category styling, including legends and accessibility requirements. The active v0.6 explorer prioritizes transit impacts and source-backed roadworks; it does not paint fictional rain or area-closure patches. Weather feeds, authorized live transit data and operational reliability remain future work. Rerouting is deferred to a separate feasibility phase.
-
-Additional planned ideas include source-backed advance warnings from news and official online notices, plus opt-in saved-route/history matching to notify users when their usual journeys may be affected. These require source verification, honest location uncertainty, explicit consent and route-data controls; the current extension does not collect travel history or send alerts. See F03 and F04 in the future backlog.
-
-## Development
-
-The demo uses JavaScript, CSS, SVG/canvas and bundled Leaflet/fflate with no build step or runtime package installation. The snapshot importer uses Node 18+. Installation and development checks are in the [demo guide](extension/README.md#files-and-development-checks). The planned side-panel/live-data backend is not implemented; there is no committed automated test suite.
-
-## Trust and safety
-
-This is a travel-information aid, not a safety guarantee. Missing reports do not mean an area is clear. Keep verified and unverified information distinct, show source freshness, and use neutral language for public events. Do not collect participant identities or individual protester locations.
-
-## License and affiliation
-
-The team has not selected a software license. Do not assume this repository or external data may be reused without permission. Transport Gaps Map is an independent project, not an official Google product.
+The team has not selected a software license yet. Third-party data keeps its own license (see the About dialog in the app).

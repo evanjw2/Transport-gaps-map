@@ -271,6 +271,6 @@
     map.invalidateSize();
   }
   for (const button of document.querySelectorAll('[data-layer]')) button.addEventListener('click', () => setView(button.dataset.layer));
-  window.addEventListener('hashchange', () => setView(location.hash === '#roads' ? 'roads' : 'transit'));
-  setView(location.hash === '#roads' ? 'roads' : 'transit');
+  window.addEventListener('hashchange', () => setView(location.hash === '#transit' ? 'transit' : 'roads'));
+  setView(location.hash === '#transit' ? 'transit' : 'roads');
 })();

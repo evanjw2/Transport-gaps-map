@@ -1,5 +1,7 @@
 # MVP and team delivery plan
 
+> **Latest (v0.7, November 26, 2026):** the prototype is now a daily “Munich this morning” briefing: real MVG notices, live weather + DWD warnings, city roadworks, news leads and team-curated strikes/protests/events, published as a phone-friendly website with a QR code, a Chrome popup and a Google Maps card. See [MORNING_BRIEFING.md](MORNING_BRIEFING.md). The v0.6 notes below are historical.
+
 Created October 30, 2026. Status: proposed first plan for team review. Owners, pilot city, budget, stack, and dates are **not assigned or approved**. This is not an implementation claim.
 
 The [Munich source audit and database proposal](MUNICH_DATA_PLAN.md) recommends Munich as the pilot candidate and municipal roadworks as the first live slice. It records source evidence, one bounded GeoJSON payload check, access/licensing gaps, ingestion architecture, and proposed tasks D01–D07. Use it for M0/T02 and the future F03/F04 work; it does not approve a city or implement a backend.

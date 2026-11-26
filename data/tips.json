@@ -1,0 +1,166 @@
+{
+  "about": "Local-knowledge workaround tips. A tip is attached to a disruption when ALL of its filters match (lines, causes, modes, stations, effects). Keep them short, factual and checkable. Shown in the app as 'Local tip'.",
+  "tips": [
+    {
+      "id": "stammstrecke",
+      "lines": [
+        "S1",
+        "S2",
+        "S3",
+        "S4",
+        "S6",
+        "S7",
+        "S8"
+      ],
+      "effects": [
+        "replacement buses",
+        "service interrupted",
+        "closure",
+        "delays",
+        "not served"
+      ],
+      "text": "S-Bahn trunk line (Pasing – Hauptbahnhof – Marienplatz – Ostbahnhof) in trouble? The U5 runs almost parallel: Laimer Platz – Hauptbahnhof – Karlsplatz – Odeonsplatz – Ostbahnhof. Tram 19 also links Pasing, Hauptbahnhof, Karlsplatz and Max-Weber-Platz.",
+      "stations": [
+        "Pasing",
+        "Laim",
+        "Hirschgarten",
+        "Donnersbergerbrücke",
+        "Hackerbrücke",
+        "Hbf",
+        "Hauptbahnhof",
+        "Karlsplatz",
+        "Marienplatz",
+        "Isartor",
+        "Rosenheimer Platz",
+        "Ostbahnhof",
+        "Leuchtenbergring"
+      ],
+      "causes": [
+        "accident",
+        "emergency",
+        "technical",
+        "disruption",
+        "works",
+        "traffic",
+        "weather"
+      ]
+    },
+    {
+      "id": "u3u6-centre",
+      "lines": [
+        "U3",
+        "U6"
+      ],
+      "text": "U3/U6 trouble in the centre? Trams 27 and 28 link Schwabing (Kurfürstenplatz) with Karlsplatz and Sendlinger Tor, and the U2 connects Scheidplatz with Hauptbahnhof and Sendlinger Tor.",
+      "causes": [
+        "accident",
+        "emergency",
+        "technical",
+        "disruption",
+        "works",
+        "traffic",
+        "weather"
+      ]
+    },
+    {
+      "id": "u1u2-centre",
+      "lines": [
+        "U1",
+        "U2",
+        "U7",
+        "U8"
+      ],
+      "text": "Short U1/U2 interruption? Hauptbahnhof ↔ Sendlinger Tor is about a 12-minute walk along Sonnenstraße, which is often quicker than waiting.",
+      "causes": [
+        "accident",
+        "emergency",
+        "technical",
+        "disruption",
+        "works",
+        "traffic",
+        "weather"
+      ]
+    },
+    {
+      "id": "u4u5-centre",
+      "lines": [
+        "U4",
+        "U5"
+      ],
+      "text": "U4/U5 trouble? Between Hauptbahnhof and Ostbahnhof any S-Bahn on the trunk line is the fastest alternative; tram 19 runs Hauptbahnhof – Karlsplatz – Max-Weber-Platz.",
+      "causes": [
+        "accident",
+        "emergency",
+        "technical",
+        "disruption",
+        "works",
+        "traffic",
+        "weather"
+      ]
+    },
+    {
+      "id": "tram-sev",
+      "modes": [
+        "tram"
+      ],
+      "effects": [
+        "replacement buses",
+        "service interrupted",
+        "not served"
+      ],
+      "text": "Tram replacement buses usually stop on the street next to the tram stop and carry fewer people. If you're near a U-Bahn station, switching is often faster."
+    },
+    {
+      "id": "match-day",
+      "causes": [
+        "event"
+      ],
+      "stations": [
+        "Fröttmaning"
+      ],
+      "text": "Match days: after full time, walking about 15 minutes south to Kieferngarten (U6) often beats the queues at Fröttmaning."
+    },
+    {
+      "id": "christmas-market",
+      "causes": [
+        "event"
+      ],
+      "stations": [
+        "Marienplatz"
+      ],
+      "text": "Avoid changing trains at Marienplatz at peak market times: Odeonsplatz (U3/U6, U4/U5) and Karlsplatz (S-Bahn, U4/U5) are less crowded."
+    },
+    {
+      "id": "strike",
+      "causes": [
+        "strike"
+      ],
+      "text": "MVG strikes don't stop the S-Bahn (Deutsche Bahn), regional trains or most MVV regional buses. In the centre, walking or bike-sharing is often quicker than waiting."
+    },
+    {
+      "id": "protest",
+      "causes": [
+        "protest"
+      ],
+      "text": "Marches usually hold up buses and trams on surface streets for 30–60 minutes; the U-Bahn underneath keeps running."
+    },
+    {
+      "id": "lift",
+      "causes": [
+        "access"
+      ],
+      "text": "Lift out of order? Check MVG's lift status before setting off and plan to use the next station with a working lift. Staff at major hubs can help."
+    },
+    {
+      "id": "traffic-bus",
+      "causes": [
+        "traffic",
+        "accident"
+      ],
+      "modes": [
+        "bus"
+      ],
+      "text": "Buses stuck in traffic? A nearby U-Bahn or S-Bahn line is usually faster until the road clears."
+    }
+  ]
+}

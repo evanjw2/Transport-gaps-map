@@ -1,5 +1,7 @@
 # Geographic Munich map and Google My Maps export
 
+> **Historical (v0.6).** The current prototype is the v0.7 morning briefing on `prototype/munich-briefing-v0.7`. See [MORNING_BRIEFING.md](MORNING_BRIEFING.md). Files mentioned below such as `preview.html`, `content.js` and `munich-highlights.js` were removed in v0.7.
+
 Added November 15, 2026, in prototype v0.4; updated for v0.6 on November 16. The explorer is now the primary prototype, combining separate transit-example and saved-roadworks views. Read [the map-first decision](MAP_FIRST_DECISION.md). Geographic coordinates follow pan/zoom in our map, not the consumer Google Maps viewport.
 
 ## Try it now

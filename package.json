@@ -1,0 +1,17 @@
+{
+  "name": "transport-gaps-map",
+  "version": "0.7.0",
+  "private": true,
+  "description": "Munich morning briefing of transport disruptions, strikes, protests, events, roadworks and weather.",
+  "scripts": {
+    "morning": "node scripts/morning-update.mjs",
+    "morning:offline": "node scripts/morning-update.mjs --offline",
+    "morning:full": "node scripts/morning-update.mjs --refresh-roads-layer",
+    "test": "node --test scripts/*.test.mjs",
+    "serve": "python3 -m http.server 8080",
+    "lines": "node scripts/build-lines.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

@@ -1,5 +1,7 @@
 # Prototype direction: transport awareness, not a road-closure directory
 
+> **Historical (v0.6).** The current prototype is the v0.7 morning briefing on `prototype/munich-briefing-v0.7`. See [MORNING_BRIEFING.md](MORNING_BRIEFING.md). Files mentioned below such as `preview.html`, `content.js` and `munich-highlights.js` were removed in v0.7.
+
 Updated November 16, 2026. **Current direction: v0.6 map-first explorer**, with the extension retained as a compact companion. The [direction decision](MAP_FIRST_DECISION.md) supersedes v0.5's optional-map decision below. Open `extension/munich-map.html` for transit station markers, map/list selection and saved roadworks in one explorer. Uses the existing Bavarian basemap, not a Google basemap or in-place Google overlay. Four fictional transit scenarios have approximate station locations; four stay list-only. No invented rail paths, exact entrance locations or area closures.
 
 ## North star
