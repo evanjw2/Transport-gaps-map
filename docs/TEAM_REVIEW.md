@@ -36,7 +36,7 @@ Commit or stash your own work before switching branches. If you use the unpacked
 ## Decisions for the team
 
 1. Present v0.7 instead of v0.2? If yes, slides need: problem → QR demo → how the morning script works → honest limits → next steps.
-2. Turn on GitHub Pages for this branch so the QR code works for everyone (Settings → Pages → branch `prototype/munich-briefing-v0.7`, folder `/`).
+2. GitHub Pages is on for this branch: <https://evanjw2.github.io/Transport-gaps-map/> (QR code in `docs/qr-code.png`). Turn it off under Settings → Pages if needed.
 3. Ask MVG about permission to reuse service notices before any public launch.
 4. Who owns `data/events.json` each week (checking MVG press releases, city notices, match calendars)?
 

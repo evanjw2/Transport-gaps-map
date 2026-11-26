@@ -6,6 +6,14 @@ Google Maps tells you *how* to get somewhere. It rarely tells you that the tram 
 
 **Scan a QR code → see today's Munich → tap a pin → it opens in your Google Maps app.** It works in any phone browser with no install, plus a Chrome extension for laptops.
 
+## Try it on your phone
+
+<p align="center">
+  <a href="https://evanjw2.github.io/Transport-gaps-map/"><img src="docs/qr-code.png" alt="QR code linking to https://evanjw2.github.io/Transport-gaps-map/" width="260"></a>
+</p>
+
+<p align="center"><strong><a href="https://evanjw2.github.io/Transport-gaps-map/">evanjw2.github.io/Transport-gaps-map</a></strong><br>Scan with your phone camera, or click the link. The live site is published from this branch with GitHub Pages.</p>
+
 ## What it shows
 
 | | Cause | From | Label |
@@ -27,7 +35,7 @@ On top of the list, **heads-up rules** stack causes together: *“Odeonsplatz: e
 
 - **Just open it:** double-click [`extension/index.html`](extension/index.html). No server or install needed.
 - **Phone on the same Wi-Fi:** `npm run serve`, then open `http://<your-laptop-ip>:8080/extension/` on the phone.
-- **Anyone, anywhere:** once GitHub Pages is on, use <https://evanjw2.github.io/Transport-gaps-map/>. The **Share** button in the page shows its QR code.
+- **Anyone, anywhere:** <https://evanjw2.github.io/Transport-gaps-map/> (live on GitHub Pages), or scan the QR code above. The **Share** button in the page shows the same QR code.
 - **Chrome extension:** `chrome://extensions` → Developer mode → *Load unpacked* → choose the `extension` folder. The toolbar popup shows today's status, and Google Maps gets a small “Munich: Allow extra time” card.
 
 ## Update the data
