@@ -1,0 +1,49 @@
+name: Morning briefing
+
+# Rebuilds extension/data/today.{json,js} and commits it. GitHub Pages then republishes the site.
+# - schedule: every day ~06:15 Munich winter time (GitHub only runs schedules from the default branch)
+# - push: whenever someone edits data/events.json or the scripts (works on any branch, e.g. prototype branches)
+# - workflow_dispatch: "Run workflow" button in the Actions tab
+on:
+  schedule:
+    - cron: '15 5 * * *'
+  push:
+    paths:
+      - 'data/events.json'
+      - 'scripts/**'
+      - 'extension/weather-codes.js'
+      - 'extension/network.js'
+      - 'data/tips.json'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: morning-briefing-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Test the rules
+        run: npm test
+      - name: Build today's briefing
+        run: |
+          # Mondays only: refresh line paths from MVV's timetable and the full 5 MB roadworks layer (keeps the repo small).
+          if [ "$(date -u +%u)" = "1" ]; then npm run lines || echo "Line paths not refreshed"; npm run morning:full; else npm run morning; fi
+      - name: Commit if changed
+        run: |
+          git config user.name "transport-gaps-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add extension/data/today.json extension/data/today.js extension/data/lines.js extension/munich-snapshot.js
+          if git diff --cached --quiet; then echo "No changes"; exit 0; fi
+          git commit -m "chore: morning briefing $(TZ=Europe/Berlin date '+%Y-%m-%d %H:%M')"
+          git pull --rebase --autostash origin "${GITHUB_REF_NAME}"
+          git push origin "HEAD:${GITHUB_REF_NAME}"

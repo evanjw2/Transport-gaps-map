@@ -2,6 +2,8 @@
 
 Reviewed October 30, 2026. Research and proposed architecture, not an implemented backend or a coverage guarantee. Munich is the recommended pilot candidate, subject to team approval. This extends [the delivery plan](PLAN.md) and [integration feasibility review](FEASIBILITY.md).
 
+November 15 update: a [geographic companion map and KML export](MUNICH_MAP.md) now demonstrate a complete saved response from the municipal source. That is a manually refreshed prototype, not the ongoing ingestion/backend or broader transit coverage proposed here. The research statements below describe the October 30 audit unless explicitly updated elsewhere.
+
 ## Recommendation
 
 **Yes: a useful Munich transport-awareness database is feasible.** Start with licensed municipal roadworks, add transit network reference data, then obtain authorized operational alerts. Use official notices and permitted news sources for advance-event discovery with review, not as automatic proof of a closure.

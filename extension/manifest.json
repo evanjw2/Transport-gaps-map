@@ -1,12 +1,18 @@
 {
   "manifest_version": 3,
-  "name": "Transport Gaps — Friendly Transport Layer",
-  "version": "0.2.0",
-  "description": "A playful transport-awareness prototype with filters, colour-coded disruptions and a fictional rain layer. Not live or geo-anchored.",
+  "name": "Transport Gaps — Munich this morning",
+  "version": "0.7.0",
+  "description": "Daily Munich briefing of transport disruptions, strikes, protests, big events, roadworks and snow or rain, next to Google Maps.",
   "action": {
-    "default_title": "Transport Gaps demo",
+    "default_title": "Munich this morning",
     "default_popup": "popup.html"
   },
+  "web_accessible_resources": [
+    {
+      "resources": ["index.html", "munich-map.html"],
+      "matches": ["https://www.google.com/*", "https://maps.google.com/*", "https://www.google.de/*", "https://www.google.co.uk/*"]
+    }
+  ],
   "content_scripts": [
     {
       "matches": [
@@ -15,7 +21,7 @@
         "https://www.google.de/maps*",
         "https://www.google.co.uk/maps*"
       ],
-      "js": ["data.js", "styles.js", "content.js"],
+      "js": ["data/today.js", "companion.js"],
       "run_at": "document_idle"
     }
   ]

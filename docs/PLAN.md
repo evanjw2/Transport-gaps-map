@@ -1,8 +1,14 @@
 # MVP and team delivery plan
 
+> **Latest (v0.7, November 26, 2026):** the prototype is now a daily “Munich this morning” briefing: real MVG notices, live weather + DWD warnings, city roadworks, news leads and team-curated strikes/protests/events, published as a phone-friendly website with a QR code, a Chrome popup and a Google Maps card. See [MORNING_BRIEFING.md](MORNING_BRIEFING.md). The v0.6 notes below are historical.
+
 Created October 30, 2026. Status: proposed first plan for team review. Owners, pilot city, budget, stack, and dates are **not assigned or approved**. This is not an implementation claim.
 
 The [Munich source audit and database proposal](MUNICH_DATA_PLAN.md) recommends Munich as the pilot candidate and municipal roadworks as the first live slice. It records source evidence, one bounded GeoJSON payload check, access/licensing gaps, ingestion architecture, and proposed tasks D01–D07. Use it for M0/T02 and the future F03/F04 work; it does not approve a city or implement a backend.
+
+November 15 prototype update: the [v0.4 geographic map](MUNICH_MAP.md) includes a full, validated municipal source snapshot, georeferenced footprints, filters and manual Google My Maps KML export. This demonstrates source-backed spatial display but does not complete the live-data backend, ongoing ingestion, transit-alert access, production lifecycle handling or coverage gates.
+
+Latest November 16 update — **v0.6**: [the map-first decision](MAP_FIRST_DECISION.md) makes our geographic explorer the primary prototype, with the Chrome extension as launcher/compact companion. The existing Bavarian basemap avoids new Google credentials/cost setup. Transit examples use approximate station markers where a location is authored; notices without reliable extent remain list-only. Source roadworks keep their actual polygons in a separate view. This supersedes v0.5's optional-map direction. Authorized transit data, source health, personal journey matching and rerouting are still not implemented. Earlier prototype descriptions below are historical, not the current default UX.
 
 Prototype update: the [v0.2 awareness demo](../extension/README.md) provides a no-build extension with category colours, travel-mode/category/timing filters, search, details, accessibility information, and an optional fictional rain patch. A cartoon bus mascot, brief animations with reduced-motion support, and an offline illustrative-map sandbox make the concept easier to explore. This is screen-positioned, not geographically anchored, and does not complete M1's planned side-panel scaffold or any live-data milestone.
 
@@ -12,7 +18,7 @@ Help a person planning travel in one pilot city answer: **What is disrupted, whe
 
 The broader use case is a transport information layer: help people identify places to avoid while also understanding delays, service changes, accessibility and facility functionality, and relevant weather context. Clearly distinguish a blocked area from a service-specific issue or information-only update. The current demo illustrates this distinction, but does not offer real travel advice.
 
-The MVP is a user-opened desktop Chrome side panel alongside Google Maps. Start with incident cards, filters, source links, and location links. Direct map overlays are optional research. Rerouting is explicitly a future update; the MVP does not calculate alternatives or modify Google navigation.
+The prototype direction is a map-first transport-awareness explorer with a lightweight Chrome companion alongside Google Maps. Prioritize geographic layers, impact cards, filters and source precision. Direct consumer-Maps overlays remain research, not a release dependency. Hosting/provider budget and production delivery still need team approval. Rerouting is explicitly a future update; the MVP does not calculate alternatives or modify Google navigation.
 
 ### Core user stories
 

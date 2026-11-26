@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Munich disruption explorer · Transport Gaps</title>
+    <link rel="stylesheet" href="vendor/leaflet.css">
+    <link rel="stylesheet" href="munich-map.css">
+    <script defer src="vendor/leaflet.js"></script>
+    <script defer src="vendor/fflate.js"></script>
+    <script defer src="munich-snapshot.js"></script>
+    <script defer src="munich-export.js"></script>
+    <script defer src="transit-data.js"></script>
+    <script defer src="transit-map.js"></script>
+    <script defer src="munich-map.js"></script>
+  </head>
+  <body>
+    <header class="topbar"><a class="brand" href="index.html">🚎 TRANSPORT GAPS</a><span class="city">Munich · disruption explorer</span><span class="snapshot-tag" id="saved-at">TRANSIT DEMO · NOT LIVE</span></header>
+    <main class="workspace">
+      <aside class="sidebar" aria-label="Find and inspect source records">
+        <nav class="explorer-nav" aria-label="Map information layer"><button type="button" data-layer="transit" aria-pressed="true">🚎 Public transport</button><button type="button" data-layer="roads" aria-pressed="false">Roadworks</button></nav>
+        <section id="transit-workspace" aria-label="Illustrative transit disruptions">
+          <div class="controls">
+            <span class="eyebrow">YOUR JOURNEY. FEWER SURPRISES.</span>
+            <h1>A little heads-up.<br>Before the hold-up.</h1>
+            <p class="transit-intro">Explore example service and access issues where they belong. <strong>All transit notices are fictional.</strong></p>
+            <label class="search-label" for="transit-search">Find a line, station or disruption</label>
+            <input id="transit-search" type="search" placeholder="Try U3, Marienplatz or lift…" maxlength="160">
+            <div class="filter-grid">
+              <label>Travel mode<select id="transit-mode"><option value="all">All modes</option></select></label>
+              <label>Scenario timing<select id="transit-timing"><option value="all">In progress + next</option><option value="now">In progress · demo</option><option value="next">Upcoming · demo</option></select></label>
+            </div>
+            <label class="check"><input id="transit-access" type="checkbox"> Step-free access examples only</label>
+            <div class="counts"><strong id="transit-count" role="status" aria-live="polite"></strong><button id="transit-reset" type="button">Reset</button></div>
+          </div>
+          <div class="record-scroll" id="transit-scroll"><section id="transit-detail" hidden aria-label="Selected transit scenario"></section><section id="transit-results" aria-label="Matching transit scenarios"><div id="transit-records"></div></section></div>
+        </section>
+        <div class="controls road-only" hidden>
+          <span class="eyebrow">REAL SOURCE FOOTPRINTS</span>
+          <h1>A little heads-up.<br>In the right place.</h1>
+          <p id="source-summary" role="status">Loading the saved Munich dataset…</p>
+          <label class="search-label" for="search">Find a street or restriction</label>
+          <input id="search" type="search" placeholder="Try Ohlmüllerstraße or Karlsfelder…" maxlength="160">
+          <div class="filter-grid">
+            <label>Source type<select id="type"><option value="works">Construction works</option><option value="parking">Temporary no-parking</option><option value="all">All reported types</option></select></label>
+            <label>Source schedule<select id="timing"><option value="available">Not ended at snapshot</option><option value="overlaps">Overlaps snapshot day</option><option value="upcoming">Upcoming at snapshot</option><option value="unknown">Unknown dates</option><option value="all">All source dates</option></select></label>
+          </div>
+          <label class="check"><input type="checkbox" id="in-view" checked> List records in this map view</label>
+          <div class="counts"><strong id="result-count" role="status" aria-live="polite"></strong><button type="button" id="fit">Fit matching records</button></div>
+        </div>
+        <div class="record-scroll road-only" id="record-scroll" hidden>
+          <section id="detail" aria-label="Selected source record" hidden></section>
+          <section id="results" aria-label="Matching source records"><div id="records"></div><button type="button" id="more" hidden>Show more records</button></section>
+        </div>
+        <footer class="sidebar-footer">
+          <details><summary>Coverage, privacy & Google Maps</summary>
+            <p>This is our own geographic explorer, not an overlay inside Google's website. Transit markers are approximate, hand-placed station centres for fictional examples—not exact platforms, entrances, track geometry or operator-confirmed incidents. Notices without a trustworthy location stay in the list, not on the map.</p>
+            <p>This is one saved municipal source, not all Munich disruptions or a live feed. Construction coverage is strongest in central districts and on main roads. No-parking notices are not whole-road closures. Multiple footprints may describe the same works.</p>
+            <p>Strikes, demonstrations, traffic jams, vehicle faults and lift outages are not comprehensively covered. Source schedules do not independently confirm current conditions. Unknown impacts stay unknown.</p>
+            <p>Street tiles are fetched from the Bavarian mapping service when enabled; it receives your IP address and viewed tile area. No location tracking, analytics or Google history access.</p>
+            <p>For anchored polygons on a Google map, export KML below, unzip it and import each file as a layer in <a href="https://www.google.com/mymaps" target="_blank" rel="noopener noreferrer">Google My Maps</a>. This is a manual snapshot import, not an automatic layer in the normal Google Maps page.</p>
+            <a href="https://support.google.com/mymaps/answer/3024836?hl=en" target="_blank" rel="noopener noreferrer">Google's import instructions ↗</a>
+          </details>
+          <button type="button" id="export" class="road-only" hidden>Export filtered records for Google My Maps</button>
+          <p id="export-status" class="road-only" role="status" hidden></p>
+          <p class="credit road-only" hidden>Restrictions: <a id="source-link" target="_blank" rel="noopener noreferrer">Munich Mobilitätsreferat</a> · <a href="https://www.govdata.de/dl-de/by-2-0" target="_blank" rel="noopener noreferrer">dl-de/by-2-0</a>. Selected fields and display styling changed.</p>
+          <p class="credit">Awareness, not rerouting. Missing reports do not mean clear travel. <a href="index.html">← Back to today’s Munich briefing</a></p>
+        </footer>
+      </aside>
+      <section class="map-section" aria-label="Geographic map of reported Munich restrictions">
+        <div id="map" aria-label="Interactive map. Use plus and minus to zoom; drag to pan." tabindex="0"></div>
+        <div class="map-tools"><span class="road-only" hidden><i class="swatch works"></i> Construction</span><span class="road-only" hidden><i class="swatch parking"></i> No-parking</span><span class="transit-only"><i class="swatch transit-swatch"></i> DEMO station markers</span><button id="transit-fit" class="transit-only" type="button">Show example places</button><label><input type="checkbox" id="basemap" checked> Street map (online)</label></div>
+        <div class="map-notice" id="map-notice" role="status">Saved source geometry, not independently verified. Dots locate small footprints; zoom in to inspect polygons. Not an entire-road closure map.</div>
+      </section>
+    </main>
+    <noscript>This map needs JavaScript. Enable it to load the packaged source snapshot.</noscript>
+  </body>
+</html>
