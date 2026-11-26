@@ -2,7 +2,7 @@
 globalThis.TransportGapsToday = {
  "schema": 1,
  "city": "Munich",
- "generatedAt": "2026-11-26T09:11:54.918Z",
+ "generatedAt": "2026-11-26T09:37:05.160Z",
  "localDay": "2026-11-26",
  "timeZone": "Europe/Berlin",
  "overall": {
@@ -13,7 +13,7 @@ globalThis.TransportGapsToday = {
  },
  "headsUps": [
   {
-   "id": "hu-mvg-1da3uak",
+   "id": "hu-mvg-lo9lj6",
    "level": 3,
    "icon": "🔧",
    "title": "S3: replacement buses · technical fault",
@@ -28,7 +28,7 @@ globalThis.TransportGapsToday = {
     "precision": "station"
    },
    "related": [
-    "mvg-1da3uak"
+    "mvg-lo9lj6"
    ],
    "includesExamples": false
   },
@@ -139,13 +139,13 @@ globalThis.TransportGapsToday = {
  ],
  "items": [
   {
-   "id": "mvg-1da3uak",
+   "id": "mvg-lo9lj6",
    "cause": "technical",
    "status": "live",
    "severity": 3,
    "title": "S3: replacement buses · technical fault",
-   "original": "Reparatur an einer Weiche - Zwischen Deisenhofen und Holzkirchen sind keine Zugfahrten möglich.",
-   "details": "Die S-Bahnen wenden in Deisenhofen. Wir haben für Sie einen Ersatzverkehr mit Bussen zwischen Deisenhofen und Holzkirchen eingerichtet. Bitte nutzen Sie nur die Fahrzeuge mit speziell gekennzeichneter \"Ersatzverkehr\" Beschilderung. Es kommt zu Verspätungen und Teilausfällen. Der Grund hierfür ist die Reparatur an einer Weiche.",
+   "original": "Reparatur an einer Weiche - Die Züge können wieder zwischen Deisenhofen und Holzkirchen fahren.",
+   "details": "Zur Sicherheit bleibt der Ersatzverkehr vorerst parallel bestehen, bis die Fahrten stabil laufen. Es kommt zu Verspätungen und Teilausfällen. Die Reparatur an einer Weiche wurde beendet.",
    "place": "Deisenhofen · Holzkirchen",
    "lines": [
     {
@@ -170,11 +170,6 @@ globalThis.TransportGapsToday = {
      48.136316,
      11.310005,
      "Holzkirchen"
-    ],
-    [
-     47.973847,
-     11.654473,
-     "Sauerlach"
     ]
    ],
    "stops": [
@@ -191,13 +186,6 @@ globalThis.TransportGapsToday = {
      "lat": 48.136316,
      "lng": 11.310005,
      "role": "end"
-    },
-    {
-     "id": "de:09184:2350",
-     "name": "Sauerlach",
-     "lat": 47.973847,
-     "lng": 11.654473,
-     "role": "listed"
     }
    ],
    "segments": [
@@ -1558,40 +1546,6 @@ globalThis.TransportGapsToday = {
    ]
   },
   {
-   "id": "mvg-diqs45",
-   "cause": "technical",
-   "status": "live",
-   "severity": 2,
-   "title": "Tram 16/17: delays · technical fault",
-   "original": "Verspätungen nach einer bereits behobenen Störung",
-   "details": "Liebe Fahrgäste, nach einer bereits behobenen Störung kommt es auf den Linien 16 und 17 derzeit zu Verspätungen. Die Behinderungen werden noch voraussichtlich bis 10:30 Uhr dauern. Wir sind bemüht, so schnell wie möglich wieder einen fahrplanmäßigen Betrieb herzustellen. Ihre MVG",
-   "place": "Tram 16/17 (line-wide)",
-   "lines": [
-    {
-     "label": "16",
-     "mode": "tram"
-    },
-    {
-     "label": "17",
-     "mode": "tram"
-    }
-   ],
-   "start": "2026-11-26T08:00:00.000Z",
-   "end": "2026-11-26T09:30:00.000Z",
-   "location": null,
-   "points": [],
-   "stops": [],
-   "segments": [],
-   "operatorAdvice": [
-    "Expected to last until about 10:30."
-   ],
-   "advice": "Check live departures in the MVG app before you leave.",
-   "source": {
-    "name": "MVG service notices",
-    "url": "https://www.mvg.de/dienste/betriebsaenderungen.html"
-   }
-  },
-  {
    "id": "mvg-zffcto",
    "cause": "technical",
    "status": "live",
@@ -1620,13 +1574,13 @@ globalThis.TransportGapsToday = {
    }
   },
   {
-   "id": "mvg-114rdj2",
+   "id": "mvg-1shk4o0",
    "cause": "accident",
    "status": "live",
    "severity": 2,
-   "title": "Tram 18/19: timetable change · traffic accident",
-   "original": "Beeinträchtigungen wegen eines Verkehrsunfalls",
-   "details": "Liebe Fahrgäste, wegen eines Verkehrsunfalls im Bereich Hauptbahnhof Süd kommt es auf den Linien 18 und 19 derzeit zu Beeinträchtigungen. Die Behinderungen werden noch voraussichtlich bis 11:10 Uhr dauern. Wir sind bemüht, so schnell wie möglich wieder einen fahrplanmäßigen Betrieb herzustellen. Ihre MVG",
+   "title": "Tram 18/19: delays · traffic accident",
+   "original": "Verspätungen wegen eines Verkehrsunfalls",
+   "details": "Liebe Fahrgäste, wegen eines Verkehrsunfalls im Bereich Hauptbahnhof Süd kommt es auf den Linien 18 und 19 derzeit zu Verspätungen. Die Behinderungen werden noch voraussichtlich bis 11:10 Uhr dauern. Wir sind bemüht, so schnell wie möglich wieder einen fahrplanmäßigen Betrieb herzustellen. Ihre MVG",
    "place": "Tram 18/19 (line-wide)",
    "lines": [
     {
@@ -5075,7 +5029,7 @@ globalThis.TransportGapsToday = {
     "name": "Altstadt",
     "lat": 48.1372,
     "lng": 11.5755,
-    "temperature": -1.7,
+    "temperature": -1.6,
     "code": 71,
     "icon": "🌨️",
     "label": "Light snow",
@@ -5171,7 +5125,7 @@ globalThis.TransportGapsToday = {
     "name": "Pasing",
     "lat": 48.149,
     "lng": 11.461,
-    "temperature": -1.7,
+    "temperature": -1.6,
     "code": 71,
     "icon": "🌨️",
     "label": "Light snow",
@@ -5243,7 +5197,7 @@ globalThis.TransportGapsToday = {
     "name": "Haidhausen",
     "lat": 48.13,
     "lng": 11.6,
-    "temperature": -1.8,
+    "temperature": -1.7,
     "code": 71,
     "icon": "🌨️",
     "label": "Light snow",
@@ -5267,7 +5221,7 @@ globalThis.TransportGapsToday = {
     "name": "Bogenhausen",
     "lat": 48.153,
     "lng": 11.615,
-    "temperature": -1.8,
+    "temperature": -1.7,
     "code": 71,
     "icon": "🌨️",
     "label": "Light snow",
@@ -5291,7 +5245,7 @@ globalThis.TransportGapsToday = {
     "name": "Trudering-Riem",
     "lat": 48.126,
     "lng": 11.665,
-    "temperature": -1.8,
+    "temperature": -1.7,
     "code": 71,
     "icon": "🌨️",
     "label": "Light snow",
@@ -5315,7 +5269,7 @@ globalThis.TransportGapsToday = {
     "name": "Milbertshofen",
     "lat": 48.183,
     "lng": 11.57,
-    "temperature": -1.7,
+    "temperature": -1.6,
     "code": 71,
     "icon": "🌨️",
     "label": "Light snow",
@@ -5339,7 +5293,7 @@ globalThis.TransportGapsToday = {
     "name": "Moosach",
     "lat": 48.18,
     "lng": 11.51,
-    "temperature": -1.6,
+    "temperature": -1.5,
     "code": 71,
     "icon": "🌨️",
     "label": "Light snow",
@@ -5363,7 +5317,7 @@ globalThis.TransportGapsToday = {
     "name": "Freimann",
     "lat": 48.203,
     "lng": 11.61,
-    "temperature": -1.8,
+    "temperature": -1.7,
     "code": 71,
     "icon": "🌨️",
     "label": "Light snow",
@@ -5473,13 +5427,13 @@ globalThis.TransportGapsToday = {
   }
  ],
  "network": {
-  "updatedAt": "2026-11-26T09:11:58.644Z",
+  "updatedAt": "2026-11-26T09:37:14.696Z",
   "lines": [
    {
     "label": "U1",
     "mode": "ubahn",
     "status": "ok",
-    "avg": 0,
+    "avg": null,
     "max": 0,
     "cancelled": 0,
     "seen": 17,
@@ -5488,44 +5442,44 @@ globalThis.TransportGapsToday = {
      "Rotkreuzplatz",
      "Kolumbusplatz"
     ],
-    "worstHub": "Sendlinger Tor",
+    "worstHub": "Rotkreuzplatz",
     "incident": false
    },
    {
     "label": "U2",
     "mode": "ubahn",
     "status": "ok",
-    "avg": 0,
-    "max": 0,
+    "avg": 0.6,
+    "max": 3,
     "cancelled": 0,
-    "seen": 54,
+    "seen": 52,
     "hubs": [
      "Sendlinger Tor",
-     "Giesing",
      "Scheidplatz",
+     "Giesing",
      "Innsbrucker Ring",
      "Kolumbusplatz"
     ],
-    "worstHub": "Sendlinger Tor",
+    "worstHub": "Innsbrucker Ring",
     "incident": false
    },
    {
     "label": "U3",
     "mode": "ubahn",
     "status": "ok",
-    "avg": 1,
-    "max": 1,
+    "avg": 0,
+    "max": 0,
     "cancelled": 0,
     "seen": 22,
     "hubs": [
-     "Marienplatz",
-     "Sendlinger Tor",
      "Odeonsplatz",
+     "Sendlinger Tor",
+     "Marienplatz",
+     "Scheidplatz",
      "Münchner Freiheit",
-     "Moosach",
-     "Scheidplatz"
+     "Moosach"
     ],
-    "worstHub": "Marienplatz",
+    "worstHub": "Scheidplatz",
     "incident": false
    },
    {
@@ -5546,51 +5500,51 @@ globalThis.TransportGapsToday = {
     "label": "U5",
     "mode": "ubahn",
     "status": "ok",
-    "avg": 1.2,
+    "avg": 0.5,
     "max": 2,
     "cancelled": 0,
-    "seen": 38,
+    "seen": 39,
     "hubs": [
-     "Ostbahnhof",
-     "Karlsplatz (Stachus)",
      "Odeonsplatz",
+     "Karlsplatz (Stachus)",
+     "Ostbahnhof",
      "Max-Weber-Platz",
      "Innsbrucker Ring"
     ],
-    "worstHub": "Karlsplatz (Stachus)",
+    "worstHub": "Odeonsplatz",
     "incident": false
    },
    {
     "label": "U6",
     "mode": "ubahn",
     "status": "disrupted",
-    "avg": null,
-    "max": 0,
+    "avg": 0.4,
+    "max": 2,
     "cancelled": 2,
-    "seen": 34,
+    "seen": 33,
     "hubs": [
-     "Marienplatz",
-     "Sendlinger Tor",
      "Odeonsplatz",
-     "Münchner Freiheit",
-     "Harras"
+     "Sendlinger Tor",
+     "Marienplatz",
+     "Harras",
+     "Münchner Freiheit"
     ],
-    "worstHub": null,
+    "worstHub": "Harras",
     "incident": false
    },
    {
     "label": "S1",
     "mode": "sbahn",
-    "status": "ok",
-    "avg": 2.7,
-    "max": 4,
+    "status": "delayed",
+    "avg": 3.1,
+    "max": 6,
     "cancelled": 0,
-    "seen": 20,
+    "seen": 22,
     "hubs": [
-     "Ostbahnhof",
      "Hauptbahnhof",
      "Marienplatz",
      "Karlsplatz (Stachus)",
+     "Ostbahnhof",
      "Moosach",
      "Laim"
     ],
@@ -5600,34 +5554,34 @@ globalThis.TransportGapsToday = {
    {
     "label": "S2",
     "mode": "sbahn",
-    "status": "ok",
-    "avg": 2.8,
-    "max": 4,
+    "status": "delayed",
+    "avg": 3.2,
+    "max": 5,
     "cancelled": 0,
-    "seen": 11,
+    "seen": 12,
     "hubs": [
-     "Ostbahnhof",
      "Hauptbahnhof",
      "Marienplatz",
      "Karlsplatz (Stachus)",
+     "Ostbahnhof",
      "Laim"
     ],
-    "worstHub": "Hauptbahnhof",
+    "worstHub": "Marienplatz",
     "incident": false
    },
    {
     "label": "S3",
     "mode": "sbahn",
     "status": "disrupted",
-    "avg": 4.3,
-    "max": 11,
-    "cancelled": 0,
+    "avg": 3.1,
+    "max": 5,
+    "cancelled": 2,
     "seen": 16,
     "hubs": [
-     "Ostbahnhof",
      "Hauptbahnhof",
      "Marienplatz",
      "Karlsplatz (Stachus)",
+     "Ostbahnhof",
      "Pasing",
      "Giesing",
      "Laim"
@@ -5639,66 +5593,64 @@ globalThis.TransportGapsToday = {
     "label": "S4",
     "mode": "sbahn",
     "status": "ok",
-    "avg": 2.8,
-    "max": 5,
+    "avg": 2.7,
+    "max": 4,
     "cancelled": 0,
     "seen": 13,
     "hubs": [
-     "Ostbahnhof",
      "Hauptbahnhof",
      "Marienplatz",
      "Karlsplatz (Stachus)",
+     "Ostbahnhof",
      "Pasing",
      "Laim"
     ],
-    "worstHub": "Ostbahnhof",
+    "worstHub": "Hauptbahnhof",
     "incident": false
    },
    {
     "label": "S5",
     "mode": "sbahn",
     "status": "delayed",
-    "avg": 4.8,
-    "max": 8,
+    "avg": 3.5,
+    "max": 5,
     "cancelled": 0,
-    "seen": 14,
+    "seen": 12,
     "hubs": [
-     "Ostbahnhof",
      "Hauptbahnhof",
      "Marienplatz",
-     "Karlsplatz (Stachus)",
+     "Ostbahnhof",
      "Pasing",
      "Giesing",
      "Laim"
     ],
-    "worstHub": "Laim",
+    "worstHub": "Hauptbahnhof",
     "incident": false
    },
    {
     "label": "S6",
     "mode": "sbahn",
     "status": "delayed",
-    "avg": 4.6,
+    "avg": 4.9,
     "max": 8,
     "cancelled": 0,
-    "seen": 13,
+    "seen": 11,
     "hubs": [
-     "Ostbahnhof",
      "Hauptbahnhof",
      "Marienplatz",
-     "Karlsplatz (Stachus)",
+     "Ostbahnhof",
      "Pasing",
      "Laim"
     ],
-    "worstHub": "Ostbahnhof",
+    "worstHub": "Hauptbahnhof",
     "incident": true
    },
    {
     "label": "S7",
     "mode": "sbahn",
     "status": "ok",
-    "avg": 2,
-    "max": 3,
+    "avg": 2.7,
+    "max": 5,
     "cancelled": 0,
     "seen": 4,
     "hubs": [
@@ -5711,30 +5663,29 @@ globalThis.TransportGapsToday = {
    {
     "label": "S8",
     "mode": "sbahn",
-    "status": "delayed",
-    "avg": 5.1,
-    "max": 7,
+    "status": "ok",
+    "avg": 2.5,
+    "max": 5,
     "cancelled": 0,
-    "seen": 10,
+    "seen": 12,
     "hubs": [
-     "Ostbahnhof",
      "Hauptbahnhof",
      "Marienplatz",
      "Karlsplatz (Stachus)",
-     "Pasing",
-     "Laim"
+     "Ostbahnhof",
+     "Pasing"
     ],
-    "worstHub": "Hauptbahnhof",
+    "worstHub": "Pasing",
     "incident": false
    },
    {
     "label": "12",
     "mode": "tram",
-    "status": "ok",
-    "avg": 1,
-    "max": 1,
+    "status": "delayed",
+    "avg": 3,
+    "max": 3,
     "cancelled": 0,
-    "seen": 11,
+    "seen": 12,
     "hubs": [
      "Scheidplatz",
      "Rotkreuzplatz"
@@ -5749,7 +5700,7 @@ globalThis.TransportGapsToday = {
     "avg": null,
     "max": 0,
     "cancelled": 0,
-    "seen": 2,
+    "seen": 1,
     "hubs": [
      "Pasing"
     ],
@@ -5759,42 +5710,42 @@ globalThis.TransportGapsToday = {
    {
     "label": "16",
     "mode": "tram",
-    "status": "delayed",
-    "avg": 1.4,
-    "max": 2,
+    "status": "ok",
+    "avg": null,
+    "max": 4,
     "cancelled": 0,
-    "seen": 5,
+    "seen": 4,
     "hubs": [
      "Sendlinger Tor",
      "Karlsplatz (Stachus)"
     ],
     "worstHub": "Sendlinger Tor",
-    "incident": true
+    "incident": false
    },
    {
     "label": "17",
     "mode": "tram",
-    "status": "delayed",
-    "avg": 1.8,
+    "status": "ok",
+    "avg": 1.3,
     "max": 3,
     "cancelled": 0,
-    "seen": 10,
+    "seen": 11,
     "hubs": [
      "Sendlinger Tor",
      "Karlsplatz (Stachus)",
      "Max-Weber-Platz"
     ],
-    "worstHub": "Sendlinger Tor",
-    "incident": true
+    "worstHub": "Max-Weber-Platz",
+    "incident": false
    },
    {
     "label": "18",
     "mode": "tram",
-    "status": "delayed",
-    "avg": 4.2,
-    "max": 10,
+    "status": "disrupted",
+    "avg": 25.5,
+    "max": 50,
     "cancelled": 0,
-    "seen": 11,
+    "seen": 13,
     "hubs": [
      "Sendlinger Tor",
      "Karlsplatz (Stachus)",
@@ -5807,16 +5758,16 @@ globalThis.TransportGapsToday = {
     "label": "19",
     "mode": "tram",
     "status": "delayed",
-    "avg": 4.2,
-    "max": 9,
+    "avg": 2.8,
+    "max": 6,
     "cancelled": 0,
-    "seen": 9,
+    "seen": 11,
     "hubs": [
      "Karlsplatz (Stachus)",
      "Pasing",
      "Max-Weber-Platz"
     ],
-    "worstHub": "Karlsplatz (Stachus)",
+    "worstHub": "Max-Weber-Platz",
     "incident": true
    },
    {
@@ -5826,8 +5777,9 @@ globalThis.TransportGapsToday = {
     "avg": null,
     "max": 0,
     "cancelled": 0,
-    "seen": 3,
+    "seen": 5,
     "hubs": [
+     "Karlsplatz (Stachus)",
      "Moosach"
     ],
     "worstHub": null,
@@ -5837,13 +5789,13 @@ globalThis.TransportGapsToday = {
     "label": "21",
     "mode": "tram",
     "status": "ok",
-    "avg": null,
-    "max": 1,
+    "avg": 1.7,
+    "max": 3,
     "cancelled": 0,
     "seen": 7,
     "hubs": [
-     "Ostbahnhof",
      "Karlsplatz (Stachus)",
+     "Ostbahnhof",
      "Max-Weber-Platz"
     ],
     "worstHub": "Karlsplatz (Stachus)",
@@ -5868,13 +5820,13 @@ globalThis.TransportGapsToday = {
     "mode": "tram",
     "status": "ok",
     "avg": null,
-    "max": 0,
+    "max": 1,
     "cancelled": 0,
     "seen": 6,
     "hubs": [
      "Max-Weber-Platz"
     ],
-    "worstHub": null,
+    "worstHub": "Max-Weber-Platz",
     "incident": false
    },
    {
@@ -5897,7 +5849,7 @@ globalThis.TransportGapsToday = {
     "mode": "tram",
     "status": "ok",
     "avg": null,
-    "max": 3,
+    "max": 0,
     "cancelled": 0,
     "seen": 6,
     "hubs": [
@@ -5905,15 +5857,15 @@ globalThis.TransportGapsToday = {
      "Karlsplatz (Stachus)",
      "Scheidplatz"
     ],
-    "worstHub": "Karlsplatz (Stachus)",
+    "worstHub": null,
     "incident": false
    },
    {
     "label": "51",
     "mode": "bus",
     "status": "delayed",
-    "avg": 7.5,
-    "max": 15,
+    "avg": 5.2,
+    "max": 12,
     "cancelled": 0,
     "seen": 8,
     "hubs": [
@@ -5940,34 +5892,34 @@ globalThis.TransportGapsToday = {
    {
     "label": "53",
     "mode": "bus",
-    "status": "delayed",
-    "avg": 3.7,
-    "max": 11,
+    "status": "ok",
+    "avg": 1.3,
+    "max": 2,
     "cancelled": 0,
-    "seen": 17,
+    "seen": 14,
     "hubs": [
-     "Münchner Freiheit",
      "Harras",
+     "Münchner Freiheit",
      "Rotkreuzplatz"
     ],
-    "worstHub": "Harras",
+    "worstHub": "Rotkreuzplatz",
     "incident": false
    },
    {
     "label": "54",
     "mode": "bus",
     "status": "ok",
-    "avg": 1,
+    "avg": 1.5,
     "max": 2,
     "cancelled": 0,
-    "seen": 14,
+    "seen": 15,
     "hubs": [
      "Ostbahnhof",
+     "Harras",
      "Münchner Freiheit",
-     "Giesing",
-     "Harras"
+     "Giesing"
     ],
-    "worstHub": "Ostbahnhof",
+    "worstHub": "Harras",
     "incident": false
    },
    {
@@ -5989,20 +5941,6 @@ globalThis.TransportGapsToday = {
     "mode": "bus",
     "status": "ok",
     "avg": null,
-    "max": 0,
-    "cancelled": 0,
-    "seen": 3,
-    "hubs": [
-     "Pasing"
-    ],
-    "worstHub": null,
-    "incident": false
-   },
-   {
-    "label": "57",
-    "mode": "bus",
-    "status": "ok",
-    "avg": null,
     "max": 2,
     "cancelled": 0,
     "seen": 3,
@@ -6013,13 +5951,27 @@ globalThis.TransportGapsToday = {
     "incident": false
    },
    {
+    "label": "57",
+    "mode": "bus",
+    "status": "ok",
+    "avg": 2.5,
+    "max": 3,
+    "cancelled": 0,
+    "seen": 4,
+    "hubs": [
+     "Pasing"
+    ],
+    "worstHub": "Pasing",
+    "incident": false
+   },
+   {
     "label": "58",
     "mode": "bus",
     "status": "ok",
-    "avg": 2.3,
-    "max": 4,
+    "avg": 2.8,
+    "max": 6,
     "cancelled": 0,
-    "seen": 5,
+    "seen": 6,
     "hubs": [
      "Ostbahnhof",
      "Kolumbusplatz"
@@ -6031,15 +5983,15 @@ globalThis.TransportGapsToday = {
     "label": "59",
     "mode": "bus",
     "status": "ok",
-    "avg": null,
-    "max": 0,
+    "avg": 1.5,
+    "max": 2,
     "cancelled": 0,
     "seen": 7,
     "hubs": [
      "Münchner Freiheit",
      "Giesing"
     ],
-    "worstHub": null,
+    "worstHub": "Münchner Freiheit",
     "incident": false
    },
    {
@@ -6047,12 +5999,12 @@ globalThis.TransportGapsToday = {
     "mode": "bus",
     "status": "ok",
     "avg": null,
-    "max": 2,
+    "max": 5,
     "cancelled": 0,
-    "seen": 6,
+    "seen": 7,
     "hubs": [
-     "Ostbahnhof",
      "Sendlinger Tor",
+     "Ostbahnhof",
      "Rotkreuzplatz"
     ],
     "worstHub": "Sendlinger Tor",
@@ -6077,13 +6029,13 @@ globalThis.TransportGapsToday = {
     "mode": "bus",
     "status": "ok",
     "avg": null,
-    "max": 0,
+    "max": 2,
     "cancelled": 0,
     "seen": 1,
     "hubs": [
      "Ostbahnhof"
     ],
-    "worstHub": null,
+    "worstHub": "Ostbahnhof",
     "incident": false
    },
    {
@@ -6091,12 +6043,12 @@ globalThis.TransportGapsToday = {
     "mode": "bus",
     "status": "ok",
     "avg": null,
-    "max": 3,
+    "max": 1,
     "cancelled": 0,
-    "seen": 5,
+    "seen": 6,
     "hubs": [
-     "Ostbahnhof",
-     "Odeonsplatz"
+     "Odeonsplatz",
+     "Ostbahnhof"
     ],
     "worstHub": "Odeonsplatz",
     "incident": false
@@ -6105,10 +6057,10 @@ globalThis.TransportGapsToday = {
     "label": "130",
     "mode": "bus",
     "status": "ok",
-    "avg": 1,
+    "avg": null,
     "max": 1,
     "cancelled": 0,
-    "seen": 5,
+    "seen": 4,
     "hubs": [
      "Pasing",
      "Harras",
@@ -6121,10 +6073,10 @@ globalThis.TransportGapsToday = {
     "label": "132",
     "mode": "bus",
     "status": "ok",
-    "avg": null,
-    "max": 2,
+    "avg": 1,
+    "max": 1,
     "cancelled": 0,
-    "seen": 4,
+    "seen": 3,
     "hubs": [
      "Marienplatz",
      "Harras"
@@ -6136,14 +6088,14 @@ globalThis.TransportGapsToday = {
     "label": "134",
     "mode": "bus",
     "status": "ok",
-    "avg": null,
-    "max": 0,
+    "avg": 1,
+    "max": 1,
     "cancelled": 0,
     "seen": 2,
     "hubs": [
      "Harras"
     ],
-    "worstHub": null,
+    "worstHub": "Harras",
     "incident": false
    },
    {
@@ -6151,9 +6103,9 @@ globalThis.TransportGapsToday = {
     "mode": "bus",
     "status": "ok",
     "avg": null,
-    "max": 1,
+    "max": 2,
     "cancelled": 0,
-    "seen": 4,
+    "seen": 3,
     "hubs": [
      "Giesing"
     ],
@@ -6167,11 +6119,11 @@ globalThis.TransportGapsToday = {
     "avg": null,
     "max": 0,
     "cancelled": 0,
-    "seen": 3,
+    "seen": 2,
     "hubs": [
      "Scheidplatz"
     ],
-    "worstHub": "Scheidplatz",
+    "worstHub": null,
     "incident": false
    },
    {
@@ -6197,8 +6149,8 @@ globalThis.TransportGapsToday = {
     "cancelled": 0,
     "seen": 5,
     "hubs": [
-     "Münchner Freiheit",
-     "Scheidplatz"
+     "Scheidplatz",
+     "Münchner Freiheit"
     ],
     "worstHub": null,
     "incident": false
@@ -6210,7 +6162,7 @@ globalThis.TransportGapsToday = {
     "avg": null,
     "max": 0,
     "cancelled": 0,
-    "seen": 4,
+    "seen": 3,
     "hubs": [
      "Scheidplatz",
      "Rotkreuzplatz"
@@ -6236,10 +6188,10 @@ globalThis.TransportGapsToday = {
     "label": "151",
     "mode": "bus",
     "status": "disrupted",
-    "avg": 15.6,
-    "max": 29,
+    "avg": 15.4,
+    "max": 28,
     "cancelled": 0,
-    "seen": 7,
+    "seen": 6,
     "hubs": [
      "Laim"
     ],
@@ -6278,10 +6230,10 @@ globalThis.TransportGapsToday = {
     "label": "157",
     "mode": "bus",
     "status": "ok",
-    "avg": 2.5,
+    "avg": 2,
     "max": 3,
     "cancelled": 0,
-    "seen": 7,
+    "seen": 5,
     "hubs": [
      "Pasing",
      "Harras",
@@ -6295,23 +6247,23 @@ globalThis.TransportGapsToday = {
     "mode": "bus",
     "status": "ok",
     "avg": null,
-    "max": 1,
+    "max": 0,
     "cancelled": 0,
-    "seen": 3,
+    "seen": 2,
     "hubs": [
      "Pasing"
     ],
-    "worstHub": "Pasing",
+    "worstHub": null,
     "incident": false
    },
    {
     "label": "162",
     "mode": "bus",
-    "status": "ok",
-    "avg": 1,
-    "max": 1,
+    "status": "delayed",
+    "avg": 5.7,
+    "max": 13,
     "cancelled": 0,
-    "seen": 6,
+    "seen": 7,
     "hubs": [
      "Pasing",
      "Moosach"
@@ -6326,7 +6278,7 @@ globalThis.TransportGapsToday = {
     "avg": null,
     "max": 0,
     "cancelled": 0,
-    "seen": 4,
+    "seen": 3,
     "hubs": [
      "Moosach"
     ],
@@ -6337,10 +6289,10 @@ globalThis.TransportGapsToday = {
     "label": "168",
     "mode": "bus",
     "status": "disrupted",
-    "avg": 28.5,
-    "max": 37,
+    "avg": 30,
+    "max": 41,
     "cancelled": 0,
-    "seen": 6,
+    "seen": 7,
     "hubs": [
      "Laim"
     ],
@@ -6366,14 +6318,14 @@ globalThis.TransportGapsToday = {
     "mode": "bus",
     "status": "ok",
     "avg": null,
-    "max": 0,
+    "max": 1,
     "cancelled": 0,
-    "seen": 6,
+    "seen": 8,
     "hubs": [
      "Ostbahnhof",
      "Harras"
     ],
-    "worstHub": null,
+    "worstHub": "Ostbahnhof",
     "incident": false
    },
    {
@@ -6397,7 +6349,7 @@ globalThis.TransportGapsToday = {
     "avg": null,
     "max": 0,
     "cancelled": 0,
-    "seen": 1,
+    "seen": 2,
     "hubs": [
      "Moosach"
     ],
@@ -6407,36 +6359,14 @@ globalThis.TransportGapsToday = {
   ],
   "hubs": [
    {
-    "id": "de:09162:5",
-    "name": "Ostbahnhof",
-    "lat": 48.12815,
-    "lng": 11.604545,
+    "id": "de:09162:60",
+    "name": "Odeonsplatz",
+    "lat": 48.142682,
+    "lng": 11.577487,
     "ok": true,
     "n": 30,
-    "avg": 2.9,
-    "max": 8,
-    "cancelled": 0
-   },
-   {
-    "id": "de:09162:100",
-    "name": "Hauptbahnhof",
-    "lat": 48.140291,
-    "lng": 11.559602,
-    "ok": true,
-    "n": 30,
-    "avg": 3.6,
-    "max": 8,
-    "cancelled": 0
-   },
-   {
-    "id": "de:09162:2",
-    "name": "Marienplatz",
-    "lat": 48.137245,
-    "lng": 11.575421,
-    "ok": true,
-    "n": 30,
-    "avg": 3.8,
-    "max": 8,
+    "avg": 0.6,
+    "max": 2,
     "cancelled": 0
    },
    {
@@ -6446,9 +6376,31 @@ globalThis.TransportGapsToday = {
     "lng": 11.566681,
     "ok": true,
     "n": 30,
-    "avg": 1.8,
-    "max": 10,
+    "avg": 8.5,
+    "max": 50,
     "cancelled": 2
+   },
+   {
+    "id": "de:09162:100",
+    "name": "Hauptbahnhof",
+    "lat": 48.140291,
+    "lng": 11.559602,
+    "ok": true,
+    "n": 30,
+    "avg": 3.3,
+    "max": 8,
+    "cancelled": 1
+   },
+   {
+    "id": "de:09162:2",
+    "name": "Marienplatz",
+    "lat": 48.137245,
+    "lng": 11.575421,
+    "ok": true,
+    "n": 30,
+    "avg": 3.5,
+    "max": 8,
+    "cancelled": 0
    },
    {
     "id": "de:09162:1",
@@ -6457,8 +6409,19 @@ globalThis.TransportGapsToday = {
     "lng": 11.566133,
     "ok": true,
     "n": 30,
-    "avg": 3.2,
-    "max": 10,
+    "avg": 5.2,
+    "max": 50,
+    "cancelled": 0
+   },
+   {
+    "id": "de:09162:5",
+    "name": "Ostbahnhof",
+    "lat": 48.12815,
+    "lng": 11.604545,
+    "ok": true,
+    "n": 30,
+    "avg": 2.4,
+    "max": 6,
     "cancelled": 0
    },
    {
@@ -6468,20 +6431,9 @@ globalThis.TransportGapsToday = {
     "lng": 11.460697,
     "ok": true,
     "n": 30,
-    "avg": 3.5,
-    "max": 11,
-    "cancelled": 0
-   },
-   {
-    "id": "de:09162:60",
-    "name": "Odeonsplatz",
-    "lat": 48.142682,
-    "lng": 11.577487,
-    "ok": true,
-    "n": 30,
-    "avg": 1.6,
-    "max": 3,
-    "cancelled": 0
+    "avg": 4,
+    "max": 13,
+    "cancelled": 1
    },
    {
     "id": "de:09162:580",
@@ -6491,40 +6443,7 @@ globalThis.TransportGapsToday = {
     "ok": true,
     "n": 30,
     "avg": 2.7,
-    "max": 9,
-    "cancelled": 0
-   },
-   {
-    "id": "de:09162:500",
-    "name": "Münchner Freiheit",
-    "lat": 48.161962,
-    "lng": 11.586497,
-    "ok": true,
-    "n": 30,
-    "avg": null,
-    "max": 0,
-    "cancelled": 0
-   },
-   {
-    "id": "de:09162:300",
-    "name": "Moosach",
-    "lat": 48.180792,
-    "lng": 11.507643,
-    "ok": true,
-    "n": 30,
-    "avg": 2.6,
-    "max": 5,
-    "cancelled": 0
-   },
-   {
-    "id": "de:09162:1110",
-    "name": "Giesing",
-    "lat": 48.110861,
-    "lng": 11.595247,
-    "ok": true,
-    "n": 30,
-    "avg": 2.4,
-    "max": 10,
+    "max": 6,
     "cancelled": 0
    },
    {
@@ -6534,8 +6453,8 @@ globalThis.TransportGapsToday = {
     "lng": 11.572933,
     "ok": true,
     "n": 28,
-    "avg": 0.5,
-    "max": 1,
+    "avg": 0.8,
+    "max": 3,
     "cancelled": 0
    },
    {
@@ -6545,30 +6464,30 @@ globalThis.TransportGapsToday = {
     "lng": 11.536668,
     "ok": true,
     "n": 30,
-    "avg": 2.9,
-    "max": 11,
+    "avg": 1.5,
+    "max": 5,
     "cancelled": 0
    },
    {
-    "id": "de:09162:9",
-    "name": "Laim",
-    "lat": 48.143905,
-    "lng": 11.50326,
+    "id": "de:09162:500",
+    "name": "Münchner Freiheit",
+    "lat": 48.161962,
+    "lng": 11.586497,
     "ok": true,
     "n": 30,
-    "avg": 12.8,
-    "max": 37,
-    "cancelled": 0
-   },
-   {
-    "id": "de:09162:1060",
-    "name": "Innsbrucker Ring",
-    "lat": 48.120415,
-    "lng": 11.619196,
-    "ok": true,
-    "n": 30,
-    "avg": 1.3,
+    "avg": 0.8,
     "max": 2,
+    "cancelled": 0
+   },
+   {
+    "id": "de:09162:1110",
+    "name": "Giesing",
+    "lat": 48.110861,
+    "lng": 11.595247,
+    "ok": true,
+    "n": 30,
+    "avg": 7.3,
+    "max": 50,
     "cancelled": 0
    },
    {
@@ -6578,8 +6497,19 @@ globalThis.TransportGapsToday = {
     "lng": 11.53312,
     "ok": true,
     "n": 27,
-    "avg": 2,
-    "max": 4,
+    "avg": 1.5,
+    "max": 3,
+    "cancelled": 0
+   },
+   {
+    "id": "de:09162:1060",
+    "name": "Innsbrucker Ring",
+    "lat": 48.120415,
+    "lng": 11.619196,
+    "ok": true,
+    "n": 30,
+    "avg": 0.7,
+    "max": 3,
     "cancelled": 0
    },
    {
@@ -6588,9 +6518,31 @@ globalThis.TransportGapsToday = {
     "lat": 48.119323,
     "lng": 11.576742,
     "ok": true,
-    "n": 29,
-    "avg": 1.4,
-    "max": 4,
+    "n": 30,
+    "avg": 1.7,
+    "max": 6,
+    "cancelled": 0
+   },
+   {
+    "id": "de:09162:300",
+    "name": "Moosach",
+    "lat": 48.180792,
+    "lng": 11.507643,
+    "ok": true,
+    "n": 30,
+    "avg": 2.4,
+    "max": 6,
+    "cancelled": 0
+   },
+   {
+    "id": "de:09162:9",
+    "name": "Laim",
+    "lat": 48.143905,
+    "lng": 11.50326,
+    "ok": true,
+    "n": 30,
+    "avg": 12,
+    "max": 41,
     "cancelled": 0
    }
   ],
@@ -6599,13 +6551,13 @@ globalThis.TransportGapsToday = {
  },
  "roads": {
   "snapshotDay": "2026-11-26",
-  "fetchedAt": "2026-11-26T09:11:57.251Z",
+  "fetchedAt": "2026-11-26T09:37:12.992Z",
   "totalRecords": 5908,
   "activeWorks": 2719,
   "onRoadToday": 977
  },
  "counts": {
-  "disruptions": 6,
+  "disruptions": 5,
   "strikes": 2,
   "works": 77,
   "events": 4,
@@ -6614,7 +6566,7 @@ globalThis.TransportGapsToday = {
  },
  "sources": [
   {
-   "fetchedAt": "2026-11-26T09:11:54.918Z",
+   "fetchedAt": "2026-11-26T09:37:05.160Z",
    "id": "events",
    "name": "Team-curated events (data/events.json)",
    "kind": "curated",
@@ -6623,17 +6575,17 @@ globalThis.TransportGapsToday = {
    "url": "https://github.com/evanjw2/Transport-gaps-map/blob/main/data/events.json"
   },
   {
-   "fetchedAt": "2026-11-26T09:11:54.918Z",
+   "fetchedAt": "2026-11-26T09:37:05.160Z",
    "id": "mvg",
    "name": "MVG service notices",
    "kind": "live",
    "url": "https://www.mvg.de/dienste/betriebsaenderungen.html",
-   "note": "5 live incidents · 42 placed on the map · 0 stops not served · 5 with ways around · Headlines, lines and times only. Reuse permission still to be confirmed with MVG.",
+   "note": "4 live incidents · 42 placed on the map · 0 stops not served · 5 with ways around · Headlines, lines and times only. Reuse permission still to be confirmed with MVG.",
    "status": "ok",
-   "count": 68
+   "count": 67
   },
   {
-   "fetchedAt": "2026-11-26T09:11:54.918Z",
+   "fetchedAt": "2026-11-26T09:37:05.160Z",
    "id": "weather",
    "name": "Open-Meteo weather (14 districts)",
    "kind": "live",
@@ -6644,7 +6596,7 @@ globalThis.TransportGapsToday = {
    "note": "🌨️ Light snow, -1.7°C"
   },
   {
-   "fetchedAt": "2026-11-26T09:11:54.918Z",
+   "fetchedAt": "2026-11-26T09:37:05.160Z",
    "id": "dwd",
    "name": "DWD official weather warnings (via Bright Sky)",
    "kind": "official",
@@ -6654,7 +6606,7 @@ globalThis.TransportGapsToday = {
    "count": 2
   },
   {
-   "fetchedAt": "2026-11-26T09:11:54.918Z",
+   "fetchedAt": "2026-11-26T09:37:05.160Z",
    "id": "news-tz",
    "name": "tz.de München (headlines)",
    "kind": "lead",
@@ -6664,7 +6616,7 @@ globalThis.TransportGapsToday = {
    "count": 4
   },
   {
-   "fetchedAt": "2026-11-26T09:11:54.918Z",
+   "fetchedAt": "2026-11-26T09:37:05.160Z",
    "id": "roads",
    "name": "Munich roadworks (Mobilitätsreferat open data)",
    "kind": "official",
@@ -6675,12 +6627,12 @@ globalThis.TransportGapsToday = {
    "note": "2719 works active today, 977 affect the road · records from 2026-11-26"
   },
   {
-   "fetchedAt": "2026-11-26T09:11:54.918Z",
+   "fetchedAt": "2026-11-26T09:37:05.160Z",
    "id": "departures",
    "name": "MVG live departures (17 hubs)",
    "kind": "live",
    "url": "https://www.mvg.de/",
-   "note": "17/17 hubs · delayed/disrupted: U6, S3, S5, S6, S8, 16, 17, 18",
+   "note": "17/17 hubs · delayed/disrupted: U6, S1, S2, S3, S5, S6, 12, 18",
    "status": "ok",
    "count": 60
   }
