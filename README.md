@@ -1,6 +1,6 @@
 # Transport Gaps Map · Munich this morning
 
-> **Prototype branch `prototype/munich-briefing-v0.7`** for team review. `main` still holds the v0.2 baseline the current slides use.
+> **v0.7 is the team's chosen version** (merged into `main` on 26 November 2026). Live at <https://evanjw2.github.io/Transport-gaps-map/>. Earlier versions (v0.2 baseline, v0.6 map explorer) remain in the git history.
 
 Google Maps tells you *how* to get somewhere. It rarely tells you that the tram is replaced by buses after an accident, that a march is crossing Odeonsplatz this afternoon, that the Christmas market makes Marienplatz a crush, or that 4 cm of snow is coming. **Transport Gaps gathers that every morning into one friendly briefing**: what's happening, where, why it matters, and one tap to open the spot in Google Maps.
 
@@ -12,7 +12,7 @@ Google Maps tells you *how* to get somewhere. It rarely tells you that the tram 
   <a href="https://evanjw2.github.io/Transport-gaps-map/"><img src="docs/qr-code.png" alt="QR code linking to https://evanjw2.github.io/Transport-gaps-map/" width="260"></a>
 </p>
 
-<p align="center"><strong><a href="https://evanjw2.github.io/Transport-gaps-map/">evanjw2.github.io/Transport-gaps-map</a></strong><br>Scan with your phone camera, or click the link. The live site is published from this branch with GitHub Pages.</p>
+<p align="center"><strong><a href="https://evanjw2.github.io/Transport-gaps-map/">evanjw2.github.io/Transport-gaps-map</a></strong><br>Scan with your phone camera, or click the link. The live site is published from `main` with GitHub Pages and refreshed every morning.</p>
 
 ## What it shows
 

@@ -122,6 +122,6 @@ German MVG text is classified into causes (accident, emergency services, heavy t
 | tz.de RSS | Headline + link only, keyword-filtered | Never stores article text; label “News lead” |
 | `data/events.json` | Team-curated | Each entry needs a source link; examples are `status: "demo"` |
 
-## Scheduling caveat
+## Schedule
 
-GitHub only runs `schedule:` workflows from the **default branch** (`main`). On the prototype branch, the workflow still runs on every push that touches `data/events.json` or `scripts/`, and via *Actions → Morning briefing → Run workflow* once the workflow file exists on `main`. Before a presentation day, run `npm run morning` and push, or merge to `main` so the 06:15 schedule takes over.
+The workflow runs from `main`: every morning at ~06:15 Munich time (05:15 UTC), on every push that changes `data/events.json`, `data/tips.json` or the scripts, and on demand via *Actions → Morning briefing → Run workflow*. Each run commits fresh `extension/data/today.*` to `main`, and GitHub Pages republishes the site a minute later. On Mondays it also refreshes the line routes and the full roadworks layer. GitHub pauses scheduled workflows after 60 days without repository activity, so re-enable it in the Actions tab if that happens.

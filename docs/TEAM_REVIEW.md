@@ -1,6 +1,6 @@
 # Team review: Munich morning briefing (v0.7)
 
-Status: **working prototype for the presentation, not merged into `main`**. Branch `prototype/munich-briefing-v0.7`, built on top of `prototype/munich-map-v0.6`. `main` still holds the v0.2 baseline used by the existing slides.
+Status: **chosen by the team and merged into `main`** on 26 November 2026. It was built on `prototype/munich-briefing-v0.7` (on top of `prototype/munich-map-v0.6`); the previous v0.2 baseline is commit `2fb34e8` in the history.
 
 ## What changed since v0.6
 
@@ -18,7 +18,8 @@ Status: **working prototype for the presentation, not merged into `main`**. Bran
 
 ```sh
 git fetch origin
-git switch prototype/munich-briefing-v0.7
+git switch main
+git pull --ff-only
 npm run morning        # optional: refresh today's data
 open extension/index.html
 ```
@@ -31,12 +32,12 @@ Commit or stash your own work before switching branches. If you use the unpacked
 - **Add a local workaround tip:** edit `data/tips.json`.
 - **Improve the rules:** `scripts/briefing.mjs`, then run `npm test`.
 - **Design:** `extension/app.css`, `extension/app.js`.
-- Open pull requests against `prototype/munich-briefing-v0.7`, not `main`.
+- Create a feature branch from `main` and open pull requests against `main`.
 
 ## Decisions for the team
 
-1. Present v0.7 instead of v0.2? If yes, slides need: problem → QR demo → how the morning script works → honest limits → next steps.
-2. GitHub Pages is on for this branch: <https://evanjw2.github.io/Transport-gaps-map/> (QR code in `docs/qr-code.png`). Turn it off under Settings → Pages if needed.
+1. ✅ Decided: v0.7 is the presentation version. Slides: problem → QR demo → how the morning script works → honest limits → next steps.
+2. GitHub Pages publishes `main`: <https://evanjw2.github.io/Transport-gaps-map/> (QR code in `docs/qr-code.png`). Turn it off under Settings → Pages if needed.
 3. Ask MVG about permission to reuse service notices before any public launch.
 4. Who owns `data/events.json` each week (checking MVG press releases, city notices, match calendars)?
 
