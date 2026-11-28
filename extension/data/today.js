@@ -2,8 +2,8 @@
 globalThis.TransportGapsToday = {
  "schema": 1,
  "city": "Munich",
- "generatedAt": "2026-11-27T14:59:03.960Z",
- "localDay": "2026-11-27",
+ "generatedAt": "2026-11-28T14:08:39.320Z",
+ "localDay": "2026-11-28",
  "timeZone": "Europe/Berlin",
  "overall": {
   "level": 3,
@@ -13,6 +13,25 @@ globalThis.TransportGapsToday = {
  },
  "headsUps": [
   {
+   "id": "hu-mvg-mkqnu6",
+   "level": 3,
+   "icon": "🚑",
+   "title": "S8: replacement buses · emergency services",
+   "why": [
+    "🚑 S8: replacement buses · emergency services"
+   ],
+   "where": "Ismaning",
+   "location": {
+    "lat": 48.225923,
+    "lng": 11.679078,
+    "precision": "station"
+   },
+   "related": [
+    "mvg-mkqnu6"
+   ],
+   "includesExamples": false
+  },
+  {
    "id": "hu-event-demo-march-odeonsplatz",
    "level": 3,
    "icon": "📍",
@@ -20,8 +39,7 @@ globalThis.TransportGapsToday = {
    "why": [
     "📣 Demonstration march Odeonsplatz → Königsplatz (example)",
     "🎟️ Christmas market crowds at Marienplatz",
-    "🦺 3 roadworks/planned works nearby",
-    "☁️ Overcast makes everything a bit slower"
+    "🦺 3 roadworks/planned works nearby"
    ],
    "where": "Odeonsplatz",
    "location": {
@@ -30,28 +48,13 @@ globalThis.TransportGapsToday = {
     "precision": "approximate"
    },
    "related": [
-    "road-13ssm37",
-    "road-j9dyi4",
-    "road-hvcsja",
+    "road-7m82q6",
+    "road-wvszyz",
+    "road-xfs7cx",
     "event-demo-march-odeonsplatz",
     "event-christkindlmarkt-marienplatz-2026"
    ],
    "includesExamples": true
-  },
-  {
-   "id": "hu-weather",
-   "level": 2,
-   "icon": "☁️",
-   "title": "Snow in Munich: buses and trams slower",
-   "why": [
-    "☁️ Snow: buses and trams may run slower. Allow ~10 extra minutes.",
-    "🚇 Tip: the U-Bahn runs underground and copes best with snow and ice.",
-    "⚠️ DWD: Official WARNING of ICY SURFACES",
-    "⚠️ DWD: Official WARNING of FROST"
-   ],
-   "where": "City-wide",
-   "location": null,
-   "related": []
   },
   {
    "id": "hu-event-demo-lift-sendlinger-tor",
@@ -60,8 +63,7 @@ globalThis.TransportGapsToday = {
    "title": "Sendlinger Tor: allow extra time",
    "why": [
     "♿ Lift out of service at Sendlinger Tor (example)",
-    "🦺 4 roadworks/planned works nearby",
-    "☁️ Overcast makes everything a bit slower"
+    "🦺 3 roadworks/planned works nearby"
    ],
    "where": "Sendlinger Tor",
    "location": {
@@ -70,13 +72,25 @@ globalThis.TransportGapsToday = {
     "precision": "approximate"
    },
    "related": [
-    "road-11u3ymu",
+    "road-1381z3p",
     "mvg-pvybj3",
-    "mvg-ncl4m9",
     "mvg-g497o0",
     "event-demo-lift-sendlinger-tor"
    ],
    "includesExamples": true
+  },
+  {
+   "id": "hu-weather",
+   "level": 1,
+   "icon": "☁️",
+   "title": "Icy conditions: careful on stairs and platforms",
+   "why": [
+    "☁️ Frosty: watch for icy patches on stairs and platforms.",
+    "⚠️ DWD: Official WARNING of FROST"
+   ],
+   "where": "City-wide",
+   "location": null,
+   "related": []
   },
   {
    "id": "hu-event-demo-warning-strike",
@@ -85,7 +99,7 @@ globalThis.TransportGapsToday = {
    "title": "Plan ahead: Warning strike: U-Bahn, tram and MVG buses",
    "includesExamples": true,
    "why": [
-    "Sunday 29 Nov, from 03:00 · example",
+    "Monday 30 Nov, from 03:00 · example",
     "Plan around the S-Bahn, bike or walking. Check MVG for an emergency timetable the day before."
    ],
    "where": "MVG network (city-wide)",
@@ -119,6 +133,88 @@ globalThis.TransportGapsToday = {
  ],
  "items": [
   {
+   "id": "mvg-mkqnu6",
+   "cause": "emergency",
+   "status": "live",
+   "severity": 3,
+   "title": "S8: replacement buses · emergency services",
+   "original": "Polizeieinsatz - Aktuell kein Zugverkehr zwischen Flughafen München und Ismaning möglich.",
+   "details": "Ersatzverkehr in Planung. Es kommt zu Verspätungen und Teilausfällen. Der Grund dafür ist ein Polizeieinsatz. Sobald wir weitere Informationen haben, werden wir Sie sofort darüber informieren. Reisende zum Flughafen nutzen aktuell bitte die S 1.",
+   "place": "Ismaning",
+   "lines": [
+    {
+     "label": "S8",
+     "mode": "sbahn"
+    }
+   ],
+   "start": "2026-11-28T13:46:00.000Z",
+   "end": "2026-11-28T15:30:00.000Z",
+   "location": {
+    "lat": 48.225923,
+    "lng": 11.679078,
+    "precision": "station"
+   },
+   "points": [
+    [
+     48.225923,
+     11.679078,
+     "Ismaning"
+    ],
+    [
+     48.308831,
+     11.713977,
+     "Hallbergmoos"
+    ]
+   ],
+   "stops": [
+    {
+     "id": "de:09184:2040",
+     "name": "Ismaning",
+     "lat": 48.225923,
+     "lng": 11.679078,
+     "role": "end"
+    },
+    {
+     "id": "de:09178:2850",
+     "name": "Hallbergmoos",
+     "lat": 48.308831,
+     "lng": 11.713977,
+     "role": "listed"
+    }
+   ],
+   "segments": [
+    "Affected section: Flughafen München ↔ Ismaning"
+   ],
+   "operatorAdvice": [
+    "Replacement buses (SEV) cover the affected section."
+   ],
+   "advice": "Check live departures in the MVG app before you leave.",
+   "source": {
+    "name": "MVG service notices",
+    "url": "https://www.mvg.de/dienste/betriebsaenderungen.html"
+   },
+   "alternatives": [
+    {
+     "type": "switch",
+     "from": "Ismaning",
+     "to": {
+      "id": "de:09184:2040",
+      "name": "Ismaning",
+      "lat": 48.225923,
+      "lng": 11.679078
+     },
+     "minutes": 0,
+     "lines": [
+      {
+       "label": "X202",
+       "mode": "bus"
+      }
+     ],
+     "text": "At Ismaning, other lines still stop: Bus X202"
+    }
+   ]
+  },
+  {
    "id": "event-demo-warning-strike",
    "cause": "strike",
    "status": "demo",
@@ -132,8 +228,8 @@ globalThis.TransportGapsToday = {
     "tram",
     "bus"
    ],
-   "start": "2026-11-29T02:00:00.000Z",
-   "end": "2026-11-29T22:59:00.000Z",
+   "start": "2026-11-30T02:00:00.000Z",
+   "end": "2026-11-30T22:59:00.000Z",
    "series": null,
    "location": null,
    "points": [],
@@ -286,7 +382,7 @@ globalThis.TransportGapsToday = {
    ]
   },
   {
-   "id": "road-159c3s4",
+   "id": "road-13c00ix",
    "cause": "roadworks",
    "status": "official",
    "severity": 2,
@@ -316,7 +412,7 @@ globalThis.TransportGapsToday = {
    }
   },
   {
-   "id": "road-15jbph3",
+   "id": "road-6avjhd",
    "cause": "roadworks",
    "status": "official",
    "severity": 2,
@@ -346,7 +442,7 @@ globalThis.TransportGapsToday = {
    }
   },
   {
-   "id": "road-1ld14bv",
+   "id": "road-1mgzj3r",
    "cause": "roadworks",
    "status": "official",
    "severity": 2,
@@ -376,7 +472,7 @@ globalThis.TransportGapsToday = {
    }
   },
   {
-   "id": "road-17hx7fh",
+   "id": "road-11nz8v4",
    "cause": "roadworks",
    "status": "official",
    "severity": 2,
@@ -413,7 +509,7 @@ globalThis.TransportGapsToday = {
    "title": "Bus 160: diverted",
    "original": "Umleitung wegen Bauarbeiten für die Tram Westtangente im Bereich Waldfriedhof",
    "details": "Wegen Bauarbeiten für die Tram Westtangente im Bereich Waldfriedhof werden die Buslinien 160 und 268 > Waldfriedhof bis auf Weiteres zwischen Kornwegerstraße und Waldfriedhof über den U-Bahnhof Holzapfelkreuth umgeleitet. Die (H) Kornwegerstraße ist in die Kornwegerstraße (nördlich der Einmündung Würmtalstraße) verlegt. An der (H) Waldfriedhof wird eine Ersatzhaltestelle vor Würmtalstraße 2-4 bedient.",
-   "place": "Kornwegerstraße · Waldfriedhof",
+   "place": "Kornwegerstraße · Waldfriedhof · Holzapfelkreuth",
    "lines": [
     {
      "label": "160",
@@ -437,6 +533,11 @@ globalThis.TransportGapsToday = {
      48.112138,
      11.502316,
      "Waldfriedhof"
+    ],
+    [
+     48.116313,
+     11.502397,
+     "Holzapfelkreuth"
     ]
    ],
    "stops": [
@@ -453,6 +554,13 @@ globalThis.TransportGapsToday = {
      "lat": 48.112138,
      "lng": 11.502316,
      "role": "listed"
+    },
+    {
+     "id": "de:09162:1510",
+     "name": "Holzapfelkreuth",
+     "lat": 48.116313,
+     "lng": 11.502397,
+     "role": "listed"
     }
    ],
    "segments": [],
@@ -466,15 +574,15 @@ globalThis.TransportGapsToday = {
    },
    "alternatives": [
     {
-     "type": "walk",
-     "from": "Waldfriedhof",
+     "type": "switch",
+     "from": "Holzapfelkreuth",
      "to": {
       "id": "de:09162:1510",
       "name": "Holzapfelkreuth",
       "lat": 48.116313,
       "lng": 11.502397
      },
-     "minutes": 8,
+     "minutes": 0,
      "lines": [
       {
        "label": "U6",
@@ -493,7 +601,7 @@ globalThis.TransportGapsToday = {
        "mode": "bus"
       }
      ],
-     "text": "From Waldfriedhof, walk ~8 min to Holzapfelkreuth: U6, Bus 51, Bus 151, Bus 167"
+     "text": "At Holzapfelkreuth, other lines still stop: U6, Bus 51, Bus 151, Bus 167"
     },
     {
      "type": "switch",
@@ -576,7 +684,7 @@ globalThis.TransportGapsToday = {
    }
   },
   {
-   "id": "road-udyude",
+   "id": "road-ucvqo5",
    "cause": "roadworks",
    "status": "official",
    "severity": 2,
@@ -606,7 +714,7 @@ globalThis.TransportGapsToday = {
    }
   },
   {
-   "id": "road-1h6xmfd",
+   "id": "road-guaj21",
    "cause": "roadworks",
    "status": "official",
    "severity": 2,
@@ -636,37 +744,7 @@ globalThis.TransportGapsToday = {
    }
   },
   {
-   "id": "road-1pd91h8",
-   "cause": "roadworks",
-   "status": "official",
-   "severity": 2,
-   "title": "St.-Anna-Straße 6: half-road closure",
-   "original": "Parkplätze entfallen, halbseitige Straßensperrung · Fahrbahn, Parkbucht, Gehweg",
-   "details": "Works: Arbeiten am Fernwärmenetz",
-   "place": "St.-Anna-Straße 6",
-   "lines": [],
-   "start": "2026-10-04T22:00:00.000Z",
-   "end": "2026-11-30T22:59:00.000Z",
-   "location": {
-    "lat": 48.13867083555555,
-    "lng": 11.586834396666667,
-    "precision": "footprint"
-   },
-   "points": [
-    [
-     48.13867083555555,
-     11.586834396666667,
-     "St.-Anna-Straße 6"
-    ]
-   ],
-   "advice": "Affects road traffic and buses on this street; footpaths may be narrowed.",
-   "source": {
-    "name": "Landeshauptstadt München · Mobilitätsreferat (dl-de/by-2-0)",
-    "url": "https://opendata.muenchen.de/dataset/baustellen_4_weeks_opendata"
-   }
-  },
-  {
-   "id": "road-13heufw",
+   "id": "road-1cgfnvh",
    "cause": "roadworks",
    "status": "official",
    "severity": 2,
@@ -696,7 +774,7 @@ globalThis.TransportGapsToday = {
    }
   },
   {
-   "id": "road-13reg4v",
+   "id": "road-16tgdri",
    "cause": "roadworks",
    "status": "official",
    "severity": 2,
@@ -726,7 +804,37 @@ globalThis.TransportGapsToday = {
    }
   },
   {
-   "id": "road-13ssm37",
+   "id": "road-18kl85v",
+   "cause": "roadworks",
+   "status": "official",
+   "severity": 2,
+   "title": "Eduard-Schmid-Str. 4: full closure of the affected section",
+   "original": "Gehweg verengt bzw. untertunnelt, Parkbuchten gesperrt (beidseitig), Vollsperre der Fahrbahn, Aufhebung der Einbahnregelung, Haltverbote (beidseitig) · Gehweg,Parkbucht,Fahrbahn",
+   "details": "Works: Baustelleneinrichtungsfläche+Gerüst mit Tunnel",
+   "place": "Eduard-Schmid-Str. 4",
+   "lines": [],
+   "start": "2026-10-31T23:00:00.000Z",
+   "end": "2026-12-30T22:59:00.000Z",
+   "location": {
+    "lat": 48.12727738941176,
+    "lng": 11.579896827647056,
+    "precision": "footprint"
+   },
+   "points": [
+    [
+     48.12727738941176,
+     11.579896827647056,
+     "Eduard-Schmid-Str. 4"
+    ]
+   ],
+   "advice": "Affects road traffic and buses on this street; footpaths may be narrowed.",
+   "source": {
+    "name": "Landeshauptstadt München · Mobilitätsreferat (dl-de/by-2-0)",
+    "url": "https://opendata.muenchen.de/dataset/baustellen_4_weeks_opendata"
+   }
+  },
+  {
+   "id": "road-7m82q6",
    "cause": "roadworks",
    "status": "official",
    "severity": 2,
@@ -756,7 +864,7 @@ globalThis.TransportGapsToday = {
    }
   },
   {
-   "id": "road-11u3ymu",
+   "id": "road-1381z3p",
    "cause": "roadworks",
    "status": "official",
    "severity": 2,
@@ -938,174 +1046,6 @@ globalThis.TransportGapsToday = {
    }
   },
   {
-   "id": "mvg-1fzvweb",
-   "cause": "works",
-   "status": "official",
-   "severity": 2,
-   "title": "Bus 162: diverted",
-   "original": "Mainaustraße \u003c> Betschartstraße: Umleitung wegen Bauarbeiten an der Bahnunterführung Bodenseestraße",
-   "details": "Wegen Bauarbeiten an der Bahnunterführung in der Bodenseestraße wird die Buslinie 162 von Montag, 23. November, ca. 9:00 Uhr bis vsl. Freitag, 27. November 2026, ca. 18:00 Uhr zwischen Mainaustraße und Betschartstraße über den S-Bahnhof Westkreuz umgeleitet. Die (H) Überlinger Weg ist in beiden Richtungen in die Reichenaustraße verlegt. An der (H) Betschartstraße bedienen die Busse in Richtung Lochhausen Bf. -…",
-   "place": "Überlinger Weg · Betschartstraße · Mainaustraße +2",
-   "lines": [
-    {
-     "label": "162",
-     "mode": "bus"
-    }
-   ],
-   "start": "2026-11-15T23:00:00.000Z",
-   "end": "2026-11-27T22:59:02.000Z",
-   "location": {
-    "lat": 48.144439,
-    "lng": 11.435086,
-    "precision": "station"
-   },
-   "points": [
-    [
-     48.144439,
-     11.435086,
-     "Überlinger Weg"
-    ],
-    [
-     48.146027,
-     11.446612,
-     "Betschartstraße"
-    ],
-    [
-     48.149306,
-     11.433757,
-     "Mainaustraße"
-    ],
-    [
-     48.148952,
-     11.443854,
-     "Westkreuz"
-    ],
-    [
-     48.150312,
-     11.436874,
-     "Ravensburger Ring"
-    ]
-   ],
-   "stops": [
-    {
-     "id": "de:09162:1737",
-     "name": "Überlinger Weg",
-     "lat": 48.144439,
-     "lng": 11.435086,
-     "role": "listed"
-    },
-    {
-     "id": "de:09162:1701",
-     "name": "Betschartstraße",
-     "lat": 48.146027,
-     "lng": 11.446612,
-     "role": "listed"
-    },
-    {
-     "id": "de:09162:1704",
-     "name": "Mainaustraße",
-     "lat": 48.149306,
-     "lng": 11.433757,
-     "role": "listed"
-    },
-    {
-     "id": "de:09162:1720",
-     "name": "Westkreuz",
-     "lat": 48.148952,
-     "lng": 11.443854,
-     "role": "listed"
-    },
-    {
-     "id": "de:09162:1702",
-     "name": "Ravensburger Ring",
-     "lat": 48.150312,
-     "lng": 11.436874,
-     "role": "listed"
-    }
-   ],
-   "segments": [],
-   "operatorAdvice": [
-    "Vehicles are diverted, so some stops are skipped."
-   ],
-   "advice": "Planned change: check the timetable for your trip.",
-   "source": {
-    "name": "MVG service notices",
-    "url": "https://www.mvg.de/dienste/betriebsaenderungen.html"
-   },
-   "alternatives": [
-    {
-     "type": "switch",
-     "from": "Westkreuz",
-     "to": {
-      "id": "de:09162:1720",
-      "name": "Westkreuz",
-      "lat": 48.148952,
-      "lng": 11.443854
-     },
-     "minutes": 0,
-     "lines": [
-      {
-       "label": "S5",
-       "mode": "sbahn"
-      },
-      {
-       "label": "S6",
-       "mode": "sbahn"
-      },
-      {
-       "label": "S8",
-       "mode": "sbahn"
-      },
-      {
-       "label": "57",
-       "mode": "bus"
-      },
-      {
-       "label": "157",
-       "mode": "bus"
-      }
-     ],
-     "text": "At Westkreuz, other lines still stop: S5, S6, S8, Bus 57, Bus 157"
-    },
-    {
-     "type": "switch",
-     "from": "Betschartstraße",
-     "to": {
-      "id": "de:09162:1701",
-      "name": "Betschartstraße",
-      "lat": 48.146027,
-      "lng": 11.446612
-     },
-     "minutes": 0,
-     "lines": [
-      {
-       "label": "157",
-       "mode": "bus"
-      }
-     ],
-     "text": "At Betschartstraße, other lines still stop: Bus 157"
-    },
-    {
-     "type": "switch",
-     "from": "Mainaustraße",
-     "to": {
-      "id": "de:09162:1704",
-      "name": "Mainaustraße",
-      "lat": 48.149306,
-      "lng": 11.433757
-     },
-     "minutes": 0,
-     "lines": [
-      {
-       "label": "57",
-       "mode": "bus"
-      }
-     ],
-     "text": "At Mainaustraße, other lines still stop: Bus 57"
-    }
-   ]
-  },
-  {
    "id": "road-gqf0px",
    "cause": "roadworks",
    "status": "official",
@@ -1136,7 +1076,7 @@ globalThis.TransportGapsToday = {
    }
   },
   {
-   "id": "road-j9dyi4",
+   "id": "road-wvszyz",
    "cause": "roadworks",
    "status": "official",
    "severity": 2,
@@ -1166,7 +1106,7 @@ globalThis.TransportGapsToday = {
    }
   },
   {
-   "id": "road-hvcsja",
+   "id": "road-xfs7cx",
    "cause": "roadworks",
    "status": "official",
    "severity": 2,
@@ -1310,6 +1250,196 @@ globalThis.TransportGapsToday = {
    ]
   },
   {
+   "id": "mvg-1c5241o",
+   "cause": "works",
+   "status": "official",
+   "severity": 2,
+   "title": "S1/S2/S4/S6: replacement buses",
+   "original": "Baustelleninformation für Stammstrecke Pasing ↔ Ostbahnhof/Trudering/Leuchtenbergring/Riem | Durchgehend 27. bis 30. Novembe - Wegen Bauarbeiten zur 2. Stammstrecke am Leuchtenbergring kommt es zwischen Pasing ↔ Pasing ↔ Ostbahnhof/Trudering/Leuchtenbergring/Riem von Freitag, 27.11., ab 22:10 Uhr, durchgehend bis Montag, 30.11.2026 , 4:40 Uhr zu Fahrplanänderungen mit Umleitungen, Fahrtausfällen und Haltausfällen.",
+   "details": "Änderung im Fahrplan: Die S-Bahn Station Berg am Laim wird während der Baustelle nicht angefahren. Bitte fahren Sie mit den anderen Verkehrsmitteln des MVV (Richtung Ostbahnhof: Bus 190, Richtung Riem: Bus 190, Richtung Trudering: Bus 185). S1: Züge in/aus Richtung Freising/Flughafen beginnen/enden am Ostbahnhof und fallen zwischen Ostbahnhof und Leuchtenbergring ausAlternative: Ostbahnhof ↔ Leuchtenbergring: S8…",
+   "place": "München, Ostbahnhof · Leuchtenbergring",
+   "lines": [
+    {
+     "label": "S1",
+     "mode": "sbahn"
+    },
+    {
+     "label": "S2",
+     "mode": "sbahn"
+    },
+    {
+     "label": "S4",
+     "mode": "sbahn"
+    },
+    {
+     "label": "S6",
+     "mode": "sbahn"
+    }
+   ],
+   "start": "2026-11-27T19:00:00.000Z",
+   "end": "2026-11-30T03:40:00.000Z",
+   "location": {
+    "lat": 48.12815,
+    "lng": 11.604545,
+    "precision": "station"
+   },
+   "points": [
+    [
+     48.12815,
+     11.604545,
+     "München, Ostbahnhof"
+    ],
+    [
+     48.134266,
+     11.615944,
+     "Leuchtenbergring"
+    ]
+   ],
+   "stops": [
+    {
+     "id": "de:09162:5",
+     "name": "München, Ostbahnhof",
+     "lat": 48.12815,
+     "lng": 11.604545,
+     "role": "end"
+    },
+    {
+     "id": "de:09162:900",
+     "name": "Leuchtenbergring",
+     "lat": 48.134266,
+     "lng": 11.615944,
+     "role": "end"
+    }
+   ],
+   "segments": [
+    "Affected section: Ostbahnhof ↔ Leuchtenbergring"
+   ],
+   "operatorAdvice": [
+    "Replacement buses (SEV) cover the affected section."
+   ],
+   "advice": "Planned change: check the timetable for your trip.",
+   "source": {
+    "name": "MVG service notices",
+    "url": "https://www.mvg.de/dienste/betriebsaenderungen.html"
+   },
+   "alternatives": [
+    {
+     "type": "switch",
+     "from": "München, Ostbahnhof",
+     "to": {
+      "id": "de:09162:5",
+      "name": "München, Ostbahnhof",
+      "lat": 48.12815,
+      "lng": 11.604545
+     },
+     "minutes": 0,
+     "lines": [
+      {
+       "label": "U2",
+       "mode": "ubahn"
+      },
+      {
+       "label": "U5",
+       "mode": "ubahn"
+      },
+      {
+       "label": "S3",
+       "mode": "sbahn"
+      },
+      {
+       "label": "S5",
+       "mode": "sbahn"
+      },
+      {
+       "label": "S8",
+       "mode": "sbahn"
+      }
+     ],
+     "text": "At München, Ostbahnhof, other lines still stop: U2, U5, S3, S5, S8"
+    },
+    {
+     "type": "switch",
+     "from": "Leuchtenbergring",
+     "to": {
+      "id": "de:09162:900",
+      "name": "Leuchtenbergring",
+      "lat": 48.134266,
+      "lng": 11.615944
+     },
+     "minutes": 0,
+     "lines": [
+      {
+       "label": "S8",
+       "mode": "sbahn"
+      }
+     ],
+     "text": "At Leuchtenbergring, other lines still stop: S8"
+    },
+    {
+     "type": "walk",
+     "from": "Leuchtenbergring",
+     "to": {
+      "id": "de:09162:662",
+      "name": "Einsteinstraße",
+      "lat": 48.136874,
+      "lng": 11.614678
+     },
+     "minutes": 5,
+     "lines": [
+      {
+       "label": "19",
+       "mode": "tram"
+      },
+      {
+       "label": "21",
+       "mode": "tram"
+      },
+      {
+       "label": "59",
+       "mode": "bus"
+      },
+      {
+       "label": "149",
+       "mode": "bus"
+      },
+      {
+       "label": "X30",
+       "mode": "bus"
+      }
+     ],
+     "text": "From Leuchtenbergring, walk ~5 min to Einsteinstraße: Tram 19, Tram 21, Bus 59, Bus 149, Bus X30"
+    },
+    {
+     "type": "walk",
+     "from": "München, Ostbahnhof",
+     "to": {
+      "id": "de:09162:891",
+      "name": "Ostbahnhof (Post)",
+      "lat": 48.128768,
+      "lng": 11.604661
+     },
+     "minutes": 1,
+     "lines": [
+      {
+       "label": "149",
+       "mode": "bus"
+      },
+      {
+       "label": "155",
+       "mode": "bus"
+      }
+     ],
+     "text": "From München, Ostbahnhof, walk ~1 min to Ostbahnhof (Post): Bus 149, Bus 155"
+    }
+   ],
+   "tips": [
+    {
+     "id": "stammstrecke",
+     "text": "S-Bahn trunk line (Pasing – Hauptbahnhof – Marienplatz – Ostbahnhof) in trouble? The U5 runs almost parallel: Laimer Platz – Hauptbahnhof – Karlsplatz – Odeonsplatz – Ostbahnhof. Tram 19 also links Pasing, Hauptbahnhof, Karlsplatz and Max-Weber-Platz."
+    }
+   ]
+  },
+  {
    "id": "event-demo-march-odeonsplatz",
    "cause": "protest",
    "status": "demo",
@@ -1335,8 +1465,8 @@ globalThis.TransportGapsToday = {
     "bus",
     "ubahn"
    ],
-   "start": "2026-11-27T13:00:00.000Z",
-   "end": "2026-11-27T16:00:00.000Z",
+   "start": "2026-11-28T13:00:00.000Z",
+   "end": "2026-11-28T16:00:00.000Z",
    "series": null,
    "location": {
     "lat": 48.1429,
@@ -1363,90 +1493,6 @@ globalThis.TransportGapsToday = {
      "text": "Marches usually hold up buses and trams on surface streets for 30–60 minutes; the U-Bahn underneath keeps running."
     }
    ]
-  },
-  {
-   "id": "mvg-1bp3bvq",
-   "cause": "traffic",
-   "status": "live",
-   "severity": 2,
-   "title": "Bus 51/50/57/151/+2: delays · heavy traffic",
-   "original": "Verspätungen wegen starken Verkehrsaufkommens",
-   "details": "Liebe Fahrgäste, wegen starken Verkehrsaufkommens kommt es auf den Linien 50, 51, 57, 151, 162 und 168 derzeit zu Verspätungen. Die Behinderungen werden noch voraussichtlich bis 20:00 Uhr dauern. Wir sind bemüht, so schnell wie möglich wieder einen fahrplanmäßigen Betrieb herzustellen. Ihre MVG",
-   "place": "Bus 51/50/57/151/+2 (line-wide)",
-   "lines": [
-    {
-     "label": "51",
-     "mode": "bus"
-    },
-    {
-     "label": "50",
-     "mode": "bus"
-    },
-    {
-     "label": "57",
-     "mode": "bus"
-    },
-    {
-     "label": "151",
-     "mode": "bus"
-    },
-    {
-     "label": "168",
-     "mode": "bus"
-    },
-    {
-     "label": "162",
-     "mode": "bus"
-    }
-   ],
-   "start": "2026-11-27T14:40:00.000Z",
-   "end": "2026-11-27T19:00:00.000Z",
-   "location": null,
-   "points": [],
-   "stops": [],
-   "segments": [],
-   "operatorAdvice": [
-    "Expected to last until about 20:00."
-   ],
-   "advice": "Check live departures in the MVG app before you leave.",
-   "source": {
-    "name": "MVG service notices",
-    "url": "https://www.mvg.de/dienste/betriebsaenderungen.html"
-   },
-   "tips": [
-    {
-     "id": "traffic-bus",
-     "text": "Buses stuck in traffic? A nearby U-Bahn or S-Bahn line is usually faster until the road clears."
-    }
-   ]
-  },
-  {
-   "id": "mvg-172thi6",
-   "cause": "technical",
-   "status": "live",
-   "severity": 2,
-   "title": "Tram 21: delays · technical fault",
-   "original": "Verspätungen und einzelne Ausfälle wegen einer Fahrzeugstörung",
-   "details": "Liebe Fahrgäste, wegen einer Fahrzeugstörung kommt es auf der Linie 21 derzeit zu Verspätungen und einzelnen Ausfällen. Wir sind bemüht, so schnell wie möglich wieder einen fahrplanmäßigen Betrieb herzustellen. Ihre MVG",
-   "place": "Tram 21 (line-wide)",
-   "lines": [
-    {
-     "label": "21",
-     "mode": "tram"
-    }
-   ],
-   "start": "2026-11-27T14:44:00.000Z",
-   "end": "2026-11-27T15:14:00.000Z",
-   "location": null,
-   "points": [],
-   "stops": [],
-   "segments": [],
-   "operatorAdvice": [],
-   "advice": "Check live departures in the MVG app before you leave.",
-   "source": {
-    "name": "MVG service notices",
-    "url": "https://www.mvg.de/dienste/betriebsaenderungen.html"
-   }
   },
   {
    "id": "event-fcb-hertha-2026-12-01",
@@ -1483,6 +1529,52 @@ globalThis.TransportGapsToday = {
    "crowd": true,
    "accessibility": false,
    "advice": "If you use the U6 north of Münchner Freiheit that evening, expect very full trains from 18:30 and after full time.",
+   "source": {
+    "name": "Allianz Arena match calendar",
+    "url": "https://allianz-arena.com/en/news/next-matches-at-the-allianz-arena"
+   },
+   "tips": [
+    {
+     "id": "match-day",
+     "text": "Match days: after full time, walking about 15 minutes south to Kieferngarten (U6) often beats the queues at Fröttmaning."
+    }
+   ]
+  },
+  {
+   "id": "event-fcb-paderborn-2026-12-04",
+   "cause": "event",
+   "status": "announced",
+   "severity": 2,
+   "title": "FC Bayern – SC Paderborn (Bundesliga) at Allianz Arena",
+   "details": "Kick-off 20:30. Match-day crowds on the U6 and around Fröttmaning.",
+   "place": "Allianz Arena · U6 Fröttmaning",
+   "lines": [
+    {
+     "label": "U6",
+     "mode": "ubahn"
+    }
+   ],
+   "modes": [
+    "ubahn"
+   ],
+   "start": "2026-12-04T17:15:00.000Z",
+   "end": "2026-12-04T22:45:00.000Z",
+   "series": null,
+   "location": {
+    "lat": 48.2131,
+    "lng": 11.6157,
+    "precision": "approximate"
+   },
+   "points": [
+    [
+     48.2131,
+     11.6157,
+     "Allianz Arena · U6 Fröttmaning"
+    ]
+   ],
+   "crowd": true,
+   "accessibility": false,
+   "advice": "Expect very full U6 trains around kick-off and full time.",
    "source": {
     "name": "Allianz Arena match calendar",
     "url": "https://allianz-arena.com/en/news/next-matches-at-the-allianz-arena"
@@ -1745,54 +1837,6 @@ globalThis.TransportGapsToday = {
    }
   },
   {
-   "id": "mvg-1k1dqt1",
-   "cause": "works",
-   "status": "official",
-   "severity": 1,
-   "title": "Bus 132: replacement buses",
-   "original": "(H) Implerstraße in Richtung Marienplatz verlegt wegen des U3/U6-Schienenersatzverkehrs",
-   "details": "Wegen des Schienenersatzverkehrs der U3 und U6 wird die (H) Implerstraße der Buslinie 132 > Marienplatz von Montag, 18. Mai bis vsl. Freitag, 27. November 2026 um ca. 100 Meter in Fahrtrichtung (nach der Kreuzung Lindenschmitstraße / Implerstraße) verlegt. Weitere Informationen zum Ersatzverkehr finden Sie auf mvg.de/pocci.",
-   "place": "Implerstraße",
-   "lines": [
-    {
-     "label": "132",
-     "mode": "bus"
-    }
-   ],
-   "start": "2026-05-03T22:00:00.000Z",
-   "end": "2026-11-27T22:59:00.000Z",
-   "location": {
-    "lat": 48.119611,
-    "lng": 11.548337,
-    "precision": "station"
-   },
-   "points": [
-    [
-     48.119611,
-     11.548337,
-     "Implerstraße"
-    ]
-   ],
-   "stops": [
-    {
-     "id": "de:09162:1140",
-     "name": "Implerstraße",
-     "lat": 48.119611,
-     "lng": 11.548337,
-     "role": "listed"
-    }
-   ],
-   "segments": [],
-   "operatorAdvice": [
-    "Replacement buses (SEV) cover the affected section."
-   ],
-   "advice": "Long-running planned change: check your usual connection.",
-   "source": {
-    "name": "MVG service notices",
-    "url": "https://www.mvg.de/dienste/betriebsaenderungen.html"
-   }
-  },
-  {
    "id": "mvg-fjjsi5",
    "cause": "works",
    "status": "official",
@@ -2038,6 +2082,31 @@ globalThis.TransportGapsToday = {
      48.184349,
      11.584692,
      "Domagkstraße West"
+    ],
+    [
+     48.183116,
+     11.596145,
+     "Gertrud-Grunow-Straße"
+    ],
+    [
+     48.183798,
+     11.590279,
+     "Domagkstraße"
+    ],
+    [
+     48.181744,
+     11.584916,
+     "Griegstraße"
+    ],
+    [
+     48.179755,
+     11.58921,
+     "Anni-Albers-Straße"
+    ],
+    [
+     48.178168,
+     11.585249,
+     "Freiligrathstraße"
     ]
    ],
    "stops": [
@@ -2054,6 +2123,41 @@ globalThis.TransportGapsToday = {
      "lat": 48.184349,
      "lng": 11.584692,
      "role": "end"
+    },
+    {
+     "id": "de:09162:448",
+     "name": "Gertrud-Grunow-Straße",
+     "lat": 48.183116,
+     "lng": 11.596145,
+     "role": "listed"
+    },
+    {
+     "id": "de:09162:502",
+     "name": "Domagkstraße",
+     "lat": 48.183798,
+     "lng": 11.590279,
+     "role": "listed"
+    },
+    {
+     "id": "de:09162:423",
+     "name": "Griegstraße",
+     "lat": 48.181744,
+     "lng": 11.584916,
+     "role": "listed"
+    },
+    {
+     "id": "de:09162:988",
+     "name": "Anni-Albers-Straße",
+     "lat": 48.179755,
+     "lng": 11.58921,
+     "role": "listed"
+    },
+    {
+     "id": "de:09162:458",
+     "name": "Freiligrathstraße",
+     "lat": 48.178168,
+     "lng": 11.585249,
+     "role": "listed"
     }
    ],
    "segments": [
@@ -2534,6 +2638,11 @@ globalThis.TransportGapsToday = {
      "Aidenbachstraße"
     ],
     [
+     48.100465,
+     11.529275,
+     "Hofmannstraße"
+    ],
+    [
      48.098312,
      11.536569,
      "Obersendling"
@@ -2547,11 +2656,6 @@ globalThis.TransportGapsToday = {
      48.099985,
      11.533236,
      "Geretsrieder Straße"
-    ],
-    [
-     48.100465,
-     11.529275,
-     "Hofmannstraße"
     ],
     [
      48.095684,
@@ -2580,6 +2684,13 @@ globalThis.TransportGapsToday = {
      "role": "end"
     },
     {
+     "id": "de:09162:1302",
+     "name": "Hofmannstraße",
+     "lat": 48.100465,
+     "lng": 11.529275,
+     "role": "listed"
+    },
+    {
      "id": "de:09162:1450",
      "name": "Obersendling",
      "lat": 48.098312,
@@ -2598,13 +2709,6 @@ globalThis.TransportGapsToday = {
      "name": "Geretsrieder Straße",
      "lat": 48.099985,
      "lng": 11.533236,
-     "role": "listed"
-    },
-    {
-     "id": "de:09162:1302",
-     "name": "Hofmannstraße",
-     "lat": 48.100465,
-     "lng": 11.529275,
      "role": "listed"
     },
     {
@@ -2730,136 +2834,6 @@ globalThis.TransportGapsToday = {
    "operatorAdvice": [
     "Vehicles are diverted, so some stops are skipped."
    ],
-   "advice": "Long-running planned change: check your usual connection.",
-   "source": {
-    "name": "MVG service notices",
-    "url": "https://www.mvg.de/dienste/betriebsaenderungen.html"
-   }
-  },
-  {
-   "id": "mvg-ncl4m9",
-   "cause": "works",
-   "status": "official",
-   "severity": 1,
-   "title": "U3/U6: replacement buses",
-   "original": "Sendlinger Tor \u003c> Implerstraße: Ersatzverkehr mit Pendelzug und Bus wegen Sanierungsarbeiten",
-   "details": "Von Montag, 5. Oktober bis vsl. Freitag, 27. November 2026 fahren die U3 und U6 zwischen Sendlinger Tor und Implerstraße stark eingeschränkt. Grund dafür sind Sanierungsarbeiten an den U-Bahnhöfen Poccistraße und Goetheplatz. Anstelle des regulären U-Bahnbetriebs setzen wir zwei Ersatzbuslinien sowie einen Pendelzug ein: Pendelzug U: Goetheplatz - Implerstraße (ohne Halt an der Poccistraße) (10-Minuten-Takt) SEV…",
-   "place": "Sendlinger Tor · Implerstraße",
-   "lines": [
-    {
-     "label": "U3",
-     "mode": "ubahn"
-    },
-    {
-     "label": "U6",
-     "mode": "ubahn"
-    }
-   ],
-   "start": "2026-09-20T22:00:00.000Z",
-   "end": "2026-11-27T22:59:00.000Z",
-   "location": {
-    "lat": 48.133444,
-    "lng": 11.566681,
-    "precision": "station"
-   },
-   "points": [
-    [
-     48.133444,
-     11.566681,
-     "Sendlinger Tor"
-    ],
-    [
-     48.119611,
-     11.548337,
-     "Implerstraße"
-    ]
-   ],
-   "stops": [
-    {
-     "id": "de:09162:50",
-     "name": "Sendlinger Tor",
-     "lat": 48.133444,
-     "lng": 11.566681,
-     "role": "end"
-    },
-    {
-     "id": "de:09162:1140",
-     "name": "Implerstraße",
-     "lat": 48.119611,
-     "lng": 11.548337,
-     "role": "end"
-    }
-   ],
-   "segments": [
-    "Affected section: Sendlinger Tor ↔ Implerstraße"
-   ],
-   "operatorAdvice": [
-    "Replacement buses (SEV) cover the affected section."
-   ],
-   "advice": "Long-running planned change: check your usual connection.",
-   "source": {
-    "name": "MVG service notices",
-    "url": "https://www.mvg.de/dienste/betriebsaenderungen.html"
-   }
-  },
-  {
-   "id": "mvg-3p31kd",
-   "cause": "works",
-   "status": "official",
-   "severity": 1,
-   "title": "U4/U5: stops or trips cancelled",
-   "original": "Eingeschränkter Betrieb wegen einer Fahrtreppenerneuerung am Max-Weber-Platz",
-   "details": "Von Montag, 5. Oktober bis vsl. Freitag, 27. November 2026 werden am U-Bahnhof Max-Weber-Platz zwei Fahrtreppen erneuert. Aus diesem Grund fahren ab Max-Weber-Platz keine U-Bahnen Richtung Innenstadt! Die U4 fährt nur im Abschnitt Arabellapark \u003c> Max-Weber-Platz. Hinweis: Ab Montag, 26. Oktober 2026 entfällt die U4 auf dem Abschnitt Odeonsplatz \u003c> Westendstraße. Bitte weichen Sie in diesem Abschnitt sowie in…",
-   "place": "Arabellapark · Max-Weber-Platz",
-   "lines": [
-    {
-     "label": "U4",
-     "mode": "ubahn"
-    },
-    {
-     "label": "U5",
-     "mode": "ubahn"
-    }
-   ],
-   "start": "2026-09-20T22:00:00.000Z",
-   "end": "2026-11-27T22:59:00.000Z",
-   "location": {
-    "lat": 48.153279,
-    "lng": 11.620427,
-    "precision": "station"
-   },
-   "points": [
-    [
-     48.153279,
-     11.620427,
-     "Arabellapark"
-    ],
-    [
-     48.135693,
-     11.598355,
-     "Max-Weber-Platz"
-    ]
-   ],
-   "stops": [
-    {
-     "id": "de:09162:670",
-     "name": "Arabellapark",
-     "lat": 48.153279,
-     "lng": 11.620427,
-     "role": "end"
-    },
-    {
-     "id": "de:09162:580",
-     "name": "Max-Weber-Platz",
-     "lat": 48.135693,
-     "lng": 11.598355,
-     "role": "end"
-    }
-   ],
-   "segments": [
-    "U4 only runs Arabellapark ↔ Max-Weber-Platz"
-   ],
-   "operatorAdvice": [],
    "advice": "Long-running planned change: check your usual connection.",
    "source": {
     "name": "MVG service notices",
@@ -3011,68 +2985,6 @@ globalThis.TransportGapsToday = {
     "Replacement buses (SEV) cover the affected section.",
     "Expected to last until about 03:30."
    ],
-   "advice": "Long-running planned change: check your usual connection.",
-   "source": {
-    "name": "MVG service notices",
-    "url": "https://www.mvg.de/dienste/betriebsaenderungen.html"
-   }
-  },
-  {
-   "id": "mvg-117d8jt",
-   "cause": "event",
-   "status": "official",
-   "severity": 1,
-   "title": "Bus 190/191: diverted · event",
-   "original": "St. Pius > Schlüsselbergstraße: Umleitung wegen Fernwärmebauarbeiten",
-   "details": "Wegen Fernwärmebauarbeiten im Bereich Aschheimer Straße / Grafinger Straße werden die Buslinien 190 > Messestadt Ost und 191 > Zamilapark von Dienstag, 27. Oktober bis vsl. Freitag, 27. November 2026 zwischen St. Pius und Schlüsselbergstraße umgeleitet. Die (H) Grafinger Straße und Altöttinger Straße entfallen. Auf der Umleitungsstrecke werden die (H) Mühldorfstraße und Ampfingstraße der Buslinie 59 >…",
-   "place": "Bus 190/191 (line-wide)",
-   "lines": [
-    {
-     "label": "190",
-     "mode": "bus"
-    },
-    {
-     "label": "191",
-     "mode": "bus"
-    }
-   ],
-   "start": "2026-10-05T22:00:00.000Z",
-   "end": "2026-11-27T22:59:00.000Z",
-   "location": null,
-   "points": [],
-   "stops": [],
-   "segments": [],
-   "operatorAdvice": [
-    "Vehicles are diverted, so some stops are skipped."
-   ],
-   "advice": "Long-running planned change: check your usual connection.",
-   "source": {
-    "name": "MVG service notices",
-    "url": "https://www.mvg.de/dienste/betriebsaenderungen.html"
-   }
-  },
-  {
-   "id": "mvg-1gu3syx",
-   "cause": "works",
-   "status": "official",
-   "severity": 1,
-   "title": "Bus 59: stop moved",
-   "original": "(H) St. Pius in Richtung Ackermannbogen wegen Fernwärmebauarbeiten verlegt",
-   "details": "Wegen Fernwärmebauarbeiten im Bereich Aschheimer Straße / Grafinger Straße ist die (H) St. Pius der Buslinie 59 > Ackermannbogen von Dienstag, 27. Oktober bis vsl. Freitag, 27. November 2026 über die Einmündung Grafinger Straße (vor Ampfingstraße 6) verlegt.",
-   "place": "Bus 59 (line-wide)",
-   "lines": [
-    {
-     "label": "59",
-     "mode": "bus"
-    }
-   ],
-   "start": "2026-10-05T22:00:00.000Z",
-   "end": "2026-11-27T22:59:00.000Z",
-   "location": null,
-   "points": [],
-   "stops": [],
-   "segments": [],
-   "operatorAdvice": [],
    "advice": "Long-running planned change: check your usual connection.",
    "source": {
     "name": "MVG service notices",
@@ -3359,7 +3271,7 @@ globalThis.TransportGapsToday = {
    "title": "Bus 60: diverted",
    "original": "Stanigplatz \u003c> Hasenbergl Süd: Umleitung wegen Fernwärmebauarbeiten",
    "details": "Wegen Fernwärmebauarbeiten in der Weitlstraße werden die Buslinien 60 und N76 von Montag, 9. November bis vsl. Montag, 14. Dezember 2026 zwischen Stanigplatz bzw. Dülferstraße und Hasenbergl Süd umgeleitet. Die (H) Hasenbergl ist in Richtung Olympia-Einkaufszentrum an die Haltestelle der Buslinie 172 > Dachau Bf. in der Dülferstraße verlegt, die (H) Ittlingerstraße entfällt in beiden Richtungen. Bitte beachten Sie…",
-   "place": "Hasenbergl · Ittlingerstraße · Stanigplatz +1",
+   "place": "Hasenbergl · Ittlingerstraße · Stanigplatz +4",
    "lines": [
     {
      "label": "60",
@@ -3393,6 +3305,21 @@ globalThis.TransportGapsToday = {
      48.208254,
      11.552397,
      "Hasenbergl Süd"
+    ],
+    [
+     48.212492,
+     11.562908,
+     "Dülferstraße"
+    ],
+    [
+     48.219974,
+     11.561138,
+     "Aschenbrennerstraße"
+    ],
+    [
+     48.219764,
+     11.557078,
+     "Stösserstraße"
     ]
    ],
    "stops": [
@@ -3422,6 +3349,27 @@ globalThis.TransportGapsToday = {
      "name": "Hasenbergl Süd",
      "lat": 48.208254,
      "lng": 11.552397,
+     "role": "listed"
+    },
+    {
+     "id": "de:09162:780",
+     "name": "Dülferstraße",
+     "lat": 48.212492,
+     "lng": 11.562908,
+     "role": "listed"
+    },
+    {
+     "id": "de:09162:788",
+     "name": "Aschenbrennerstraße",
+     "lat": 48.219974,
+     "lng": 11.561138,
+     "role": "listed"
+    },
+    {
+     "id": "de:09162:351",
+     "name": "Stösserstraße",
+     "lat": 48.219764,
+     "lng": 11.557078,
      "role": "listed"
     }
    ],
@@ -3491,57 +3439,6 @@ globalThis.TransportGapsToday = {
    "operatorAdvice": [
     "Replacement buses (SEV) cover the affected section.",
     "Expected to last until about 03:00."
-   ],
-   "advice": "Long-running planned change: check your usual connection.",
-   "source": {
-    "name": "MVG service notices",
-    "url": "https://www.mvg.de/dienste/betriebsaenderungen.html"
-   }
-  },
-  {
-   "id": "mvg-298kt7",
-   "cause": "works",
-   "status": "official",
-   "severity": 1,
-   "title": "S2: replacement buses",
-   "original": "Ersatzverkehr und Umleitungen zwischen Dachau und Petershausen (23. bis 28. November)",
-   "details": "Auf Grund von Gleisbauarbeiten besteht von Montag, 23. November 2026, 4:00 Uhr, durchgehend bis Samstag, 28. November 2026, 4:00 Uhr zwischen Dachau und Petershausen Ersatzverkehr mit Bussen. Die Züge Richtung München fahren in Dachau von unterschiedlichen Abfahrtsgleisen ab, teilweise auch von Gleis 4. Bitte beachten Sie die Anzeigen und Ansagen am Bahnsteig. In den Nächten Donnerstag/Freitag, 26./27. November,…",
-   "place": "Dachau Bahnhof",
-   "lines": [
-    {
-     "label": "S2",
-     "mode": "sbahn"
-    }
-   ],
-   "start": "2026-11-02T03:00:00.000Z",
-   "end": "2026-11-28T03:00:00.000Z",
-   "location": {
-    "lat": 48.254497,
-    "lng": 11.443252,
-    "precision": "station"
-   },
-   "points": [
-    [
-     48.254497,
-     11.443252,
-     "Dachau Bahnhof"
-    ]
-   ],
-   "stops": [
-    {
-     "id": "de:09174:6800",
-     "name": "Dachau Bahnhof",
-     "lat": 48.254497,
-     "lng": 11.443252,
-     "role": "end"
-    }
-   ],
-   "segments": [
-    "Affected section: Dachau ↔ Petershausen"
-   ],
-   "operatorAdvice": [
-    "Replacement buses (SEV) cover the affected section.",
-    "Vehicles are diverted, so some stops are skipped."
    ],
    "advice": "Long-running planned change: check your usual connection.",
    "source": {
@@ -3961,7 +3858,7 @@ globalThis.TransportGapsToday = {
    "title": "Bus N81: diverted",
    "original": "Lochhausen Bf. > Sumpfmeisenweg: Umleitung wegen Bauarbeiten im Kleiberweg",
    "details": "Wegen Bauarbeiten im Kleiberweg wird die Nachtlinie N81 von Dienstag, 1. Dezember bis vsl. Mittwoch, 23. Dezember 2026 zwischen Lochhausen Bf. und Sumpfmeisenweg umgeleitet. Die (H) Kleiberweg entfällt. Auf der Umleitungsstrecke werden die (H) Ziegeleistraße und Federseestraße der Buslinie 162 > Eichelhäherstraße bedient.",
-   "place": "Kleiberweg · Lochhausen · Sumpfmeisenweg",
+   "place": "Kleiberweg · Ziegeleistraße · Federseestraße +2",
    "lines": [
     {
      "label": "N81",
@@ -3982,6 +3879,16 @@ globalThis.TransportGapsToday = {
      "Kleiberweg"
     ],
     [
+     48.176335,
+     11.403457,
+     "Ziegeleistraße"
+    ],
+    [
+     48.175508,
+     11.398031,
+     "Federseestraße"
+    ],
+    [
      48.176425,
      11.407984,
      "Lochhausen"
@@ -3998,6 +3905,20 @@ globalThis.TransportGapsToday = {
      "name": "Kleiberweg",
      "lat": 48.178432,
      "lng": 11.402648,
+     "role": "listed"
+    },
+    {
+     "id": "de:09162:1746",
+     "name": "Ziegeleistraße",
+     "lat": 48.176335,
+     "lng": 11.403457,
+     "role": "listed"
+    },
+    {
+     "id": "de:09162:1748",
+     "name": "Federseestraße",
+     "lat": 48.175508,
+     "lng": 11.398031,
      "role": "listed"
     },
     {
@@ -4362,43 +4283,43 @@ globalThis.TransportGapsToday = {
    }
   },
   {
-   "id": "news-3aaco4",
+   "id": "news-zdav1b",
    "cause": "news",
-   "topic": "works",
+   "topic": "accident",
    "status": "lead",
    "severity": 1,
-   "title": "Einschränkungen im Münchner U-Bahn-Verkehr: MVG kündigt nächste Bauphase mit Ersatzbussen an",
+   "title": "Glätte-Unfall in Hohenbrunn: Auto gerät in Gegenverkehr – Mann schwer verletzt",
    "details": "Headline from local news. Transport impact not confirmed: open the article to check.",
    "place": "Munich (location not extracted)",
    "lines": [],
-   "start": "2026-11-26T14:00:58.000Z",
+   "start": "2026-11-27T12:02:26.000Z",
    "end": null,
    "location": null,
    "points": [],
    "advice": "Treat as a lead, not a confirmed disruption.",
    "source": {
     "name": "tz.de München (headlines)",
-    "url": "https://www.tz.de/muenchen/stadt/einschraenkungen-im-muenchner-bahn-verkehr-mvg-kuendigt-naechste-bauphase-mit-ersatzbussen-an-94609694.html"
+    "url": "https://www.tz.de/muenchen/region/glaette-unfall-in-hohenbrunn-auto-geraet-in-gegenverkehr-mann-schwer-verletzt-94611292.html"
    }
   },
   {
-   "id": "news-16ikvad",
+   "id": "news-h1o82y",
    "cause": "news",
    "topic": "works",
    "status": "lead",
    "severity": 1,
-   "title": "S-Bahn-Sperrung zwischen Dachau und Petershausen – DB verlängert Ersatzverkehr in München",
+   "title": "Baureferat sperrt Hackerbrücke in München: Kabelarbeiten zwingen Autofahrer zur Umleitung",
    "details": "Headline from local news. Transport impact not confirmed: open the article to check.",
    "place": "Munich (location not extracted)",
    "lines": [],
-   "start": "2026-11-26T15:47:18.000Z",
+   "start": "2026-11-27T12:11:31.000Z",
    "end": null,
    "location": null,
    "points": [],
    "advice": "Treat as a lead, not a confirmed disruption.",
    "source": {
     "name": "tz.de München (headlines)",
-    "url": "https://www.tz.de/muenchen/stadt/bahn-sperrung-zwischen-dachau-und-petershausen-db-verlaengert-ersatzverkehr-in-muenchen-94610057.html"
+    "url": "https://www.tz.de/muenchen/stadt/baureferat-sperrt-hackerbruecke-in-muenchen-kabelarbeiten-zwingen-autofahrer-zur-umleitung-94611319.html"
    }
   },
   {
@@ -4430,8 +4351,8 @@ globalThis.TransportGapsToday = {
    "modes": [
     "ubahn"
    ],
-   "start": "2026-11-27T04:00:00.000Z",
-   "end": "2026-11-27T22:59:00.000Z",
+   "start": "2026-11-28T04:00:00.000Z",
+   "end": "2026-11-28T22:59:00.000Z",
    "series": null,
    "location": {
     "lat": 48.1334,
@@ -4509,8 +4430,8 @@ globalThis.TransportGapsToday = {
     "sbahn",
     "ubahn"
    ],
-   "start": "2026-11-27T09:00:00.000Z",
-   "end": "2026-11-27T20:00:00.000Z",
+   "start": "2026-11-28T09:00:00.000Z",
+   "end": "2026-11-28T20:00:00.000Z",
    "series": {
     "from": "2026-11-20",
     "to": "2026-12-24"
@@ -4542,43 +4463,23 @@ globalThis.TransportGapsToday = {
    ]
   },
   {
-   "id": "news-zdav1b",
+   "id": "news-wfl5qo",
    "cause": "news",
-   "topic": "accident",
+   "topic": "technical",
    "status": "lead",
    "severity": 1,
-   "title": "Glätte-Unfall in Hohenbrunn: Auto gerät in Gegenverkehr – Mann schwer verletzt",
+   "title": "„Sofortreparatur“ nötig: Mangfallbrücke gesperrt – In Richtung München geht ab Montag nichts mehr",
    "details": "Headline from local news. Transport impact not confirmed: open the article to check.",
    "place": "Munich (location not extracted)",
    "lines": [],
-   "start": "2026-11-27T12:02:26.000Z",
+   "start": "2026-11-28T12:57:48.000Z",
    "end": null,
    "location": null,
    "points": [],
    "advice": "Treat as a lead, not a confirmed disruption.",
    "source": {
     "name": "tz.de München (headlines)",
-    "url": "https://www.tz.de/muenchen/region/glaette-unfall-in-hohenbrunn-auto-geraet-in-gegenverkehr-mann-schwer-verletzt-94611292.html"
-   }
-  },
-  {
-   "id": "news-h1o82y",
-   "cause": "news",
-   "topic": "works",
-   "status": "lead",
-   "severity": 1,
-   "title": "Baureferat sperrt Hackerbrücke in München: Kabelarbeiten zwingen Autofahrer zur Umleitung",
-   "details": "Headline from local news. Transport impact not confirmed: open the article to check.",
-   "place": "Munich (location not extracted)",
-   "lines": [],
-   "start": "2026-11-27T12:11:31.000Z",
-   "end": null,
-   "location": null,
-   "points": [],
-   "advice": "Treat as a lead, not a confirmed disruption.",
-   "source": {
-    "name": "tz.de München (headlines)",
-    "url": "https://www.tz.de/muenchen/stadt/baureferat-sperrt-hackerbruecke-in-muenchen-kabelarbeiten-zwingen-autofahrer-zur-umleitung-94611319.html"
+    "url": "https://www.tz.de/muenchen/region/mangfallbruecke-in-gmund-gesperrt-sofortreparatur-legt-verkehr-lahm-94612756.html"
    }
   },
   {
@@ -4602,8 +4503,8 @@ globalThis.TransportGapsToday = {
    "modes": [
     "ubahn"
    ],
-   "start": "2026-11-27T15:00:00.000Z",
-   "end": "2026-11-27T22:00:00.000Z",
+   "start": "2026-11-28T15:00:00.000Z",
+   "end": "2026-11-28T22:00:00.000Z",
    "series": {
     "from": "2026-11-24",
     "to": "2026-12-23"
@@ -4636,264 +4537,264 @@ globalThis.TransportGapsToday = {
     "name": "Altstadt",
     "lat": 48.1372,
     "lng": 11.5755,
-    "temperature": 0.1,
+    "temperature": -0.2,
     "code": 3,
     "icon": "☁️",
     "label": "Overcast",
     "snowfallNext": 0,
     "precipitationNext": 0,
     "today": {
-     "min": -0.9,
+     "min": -2.2,
      "max": 0.1,
      "snowfall": 0,
      "precipitation": 0,
-     "chance": 5,
-     "icon": "🌨️",
-     "label": "Snow grains"
+     "chance": 0,
+     "icon": "☁️",
+     "label": "Overcast"
     },
-    "level": 2,
-    "kind": "snow",
-    "advice": "Snow: buses and trams may run slower. Allow ~10 extra minutes."
+    "level": 1,
+    "kind": "frost",
+    "advice": "Frosty: watch for icy patches on stairs and platforms."
    },
    {
     "id": "schwabing",
     "name": "Schwabing",
     "lat": 48.165,
     "lng": 11.586,
-    "temperature": 0,
+    "temperature": -0.2,
     "code": 3,
     "icon": "☁️",
     "label": "Overcast",
     "snowfallNext": 0,
     "precipitationNext": 0,
     "today": {
-     "min": -1.2,
-     "max": 0,
+     "min": -2.3,
+     "max": 0.2,
      "snowfall": 0,
      "precipitation": 0,
-     "chance": 5,
-     "icon": "🌨️",
-     "label": "Snow grains"
+     "chance": 0,
+     "icon": "☁️",
+     "label": "Overcast"
     },
-    "level": 2,
-    "kind": "snow",
-    "advice": "Snow: buses and trams may run slower. Allow ~10 extra minutes."
+    "level": 1,
+    "kind": "frost",
+    "advice": "Frosty: watch for icy patches on stairs and platforms."
    },
    {
     "id": "maxvorstadt",
     "name": "Maxvorstadt",
     "lat": 48.15,
     "lng": 11.568,
-    "temperature": 0.1,
+    "temperature": -0.1,
     "code": 3,
     "icon": "☁️",
     "label": "Overcast",
     "snowfallNext": 0,
     "precipitationNext": 0,
     "today": {
-     "min": -1,
-     "max": 0.1,
+     "min": -2.2,
+     "max": 0.2,
      "snowfall": 0,
      "precipitation": 0,
-     "chance": 5,
-     "icon": "🌨️",
-     "label": "Snow grains"
+     "chance": 0,
+     "icon": "☁️",
+     "label": "Overcast"
     },
-    "level": 2,
-    "kind": "snow",
-    "advice": "Snow: buses and trams may run slower. Allow ~10 extra minutes."
+    "level": 1,
+    "kind": "frost",
+    "advice": "Frosty: watch for icy patches on stairs and platforms."
    },
    {
     "id": "neuhausen",
     "name": "Neuhausen",
     "lat": 48.155,
     "lng": 11.533,
-    "temperature": 0.1,
+    "temperature": -0.2,
     "code": 3,
     "icon": "☁️",
     "label": "Overcast",
     "snowfallNext": 0,
     "precipitationNext": 0,
     "today": {
-     "min": -1.1,
-     "max": 0.1,
+     "min": -2.1,
+     "max": 0.3,
      "snowfall": 0,
      "precipitation": 0,
-     "chance": 5,
-     "icon": "🌨️",
-     "label": "Snow grains"
+     "chance": 0,
+     "icon": "☁️",
+     "label": "Overcast"
     },
-    "level": 2,
-    "kind": "snow",
-    "advice": "Snow: buses and trams may run slower. Allow ~10 extra minutes."
+    "level": 1,
+    "kind": "frost",
+    "advice": "Frosty: watch for icy patches on stairs and platforms."
    },
    {
     "id": "pasing",
     "name": "Pasing",
     "lat": 48.149,
     "lng": 11.461,
-    "temperature": 0,
+    "temperature": -0.2,
     "code": 3,
     "icon": "☁️",
     "label": "Overcast",
     "snowfallNext": 0,
     "precipitationNext": 0,
     "today": {
-     "min": -1.1,
-     "max": 0.1,
+     "min": -2,
+     "max": 0.3,
      "snowfall": 0,
      "precipitation": 0,
-     "chance": 5,
-     "icon": "🌨️",
-     "label": "Snow grains"
+     "chance": 0,
+     "icon": "☁️",
+     "label": "Overcast"
     },
-    "level": 2,
-    "kind": "snow",
-    "advice": "Snow: buses and trams may run slower. Allow ~10 extra minutes."
+    "level": 1,
+    "kind": "frost",
+    "advice": "Frosty: watch for icy patches on stairs and platforms."
    },
    {
     "id": "sendling",
     "name": "Sendling",
     "lat": 48.118,
     "lng": 11.54,
-    "temperature": 0,
+    "temperature": -0.3,
     "code": 3,
     "icon": "☁️",
     "label": "Overcast",
     "snowfallNext": 0,
     "precipitationNext": 0,
     "today": {
-     "min": -0.8,
-     "max": 0.1,
+     "min": -2.2,
+     "max": 0,
      "snowfall": 0,
      "precipitation": 0,
-     "chance": 5,
-     "icon": "🌨️",
-     "label": "Light snow"
+     "chance": 0,
+     "icon": "☁️",
+     "label": "Overcast"
     },
-    "level": 2,
-    "kind": "snow",
-    "advice": "Snow: buses and trams may run slower. Allow ~10 extra minutes."
+    "level": 1,
+    "kind": "frost",
+    "advice": "Frosty: watch for icy patches on stairs and platforms."
    },
    {
     "id": "giesing",
     "name": "Giesing",
     "lat": 48.11,
     "lng": 11.585,
-    "temperature": 0,
+    "temperature": -0.4,
     "code": 3,
     "icon": "☁️",
     "label": "Overcast",
     "snowfallNext": 0,
     "precipitationNext": 0,
     "today": {
-     "min": -0.9,
-     "max": 0.1,
+     "min": -2.3,
+     "max": -0.1,
      "snowfall": 0,
      "precipitation": 0,
-     "chance": 5,
-     "icon": "🌨️",
-     "label": "Light snow"
+     "chance": 0,
+     "icon": "☁️",
+     "label": "Overcast"
     },
-    "level": 2,
-    "kind": "snow",
-    "advice": "Snow: buses and trams may run slower. Allow ~10 extra minutes."
+    "level": 1,
+    "kind": "frost",
+    "advice": "Frosty: watch for icy patches on stairs and platforms."
    },
    {
     "id": "haidhausen",
     "name": "Haidhausen",
     "lat": 48.13,
     "lng": 11.6,
-    "temperature": 0,
+    "temperature": -0.3,
     "code": 3,
     "icon": "☁️",
     "label": "Overcast",
     "snowfallNext": 0,
     "precipitationNext": 0,
     "today": {
-     "min": -1.1,
+     "min": -2.3,
      "max": 0,
      "snowfall": 0,
-     "precipitation": 0.1,
-     "chance": 5,
-     "icon": "🌨️",
-     "label": "Snow grains"
+     "precipitation": 0,
+     "chance": 0,
+     "icon": "☁️",
+     "label": "Overcast"
     },
-    "level": 2,
-    "kind": "snow",
-    "advice": "Snow: buses and trams may run slower. Allow ~10 extra minutes."
+    "level": 1,
+    "kind": "frost",
+    "advice": "Frosty: watch for icy patches on stairs and platforms."
    },
    {
     "id": "bogenhausen",
     "name": "Bogenhausen",
     "lat": 48.153,
     "lng": 11.615,
-    "temperature": 0,
+    "temperature": -0.3,
     "code": 3,
     "icon": "☁️",
     "label": "Overcast",
     "snowfallNext": 0,
     "precipitationNext": 0,
     "today": {
-     "min": -1.2,
-     "max": 0,
+     "min": -2.3,
+     "max": 0.1,
      "snowfall": 0,
      "precipitation": 0,
-     "chance": 5,
-     "icon": "🌨️",
-     "label": "Snow grains"
+     "chance": 0,
+     "icon": "☁️",
+     "label": "Overcast"
     },
-    "level": 2,
-    "kind": "snow",
-    "advice": "Snow: buses and trams may run slower. Allow ~10 extra minutes."
+    "level": 1,
+    "kind": "frost",
+    "advice": "Frosty: watch for icy patches on stairs and platforms."
    },
    {
     "id": "trudering",
     "name": "Trudering-Riem",
     "lat": 48.126,
     "lng": 11.665,
-    "temperature": 0,
+    "temperature": -0.3,
     "code": 3,
     "icon": "☁️",
     "label": "Overcast",
     "snowfallNext": 0,
     "precipitationNext": 0,
     "today": {
-     "min": -1.1,
+     "min": -2.4,
      "max": 0,
      "snowfall": 0,
-     "precipitation": 0.1,
-     "chance": 5,
-     "icon": "🌨️",
-     "label": "Light snow"
+     "precipitation": 0,
+     "chance": 0,
+     "icon": "☁️",
+     "label": "Overcast"
     },
-    "level": 2,
-    "kind": "snow",
-    "advice": "Snow: buses and trams may run slower. Allow ~10 extra minutes."
+    "level": 1,
+    "kind": "frost",
+    "advice": "Frosty: watch for icy patches on stairs and platforms."
    },
    {
     "id": "milbertshofen",
     "name": "Milbertshofen",
     "lat": 48.183,
     "lng": 11.57,
-    "temperature": 0,
+    "temperature": -0.2,
     "code": 3,
     "icon": "☁️",
     "label": "Overcast",
     "snowfallNext": 0,
     "precipitationNext": 0,
     "today": {
-     "min": -1.2,
-     "max": 0,
+     "min": -2.2,
+     "max": 0.2,
      "snowfall": 0,
      "precipitation": 0,
-     "chance": 5,
-     "icon": "🌨️",
-     "label": "Snow grains"
+     "chance": 0,
+     "icon": "☁️",
+     "label": "Overcast"
     },
-    "level": 2,
-    "kind": "snow",
-    "advice": "Snow: buses and trams may run slower. Allow ~10 extra minutes."
+    "level": 1,
+    "kind": "frost",
+    "advice": "Frosty: watch for icy patches on stairs and platforms."
    },
    {
     "id": "moosach",
@@ -4907,140 +4808,97 @@ globalThis.TransportGapsToday = {
     "snowfallNext": 0,
     "precipitationNext": 0,
     "today": {
-     "min": -1.1,
-     "max": -0.1,
+     "min": -2,
+     "max": 0.3,
      "snowfall": 0,
      "precipitation": 0,
-     "chance": 5,
-     "icon": "🌨️",
-     "label": "Snow grains"
+     "chance": 0,
+     "icon": "☁️",
+     "label": "Overcast"
     },
-    "level": 2,
-    "kind": "snow",
-    "advice": "Snow: buses and trams may run slower. Allow ~10 extra minutes."
+    "level": 1,
+    "kind": "frost",
+    "advice": "Frosty: watch for icy patches on stairs and platforms."
    },
    {
     "id": "freimann",
     "name": "Freimann",
     "lat": 48.203,
     "lng": 11.61,
-    "temperature": -0.2,
+    "temperature": -0.3,
     "code": 3,
     "icon": "☁️",
     "label": "Overcast",
     "snowfallNext": 0,
     "precipitationNext": 0,
     "today": {
-     "min": -1.3,
-     "max": -0.1,
+     "min": -2.3,
+     "max": 0.1,
      "snowfall": 0,
      "precipitation": 0,
-     "chance": 5,
-     "icon": "🌨️",
-     "label": "Snow grains"
+     "chance": 0,
+     "icon": "☁️",
+     "label": "Overcast"
     },
-    "level": 2,
-    "kind": "snow",
-    "advice": "Snow: buses and trams may run slower. Allow ~10 extra minutes."
+    "level": 1,
+    "kind": "frost",
+    "advice": "Frosty: watch for icy patches on stairs and platforms."
    },
    {
     "id": "hadern",
     "name": "Hadern",
     "lat": 48.115,
     "lng": 11.485,
-    "temperature": 0,
+    "temperature": -0.3,
     "code": 3,
     "icon": "☁️",
     "label": "Overcast",
     "snowfallNext": 0,
     "precipitationNext": 0,
     "today": {
-     "min": -0.9,
-     "max": 0.1,
+     "min": -2.2,
+     "max": 0,
      "snowfall": 0,
      "precipitation": 0,
-     "chance": 5,
-     "icon": "🌨️",
-     "label": "Snow grains"
+     "chance": 0,
+     "icon": "☁️",
+     "label": "Overcast"
     },
-    "level": 2,
-    "kind": "snow",
-    "advice": "Snow: buses and trams may run slower. Allow ~10 extra minutes."
+    "level": 1,
+    "kind": "frost",
+    "advice": "Frosty: watch for icy patches on stairs and platforms."
    }
   ],
   "city": {
-   "level": 2,
-   "kind": "snow",
-   "advice": "Snow: buses and trams may run slower. Allow ~10 extra minutes.",
+   "level": 1,
+   "kind": "frost",
+   "advice": "Frosty: watch for icy patches on stairs and platforms.",
    "icon": "☁️",
    "label": "Overcast",
-   "temperature": 0,
+   "temperature": -0.2,
    "today": {
-    "min": -0.9,
+    "min": -2.2,
     "max": 0.1,
     "snowfall": 0,
     "precipitation": 0,
-    "chance": 5,
-    "icon": "🌨️",
-    "label": "Snow grains"
+    "chance": 0,
+    "icon": "☁️",
+    "label": "Overcast"
    },
-   "snowyDistricts": [
-    "Altstadt",
-    "Schwabing",
-    "Maxvorstadt",
-    "Neuhausen",
-    "Pasing",
-    "Sendling",
-    "Giesing",
-    "Haidhausen",
-    "Bogenhausen",
-    "Trudering-Riem",
-    "Milbertshofen",
-    "Moosach",
-    "Freimann",
-    "Hadern"
-   ],
+   "snowyDistricts": [],
    "wetDistricts": []
   }
  },
  "alerts": [
   {
-   "id": "dwd-3071423",
-   "level": 1,
-   "event": "icy surfaces",
-   "headline": "Official WARNING of ICY SURFACES",
-   "description": "There is a slight risk of icy surfaces (level 1 of 4).\n",
-   "instruction": "Hazard(s) to expect: slippery ground. \nRecommendations for what to do: \nAdapt your behaviour in road traffic.",
-   "start": "2026-11-27T10:00:00+00:00",
-   "end": "2026-11-27T15:00:00+00:00",
-   "source": {
-    "name": "Deutscher Wetterdienst via Bright Sky",
-    "url": "https://www.dwd.de/DE/wetter/warnungen_gemeinden/warnWetter_node.html"
-   }
-  },
-  {
-   "id": "dwd-3071722",
+   "id": "dwd-3072212",
    "level": 1,
    "event": "frost",
    "headline": "Official WARNING of FROST",
-   "description": "There is a risk of frost (level 1 of 2).\nMinimum temperature: -1 - -4 °C",
+   "description": "There is a risk of frost (level 1 of 2).\nMinimum temperature: -2 - -6 °C",
    "instruction": "Hazard(s) to expect: possible frost damage. \nRecommendations for what to do: \nIf necessary, take precautions against frost.",
-   "start": "2026-11-27T11:00:00+00:00",
-   "end": "2026-11-28T11:00:00+00:00",
-   "source": {
-    "name": "Deutscher Wetterdienst via Bright Sky",
-    "url": "https://www.dwd.de/DE/wetter/warnungen_gemeinden/warnWetter_node.html"
-   }
-  },
-  {
-   "id": "dwd-3071728",
-   "level": 1,
-   "event": "icy surfaces",
-   "headline": "Official WARNING of ICY SURFACES",
-   "description": "There is a risk of icy surfaces (level 1 of 4).\n",
-   "instruction": "Hazard(s) to expect: slippery ground. \nRecommendations for what to do: \nAdapt your behaviour in road traffic.",
-   "start": "2026-11-27T15:00:00+00:00",
-   "end": "2026-11-28T10:00:00+00:00",
+   "start": "2026-11-28T15:00:00+00:00",
+   "end": "2026-11-29T11:00:00+00:00",
    "source": {
     "name": "Deutscher Wetterdienst via Bright Sky",
     "url": "https://www.dwd.de/DE/wetter/warnungen_gemeinden/warnWetter_node.html"
@@ -5048,36 +4906,36 @@ globalThis.TransportGapsToday = {
   }
  ],
  "network": {
-  "updatedAt": "2026-11-27T14:59:14.165Z",
+  "updatedAt": "2026-11-28T14:08:47.705Z",
   "lines": [
    {
     "label": "U1",
     "mode": "ubahn",
     "status": "ok",
-    "avg": 1.5,
+    "avg": 1.3,
     "max": 3,
     "cancelled": 0,
-    "seen": 16,
+    "seen": 17,
     "hubs": [
      "Sendlinger Tor",
      "Rotkreuzplatz",
      "Kolumbusplatz"
     ],
-    "worstHub": "Kolumbusplatz",
+    "worstHub": "Rotkreuzplatz",
     "incident": false
    },
    {
     "label": "U2",
     "mode": "ubahn",
     "status": "ok",
-    "avg": 0.3,
-    "max": 2,
+    "avg": 1.4,
+    "max": 3,
     "cancelled": 0,
-    "seen": 49,
+    "seen": 29,
     "hubs": [
      "Sendlinger Tor",
-     "Scheidplatz",
      "Giesing",
+     "Scheidplatz",
      "Innsbrucker Ring",
      "Kolumbusplatz"
     ],
@@ -5087,20 +4945,20 @@ globalThis.TransportGapsToday = {
    {
     "label": "U3",
     "mode": "ubahn",
-    "status": "delayed",
-    "avg": 0,
-    "max": 0,
-    "cancelled": 1,
-    "seen": 26,
+    "status": "ok",
+    "avg": 0.8,
+    "max": 3,
+    "cancelled": 0,
+    "seen": 25,
     "hubs": [
-     "Marienplatz",
-     "Odeonsplatz",
      "Sendlinger Tor",
+     "Odeonsplatz",
+     "Marienplatz",
      "Münchner Freiheit",
-     "Scheidplatz",
-     "Moosach"
+     "Moosach",
+     "Scheidplatz"
     ],
-    "worstHub": "Münchner Freiheit",
+    "worstHub": "Sendlinger Tor",
     "incident": false
    },
    {
@@ -5110,8 +4968,10 @@ globalThis.TransportGapsToday = {
     "avg": null,
     "max": 0,
     "cancelled": 0,
-    "seen": 3,
+    "seen": 11,
     "hubs": [
+     "Karlsplatz (Stachus)",
+     "Odeonsplatz",
      "Max-Weber-Platz"
     ],
     "worstHub": null,
@@ -5122,48 +4982,51 @@ globalThis.TransportGapsToday = {
     "mode": "ubahn",
     "status": "ok",
     "avg": 0.8,
-    "max": 2,
+    "max": 1,
     "cancelled": 0,
-    "seen": 21,
+    "seen": 24,
     "hubs": [
-     "Ostbahnhof",
-     "Odeonsplatz",
      "Karlsplatz (Stachus)",
+     "Odeonsplatz",
+     "Ostbahnhof",
      "Max-Weber-Platz",
      "Innsbrucker Ring"
     ],
-    "worstHub": "Odeonsplatz",
+    "worstHub": "Karlsplatz (Stachus)",
     "incident": false
    },
    {
     "label": "U6",
     "mode": "ubahn",
-    "status": "disrupted",
-    "avg": 1,
-    "max": 3,
-    "cancelled": 3,
-    "seen": 35,
+    "status": "ok",
+    "avg": 0.6,
+    "max": 2,
+    "cancelled": 0,
+    "seen": 42,
     "hubs": [
-     "Marienplatz",
-     "Odeonsplatz",
      "Sendlinger Tor",
+     "Odeonsplatz",
+     "Marienplatz",
      "Münchner Freiheit",
      "Harras"
     ],
-    "worstHub": "Harras",
+    "worstHub": "Odeonsplatz",
     "incident": false
    },
    {
-    "label": "U7",
+    "label": "U8",
     "mode": "ubahn",
     "status": "ok",
-    "avg": null,
+    "avg": 0,
     "max": 0,
     "cancelled": 0,
-    "seen": 6,
+    "seen": 26,
     "hubs": [
      "Sendlinger Tor",
-     "Rotkreuzplatz"
+     "Giesing",
+     "Scheidplatz",
+     "Innsbrucker Ring",
+     "Kolumbusplatz"
     ],
     "worstHub": "Sendlinger Tor",
     "incident": false
@@ -5171,111 +5034,104 @@ globalThis.TransportGapsToday = {
    {
     "label": "S1",
     "mode": "sbahn",
-    "status": "delayed",
-    "avg": 3.9,
-    "max": 7,
+    "status": "ok",
+    "avg": 2.9,
+    "max": 6,
     "cancelled": 0,
-    "seen": 19,
+    "seen": 23,
     "hubs": [
-     "Ostbahnhof",
-     "Marienplatz",
-     "Karlsplatz (Stachus)",
      "Hauptbahnhof",
-     "Moosach"
+     "Karlsplatz (Stachus)",
+     "Marienplatz",
+     "Ostbahnhof",
+     "Moosach",
+     "Laim"
     ],
-    "worstHub": "Ostbahnhof",
+    "worstHub": "Hauptbahnhof",
     "incident": false
    },
    {
     "label": "S2",
     "mode": "sbahn",
-    "status": "delayed",
-    "avg": 3.9,
-    "max": 8,
+    "status": "ok",
+    "avg": 2.7,
+    "max": 4,
     "cancelled": 0,
-    "seen": 15,
+    "seen": 14,
     "hubs": [
-     "Ostbahnhof",
-     "Marienplatz",
-     "Karlsplatz (Stachus)",
      "Hauptbahnhof",
+     "Karlsplatz (Stachus)",
+     "Marienplatz",
+     "Ostbahnhof",
      "Laim"
     ],
-    "worstHub": "Laim",
+    "worstHub": "Hauptbahnhof",
     "incident": false
    },
    {
     "label": "S3",
     "mode": "sbahn",
-    "status": "delayed",
-    "avg": 4.5,
-    "max": 9,
+    "status": "ok",
+    "avg": 2.5,
+    "max": 5,
     "cancelled": 0,
-    "seen": 26,
+    "seen": 17,
     "hubs": [
-     "Ostbahnhof",
-     "Marienplatz",
-     "Karlsplatz (Stachus)",
      "Hauptbahnhof",
+     "Karlsplatz (Stachus)",
+     "Marienplatz",
+     "Ostbahnhof",
      "Pasing",
      "Giesing",
      "Laim"
     ],
-    "worstHub": "Marienplatz",
+    "worstHub": "Pasing",
     "incident": false
    },
    {
     "label": "S4",
     "mode": "sbahn",
     "status": "ok",
-    "avg": 2,
-    "max": 4,
+    "avg": null,
+    "max": 2,
     "cancelled": 0,
-    "seen": 7,
+    "seen": 1,
     "hubs": [
-     "Ostbahnhof",
-     "Marienplatz",
-     "Karlsplatz (Stachus)",
-     "Hauptbahnhof",
      "Pasing"
     ],
-    "worstHub": "Hauptbahnhof",
+    "worstHub": "Pasing",
     "incident": false
    },
    {
     "label": "S5",
     "mode": "sbahn",
-    "status": "delayed",
-    "avg": 3.8,
-    "max": 8,
-    "cancelled": 1,
-    "seen": 12,
+    "status": "ok",
+    "avg": 2.9,
+    "max": 5,
+    "cancelled": 0,
+    "seen": 16,
     "hubs": [
-     "Ostbahnhof",
-     "Marienplatz",
-     "Karlsplatz (Stachus)",
      "Hauptbahnhof",
+     "Karlsplatz (Stachus)",
+     "Marienplatz",
+     "Ostbahnhof",
      "Pasing",
      "Giesing",
      "Laim"
     ],
-    "worstHub": "Laim",
+    "worstHub": "Hauptbahnhof",
     "incident": false
    },
    {
     "label": "S6",
     "mode": "sbahn",
-    "status": "delayed",
-    "avg": 3.6,
-    "max": 8,
+    "status": "ok",
+    "avg": null,
+    "max": 2,
     "cancelled": 0,
-    "seen": 8,
+    "seen": 2,
     "hubs": [
-     "Ostbahnhof",
-     "Marienplatz",
-     "Hauptbahnhof",
-     "Pasing",
-     "Laim"
+     "Pasing"
     ],
     "worstHub": "Pasing",
     "incident": false
@@ -5284,8 +5140,8 @@ globalThis.TransportGapsToday = {
     "label": "S7",
     "mode": "sbahn",
     "status": "ok",
-    "avg": 1.7,
-    "max": 2,
+    "avg": null,
+    "max": 1,
     "cancelled": 0,
     "seen": 4,
     "hubs": [
@@ -5298,44 +5154,30 @@ globalThis.TransportGapsToday = {
    {
     "label": "S8",
     "mode": "sbahn",
-    "status": "delayed",
-    "avg": 4.2,
-    "max": 9,
+    "status": "disrupted",
+    "avg": 3,
+    "max": 8,
     "cancelled": 0,
-    "seen": 10,
+    "seen": 14,
     "hubs": [
-     "Ostbahnhof",
-     "Marienplatz",
-     "Karlsplatz (Stachus)",
      "Hauptbahnhof",
+     "Karlsplatz (Stachus)",
+     "Marienplatz",
+     "Ostbahnhof",
      "Pasing",
      "Laim"
     ],
-    "worstHub": "Laim",
-    "incident": false
-   },
-   {
-    "label": "S20",
-    "mode": "sbahn",
-    "status": "ok",
-    "avg": null,
-    "max": 0,
-    "cancelled": 0,
-    "seen": 1,
-    "hubs": [
-     "Pasing"
-    ],
-    "worstHub": null,
-    "incident": false
+    "worstHub": "Ostbahnhof",
+    "incident": true
    },
    {
     "label": "12",
     "mode": "tram",
-    "status": "ok",
-    "avg": 2.7,
-    "max": 6,
+    "status": "delayed",
+    "avg": 3,
+    "max": 3,
     "cancelled": 0,
-    "seen": 8,
+    "seen": 11,
     "hubs": [
      "Scheidplatz",
      "Rotkreuzplatz"
@@ -5350,7 +5192,7 @@ globalThis.TransportGapsToday = {
     "avg": null,
     "max": 0,
     "cancelled": 0,
-    "seen": 1,
+    "seen": 2,
     "hubs": [
      "Pasing"
     ],
@@ -5361,28 +5203,28 @@ globalThis.TransportGapsToday = {
     "label": "16",
     "mode": "tram",
     "status": "ok",
-    "avg": 2.3,
-    "max": 3,
+    "avg": 1,
+    "max": 1,
     "cancelled": 0,
-    "seen": 5,
+    "seen": 6,
     "hubs": [
-     "Karlsplatz (Stachus)",
-     "Sendlinger Tor"
+     "Sendlinger Tor",
+     "Karlsplatz (Stachus)"
     ],
-    "worstHub": "Karlsplatz (Stachus)",
+    "worstHub": "Sendlinger Tor",
     "incident": false
    },
    {
     "label": "17",
     "mode": "tram",
-    "status": "ok",
-    "avg": 0.5,
-    "max": 1,
+    "status": "delayed",
+    "avg": 2.9,
+    "max": 10,
     "cancelled": 0,
     "seen": 12,
     "hubs": [
-     "Karlsplatz (Stachus)",
      "Sendlinger Tor",
+     "Karlsplatz (Stachus)",
      "Max-Weber-Platz"
     ],
     "worstHub": "Max-Weber-Platz",
@@ -5392,24 +5234,24 @@ globalThis.TransportGapsToday = {
     "label": "18",
     "mode": "tram",
     "status": "ok",
-    "avg": 1.3,
-    "max": 2,
+    "avg": null,
+    "max": 0,
     "cancelled": 0,
-    "seen": 8,
+    "seen": 10,
     "hubs": [
-     "Karlsplatz (Stachus)",
      "Sendlinger Tor",
+     "Karlsplatz (Stachus)",
      "Giesing"
     ],
-    "worstHub": "Giesing",
+    "worstHub": null,
     "incident": false
    },
    {
     "label": "19",
     "mode": "tram",
     "status": "ok",
-    "avg": 1,
-    "max": 1,
+    "avg": 2.3,
+    "max": 6,
     "cancelled": 0,
     "seen": 10,
     "hubs": [
@@ -5427,7 +5269,7 @@ globalThis.TransportGapsToday = {
     "avg": null,
     "max": 0,
     "cancelled": 0,
-    "seen": 6,
+    "seen": 5,
     "hubs": [
      "Karlsplatz (Stachus)",
      "Moosach"
@@ -5439,17 +5281,17 @@ globalThis.TransportGapsToday = {
     "label": "21",
     "mode": "tram",
     "status": "delayed",
-    "avg": null,
-    "max": 4,
+    "avg": 3,
+    "max": 5,
     "cancelled": 0,
-    "seen": 7,
+    "seen": 9,
     "hubs": [
-     "Ostbahnhof",
      "Karlsplatz (Stachus)",
+     "Ostbahnhof",
      "Max-Weber-Platz"
     ],
     "worstHub": "Karlsplatz (Stachus)",
-    "incident": true
+    "incident": false
    },
    {
     "label": "23",
@@ -5472,7 +5314,7 @@ globalThis.TransportGapsToday = {
     "avg": null,
     "max": 0,
     "cancelled": 0,
-    "seen": 6,
+    "seen": 4,
     "hubs": [
      "Max-Weber-Platz"
     ],
@@ -5488,8 +5330,8 @@ globalThis.TransportGapsToday = {
     "cancelled": 0,
     "seen": 3,
     "hubs": [
-     "Karlsplatz (Stachus)",
-     "Sendlinger Tor"
+     "Sendlinger Tor",
+     "Karlsplatz (Stachus)"
     ],
     "worstHub": null,
     "incident": false
@@ -5499,43 +5341,31 @@ globalThis.TransportGapsToday = {
     "mode": "tram",
     "status": "ok",
     "avg": null,
-    "max": 2,
+    "max": 1,
     "cancelled": 0,
-    "seen": 5,
+    "seen": 6,
     "hubs": [
-     "Karlsplatz (Stachus)",
      "Sendlinger Tor",
+     "Karlsplatz (Stachus)",
      "Scheidplatz"
     ],
     "worstHub": "Karlsplatz (Stachus)",
     "incident": false
    },
    {
-    "label": "50",
-    "mode": "bus",
-    "status": "delayed",
-    "avg": null,
-    "max": 0,
-    "cancelled": 0,
-    "seen": 0,
-    "hubs": [],
-    "worstHub": null,
-    "incident": true
-   },
-   {
     "label": "51",
     "mode": "bus",
-    "status": "disrupted",
-    "avg": 8.5,
-    "max": 16,
+    "status": "delayed",
+    "avg": 6,
+    "max": 12,
     "cancelled": 0,
-    "seen": 6,
+    "seen": 11,
     "hubs": [
      "Moosach",
      "Laim"
     ],
     "worstHub": "Laim",
-    "incident": true
+    "incident": false
    },
    {
     "label": "52",
@@ -5555,33 +5385,33 @@ globalThis.TransportGapsToday = {
     "label": "53",
     "mode": "bus",
     "status": "ok",
-    "avg": 2,
-    "max": 5,
+    "avg": null,
+    "max": 0,
     "cancelled": 0,
-    "seen": 11,
+    "seen": 15,
     "hubs": [
      "Münchner Freiheit",
-     "Rotkreuzplatz",
-     "Harras"
+     "Harras",
+     "Rotkreuzplatz"
     ],
-    "worstHub": "Harras",
+    "worstHub": "Rotkreuzplatz",
     "incident": false
    },
    {
     "label": "54",
     "mode": "bus",
     "status": "ok",
-    "avg": 2.5,
-    "max": 4,
+    "avg": 1.3,
+    "max": 2,
     "cancelled": 0,
-    "seen": 13,
+    "seen": 15,
     "hubs": [
      "Ostbahnhof",
      "Münchner Freiheit",
-     "Giesing",
-     "Harras"
+     "Harras",
+     "Giesing"
     ],
-    "worstHub": "Giesing",
+    "worstHub": "Ostbahnhof",
     "incident": false
    },
    {
@@ -5603,9 +5433,23 @@ globalThis.TransportGapsToday = {
     "mode": "bus",
     "status": "ok",
     "avg": null,
-    "max": 3,
+    "max": 0,
     "cancelled": 0,
-    "seen": 2,
+    "seen": 5,
+    "hubs": [
+     "Pasing"
+    ],
+    "worstHub": null,
+    "incident": false
+   },
+   {
+    "label": "57",
+    "mode": "bus",
+    "status": "ok",
+    "avg": 2,
+    "max": 2,
+    "cancelled": 0,
+    "seen": 4,
     "hubs": [
      "Pasing"
     ],
@@ -5613,27 +5457,13 @@ globalThis.TransportGapsToday = {
     "incident": false
    },
    {
-    "label": "57",
-    "mode": "bus",
-    "status": "disrupted",
-    "avg": 11.8,
-    "max": 21,
-    "cancelled": 0,
-    "seen": 6,
-    "hubs": [
-     "Pasing"
-    ],
-    "worstHub": "Pasing",
-    "incident": true
-   },
-   {
     "label": "58",
     "mode": "bus",
-    "status": "delayed",
-    "avg": 3.7,
-    "max": 8,
+    "status": "ok",
+    "avg": null,
+    "max": 1,
     "cancelled": 0,
-    "seen": 9,
+    "seen": 5,
     "hubs": [
      "Ostbahnhof",
      "Kolumbusplatz"
@@ -5644,9 +5474,9 @@ globalThis.TransportGapsToday = {
    {
     "label": "59",
     "mode": "bus",
-    "status": "disrupted",
-    "avg": 8,
-    "max": 15,
+    "status": "ok",
+    "avg": 1,
+    "max": 1,
     "cancelled": 0,
     "seen": 8,
     "hubs": [
@@ -5659,16 +5489,17 @@ globalThis.TransportGapsToday = {
    {
     "label": "62",
     "mode": "bus",
-    "status": "delayed",
-    "avg": 5.7,
-    "max": 10,
+    "status": "ok",
+    "avg": 1.5,
+    "max": 2,
     "cancelled": 0,
-    "seen": 7,
+    "seen": 8,
     "hubs": [
      "Sendlinger Tor",
+     "Ostbahnhof",
      "Rotkreuzplatz"
     ],
-    "worstHub": "Sendlinger Tor",
+    "worstHub": "Ostbahnhof",
     "incident": false
    },
    {
@@ -5702,14 +5533,14 @@ globalThis.TransportGapsToday = {
    {
     "label": "100",
     "mode": "bus",
-    "status": "delayed",
-    "avg": 3.3,
+    "status": "ok",
+    "avg": null,
     "max": 5,
     "cancelled": 0,
-    "seen": 7,
+    "seen": 6,
     "hubs": [
-     "Ostbahnhof",
-     "Odeonsplatz"
+     "Odeonsplatz",
+     "Ostbahnhof"
     ],
     "worstHub": "Odeonsplatz",
     "incident": false
@@ -5717,25 +5548,25 @@ globalThis.TransportGapsToday = {
    {
     "label": "130",
     "mode": "bus",
-    "status": "ok",
-    "avg": 2.5,
-    "max": 3,
+    "status": "delayed",
+    "avg": 4.5,
+    "max": 7,
     "cancelled": 0,
-    "seen": 4,
+    "seen": 6,
     "hubs": [
      "Pasing",
      "Harras",
      "Laim"
     ],
-    "worstHub": "Pasing",
+    "worstHub": "Harras",
     "incident": false
    },
    {
     "label": "132",
     "mode": "bus",
-    "status": "delayed",
-    "avg": 7.8,
-    "max": 15,
+    "status": "ok",
+    "avg": null,
+    "max": 0,
     "cancelled": 0,
     "seen": 5,
     "hubs": [
@@ -5750,21 +5581,21 @@ globalThis.TransportGapsToday = {
     "mode": "bus",
     "status": "ok",
     "avg": null,
-    "max": 0,
+    "max": 1,
     "cancelled": 0,
     "seen": 2,
     "hubs": [
      "Harras"
     ],
-    "worstHub": null,
+    "worstHub": "Harras",
     "incident": false
    },
    {
     "label": "139",
     "mode": "bus",
     "status": "delayed",
-    "avg": 6,
-    "max": 7,
+    "avg": 4.5,
+    "max": 6,
     "cancelled": 0,
     "seen": 4,
     "hubs": [
@@ -5776,25 +5607,25 @@ globalThis.TransportGapsToday = {
    {
     "label": "140",
     "mode": "bus",
-    "status": "disrupted",
-    "avg": 14,
-    "max": 16,
+    "status": "ok",
+    "avg": null,
+    "max": 0,
     "cancelled": 0,
-    "seen": 4,
+    "seen": 2,
     "hubs": [
      "Scheidplatz"
     ],
-    "worstHub": "Scheidplatz",
+    "worstHub": null,
     "incident": false
    },
    {
     "label": "141",
     "mode": "bus",
-    "status": "disrupted",
-    "avg": 12.3,
-    "max": 21,
+    "status": "ok",
+    "avg": null,
+    "max": 3,
     "cancelled": 0,
-    "seen": 3,
+    "seen": 2,
     "hubs": [
      "Scheidplatz"
     ],
@@ -5820,10 +5651,10 @@ globalThis.TransportGapsToday = {
     "label": "144",
     "mode": "bus",
     "status": "delayed",
-    "avg": 3.7,
-    "max": 6,
+    "avg": 4,
+    "max": 5,
     "cancelled": 0,
-    "seen": 3,
+    "seen": 4,
     "hubs": [
      "Scheidplatz",
      "Rotkreuzplatz"
@@ -5838,7 +5669,7 @@ globalThis.TransportGapsToday = {
     "avg": null,
     "max": 0,
     "cancelled": 0,
-    "seen": 1,
+    "seen": 2,
     "hubs": [
      "Ostbahnhof"
     ],
@@ -5846,32 +5677,17 @@ globalThis.TransportGapsToday = {
     "incident": false
    },
    {
-    "label": "151",
-    "mode": "bus",
-    "status": "disrupted",
-    "avg": 23.5,
-    "max": 37,
-    "cancelled": 0,
-    "seen": 6,
-    "hubs": [
-     "Laim"
-    ],
-    "worstHub": "Laim",
-    "incident": true
-   },
-   {
     "label": "153",
     "mode": "bus",
-    "status": "delayed",
-    "avg": 4.3,
-    "max": 7,
+    "status": "ok",
+    "avg": null,
+    "max": 0,
     "cancelled": 0,
-    "seen": 6,
+    "seen": 2,
     "hubs": [
-     "Odeonsplatz",
-     "Giesing"
+     "Odeonsplatz"
     ],
-    "worstHub": "Odeonsplatz",
+    "worstHub": null,
     "incident": false
    },
    {
@@ -5881,7 +5697,7 @@ globalThis.TransportGapsToday = {
     "avg": null,
     "max": 0,
     "cancelled": 0,
-    "seen": 1,
+    "seen": 3,
     "hubs": [
      "Max-Weber-Platz"
     ],
@@ -5889,90 +5705,61 @@ globalThis.TransportGapsToday = {
     "incident": false
    },
    {
-    "label": "157",
-    "mode": "bus",
-    "status": "delayed",
-    "avg": 4,
-    "max": 4,
-    "cancelled": 0,
-    "seen": 4,
-    "hubs": [
-     "Harras",
-     "Laim"
-    ],
-    "worstHub": "Harras",
-    "incident": false
-   },
-   {
-    "label": "159",
-    "mode": "bus",
-    "status": "ok",
-    "avg": null,
-    "max": 1,
-    "cancelled": 0,
-    "seen": 1,
-    "hubs": [
-     "Pasing"
-    ],
-    "worstHub": "Pasing",
-    "incident": false
-   },
-   {
     "label": "160",
     "mode": "bus",
     "status": "ok",
     "avg": null,
-    "max": 5,
+    "max": 0,
     "cancelled": 0,
-    "seen": 2,
+    "seen": 3,
     "hubs": [
      "Pasing"
     ],
-    "worstHub": "Pasing",
+    "worstHub": null,
     "incident": false
    },
    {
     "label": "162",
     "mode": "bus",
-    "status": "disrupted",
-    "avg": 18.4,
-    "max": 27,
+    "status": "ok",
+    "avg": null,
+    "max": 0,
     "cancelled": 0,
-    "seen": 7,
+    "seen": 4,
     "hubs": [
      "Pasing",
      "Moosach"
     ],
-    "worstHub": "Pasing",
-    "incident": true
+    "worstHub": null,
+    "incident": false
    },
    {
     "label": "163",
     "mode": "bus",
-    "status": "delayed",
+    "status": "ok",
     "avg": null,
-    "max": 24,
+    "max": 0,
     "cancelled": 0,
-    "seen": 3,
+    "seen": 4,
     "hubs": [
      "Moosach"
     ],
-    "worstHub": "Moosach",
+    "worstHub": null,
     "incident": false
    },
    {
     "label": "168",
     "mode": "bus",
-    "status": "disrupted",
-    "avg": 35.5,
-    "max": 59,
-    "cancelled": 0,
-    "seen": 9,
+    "status": "delayed",
+    "avg": 7.5,
+    "max": 12,
+    "cancelled": 1,
+    "seen": 7,
     "hubs": [
      "Laim"
     ],
     "worstHub": "Laim",
-    "incident": true
+    "incident": false
    },
    {
     "label": "169",
@@ -5981,21 +5768,7 @@ globalThis.TransportGapsToday = {
     "avg": null,
     "max": 0,
     "cancelled": 0,
-    "seen": 3,
-    "hubs": [
-     "Moosach"
-    ],
-    "worstHub": null,
-    "incident": false
-   },
-   {
-    "label": "176",
-    "mode": "bus",
-    "status": "ok",
-    "avg": null,
-    "max": 0,
-    "cancelled": 0,
-    "seen": 2,
+    "seen": 4,
     "hubs": [
      "Moosach"
     ],
@@ -6005,16 +5778,16 @@ globalThis.TransportGapsToday = {
    {
     "label": "X30",
     "mode": "bus",
-    "status": "delayed",
-    "avg": 5.7,
-    "max": 14,
-    "cancelled": 1,
-    "seen": 8,
+    "status": "ok",
+    "avg": null,
+    "max": 0,
+    "cancelled": 0,
+    "seen": 3,
     "hubs": [
      "Ostbahnhof",
      "Harras"
     ],
-    "worstHub": "Ostbahnhof",
+    "worstHub": null,
     "incident": false
    },
    {
@@ -6024,7 +5797,7 @@ globalThis.TransportGapsToday = {
     "avg": null,
     "max": 0,
     "cancelled": 0,
-    "seen": 2,
+    "seen": 1,
     "hubs": [
      "Moosach"
     ],
@@ -6038,51 +5811,9 @@ globalThis.TransportGapsToday = {
     "avg": null,
     "max": 0,
     "cancelled": 0,
-    "seen": 1,
-    "hubs": [
-     "Moosach"
-    ],
-    "worstHub": null,
-    "incident": false
-   },
-   {
-    "label": "X200",
-    "mode": "bus",
-    "status": "ok",
-    "avg": null,
-    "max": 0,
-    "cancelled": 0,
     "seen": 2,
     "hubs": [
-     "Ostbahnhof"
-    ],
-    "worstHub": null,
-    "incident": false
-   },
-   {
-    "label": "X730",
-    "mode": "bus",
-    "status": "ok",
-    "avg": null,
-    "max": 1,
-    "cancelled": 0,
-    "seen": 1,
-    "hubs": [
-     "Pasing"
-    ],
-    "worstHub": "Pasing",
-    "incident": false
-   },
-   {
-    "label": "X732",
-    "mode": "bus",
-    "status": "ok",
-    "avg": null,
-    "max": 0,
-    "cancelled": 0,
-    "seen": 1,
-    "hubs": [
-     "Pasing"
+     "Moosach"
     ],
     "worstHub": null,
     "incident": false
@@ -6090,36 +5821,25 @@ globalThis.TransportGapsToday = {
   ],
   "hubs": [
    {
-    "id": "de:09162:5",
-    "name": "Ostbahnhof",
-    "lat": 48.12815,
-    "lng": 11.604545,
+    "id": "de:09162:50",
+    "name": "Sendlinger Tor",
+    "lat": 48.133444,
+    "lng": 11.566681,
     "ok": true,
     "n": 30,
-    "avg": 3.7,
-    "max": 14,
+    "avg": 0.7,
+    "max": 3,
     "cancelled": 0
    },
    {
-    "id": "de:09162:2",
-    "name": "Marienplatz",
-    "lat": 48.137245,
-    "lng": 11.575421,
+    "id": "de:09162:100",
+    "name": "Hauptbahnhof",
+    "lat": 48.140291,
+    "lng": 11.559602,
     "ok": true,
-    "n": 30,
-    "avg": 3.6,
-    "max": 9,
-    "cancelled": 0
-   },
-   {
-    "id": "de:09162:60",
-    "name": "Odeonsplatz",
-    "lat": 48.142682,
-    "lng": 11.577487,
-    "ok": true,
-    "n": 30,
-    "avg": 3.1,
-    "max": 7,
+    "n": 26,
+    "avg": 2.7,
+    "max": 6,
     "cancelled": 0
    },
    {
@@ -6129,41 +5849,41 @@ globalThis.TransportGapsToday = {
     "lng": 11.566133,
     "ok": true,
     "n": 30,
-    "avg": 3.4,
-    "max": 8,
+    "avg": 2.4,
+    "max": 6,
     "cancelled": 0
    },
    {
-    "id": "de:09162:50",
-    "name": "Sendlinger Tor",
-    "lat": 48.133444,
-    "lng": 11.566681,
+    "id": "de:09162:60",
+    "name": "Odeonsplatz",
+    "lat": 48.142682,
+    "lng": 11.577487,
     "ok": true,
     "n": 30,
-    "avg": 2.9,
-    "max": 10,
-    "cancelled": 3
+    "avg": 1.1,
+    "max": 5,
+    "cancelled": 0
    },
    {
-    "id": "de:09162:100",
-    "name": "Hauptbahnhof",
-    "lat": 48.140291,
-    "lng": 11.559602,
+    "id": "de:09162:2",
+    "name": "Marienplatz",
+    "lat": 48.137245,
+    "lng": 11.575421,
     "ok": true,
     "n": 30,
-    "avg": 3.4,
-    "max": 9,
-    "cancelled": 1
+    "avg": 2.2,
+    "max": 4,
+    "cancelled": 0
    },
    {
-    "id": "de:09162:500",
-    "name": "Münchner Freiheit",
-    "lat": 48.161962,
-    "lng": 11.586497,
+    "id": "de:09162:5",
+    "name": "Ostbahnhof",
+    "lat": 48.12815,
+    "lng": 11.604545,
     "ok": true,
     "n": 30,
-    "avg": 5,
-    "max": 15,
+    "avg": 2.5,
+    "max": 8,
     "cancelled": 0
    },
    {
@@ -6173,8 +5893,19 @@ globalThis.TransportGapsToday = {
     "lng": 11.460697,
     "ok": true,
     "n": 30,
-    "avg": 9.9,
-    "max": 27,
+    "avg": 2.4,
+    "max": 5,
+    "cancelled": 0
+   },
+   {
+    "id": "de:09162:500",
+    "name": "Münchner Freiheit",
+    "lat": 48.161962,
+    "lng": 11.586497,
+    "ok": true,
+    "n": 30,
+    "avg": 0.9,
+    "max": 2,
     "cancelled": 0
    },
    {
@@ -6184,63 +5915,8 @@ globalThis.TransportGapsToday = {
     "lng": 11.598355,
     "ok": true,
     "n": 30,
-    "avg": 1,
-    "max": 2,
-    "cancelled": 0
-   },
-   {
-    "id": "de:09162:400",
-    "name": "Scheidplatz",
-    "lat": 48.171537,
-    "lng": 11.572933,
-    "ok": true,
-    "n": 27,
-    "avg": 8.4,
-    "max": 21,
-    "cancelled": 1
-   },
-   {
-    "id": "de:09162:300",
-    "name": "Moosach",
-    "lat": 48.180792,
-    "lng": 11.507643,
-    "ok": true,
-    "n": 30,
-    "avg": 5.9,
-    "max": 24,
-    "cancelled": 0
-   },
-   {
-    "id": "de:09162:1110",
-    "name": "Giesing",
-    "lat": 48.110861,
-    "lng": 11.595247,
-    "ok": true,
-    "n": 30,
-    "avg": 3.2,
-    "max": 11,
-    "cancelled": 0
-   },
-   {
-    "id": "de:09162:1060",
-    "name": "Innsbrucker Ring",
-    "lat": 48.120415,
-    "lng": 11.619196,
-    "ok": true,
-    "n": 25,
-    "avg": 0.3,
-    "max": 1,
-    "cancelled": 0
-   },
-   {
-    "id": "de:09162:190",
-    "name": "Rotkreuzplatz",
-    "lat": 48.153423,
-    "lng": 11.53312,
-    "ok": true,
-    "n": 27,
-    "avg": 1.3,
-    "max": 3,
+    "avg": 2.6,
+    "max": 10,
     "cancelled": 0
    },
    {
@@ -6250,9 +5926,64 @@ globalThis.TransportGapsToday = {
     "lng": 11.536668,
     "ok": true,
     "n": 30,
-    "avg": 3.4,
-    "max": 15,
-    "cancelled": 1
+    "avg": 1.8,
+    "max": 7,
+    "cancelled": 0
+   },
+   {
+    "id": "de:09162:1110",
+    "name": "Giesing",
+    "lat": 48.110861,
+    "lng": 11.595247,
+    "ok": true,
+    "n": 30,
+    "avg": 1.7,
+    "max": 6,
+    "cancelled": 0
+   },
+   {
+    "id": "de:09162:300",
+    "name": "Moosach",
+    "lat": 48.180792,
+    "lng": 11.507643,
+    "ok": true,
+    "n": 30,
+    "avg": 4,
+    "max": 4,
+    "cancelled": 0
+   },
+   {
+    "id": "de:09162:400",
+    "name": "Scheidplatz",
+    "lat": 48.171537,
+    "lng": 11.572933,
+    "ok": true,
+    "n": 28,
+    "avg": 2.1,
+    "max": 5,
+    "cancelled": 0
+   },
+   {
+    "id": "de:09162:190",
+    "name": "Rotkreuzplatz",
+    "lat": 48.153423,
+    "lng": 11.53312,
+    "ok": true,
+    "n": 27,
+    "avg": 1.8,
+    "max": 3,
+    "cancelled": 0
+   },
+   {
+    "id": "de:09162:1060",
+    "name": "Innsbrucker Ring",
+    "lat": 48.120415,
+    "lng": 11.619196,
+    "ok": true,
+    "n": 24,
+    "avg": 1.3,
+    "max": 3,
+    "cancelled": 0
    },
    {
     "id": "de:09162:160",
@@ -6260,9 +5991,9 @@ globalThis.TransportGapsToday = {
     "lat": 48.119323,
     "lng": 11.576742,
     "ok": true,
-    "n": 30,
-    "avg": 2.3,
-    "max": 8,
+    "n": 29,
+    "avg": 1.5,
+    "max": 3,
     "cancelled": 0
    },
    {
@@ -6272,51 +6003,51 @@ globalThis.TransportGapsToday = {
     "lng": 11.50326,
     "ok": true,
     "n": 30,
-    "avg": 18.6,
-    "max": 59,
-    "cancelled": 0
+    "avg": 4.3,
+    "max": 12,
+    "cancelled": 1
    }
   ],
   "hubsOk": 17,
   "hubsTotal": 17
  },
  "roads": {
-  "snapshotDay": "2026-11-27",
-  "fetchedAt": "2026-11-27T14:59:12.330Z",
-  "totalRecords": 5873,
-  "activeWorks": 2670,
-  "onRoadToday": 955
+  "snapshotDay": "2026-11-28",
+  "fetchedAt": "2026-11-28T14:08:46.339Z",
+  "totalRecords": 5667,
+  "activeWorks": 2577,
+  "onRoadToday": 907
  },
  "counts": {
+  "disruptions": 2,
   "strikes": 2,
-  "works": 76,
-  "disruptions": 3,
+  "works": 71,
   "events": 4,
-  "news": 4,
-  "weather": 3
+  "news": 3,
+  "weather": 1
  },
  "sources": [
   {
-   "fetchedAt": "2026-11-27T14:59:03.960Z",
+   "fetchedAt": "2026-11-28T14:08:39.320Z",
    "id": "events",
    "name": "Team-curated events (data/events.json)",
    "kind": "curated",
    "status": "ok",
-   "count": 6,
+   "count": 7,
    "url": "https://github.com/evanjw2/Transport-gaps-map/blob/main/data/events.json"
   },
   {
-   "fetchedAt": "2026-11-27T14:59:03.960Z",
+   "fetchedAt": "2026-11-28T14:08:39.320Z",
    "id": "mvg",
    "name": "MVG service notices",
    "kind": "live",
    "url": "https://www.mvg.de/dienste/betriebsaenderungen.html",
-   "note": "2 live incidents · 40 placed on the map · 0 stops not served · 4 with ways around · Headlines, lines and times only. Reuse permission still to be confirmed with MVG.",
+   "note": "1 live incidents · 37 placed on the map · 0 stops not served · 5 with ways around · Headlines, lines and times only. Reuse permission still to be confirmed with MVG.",
    "status": "ok",
-   "count": 64
+   "count": 57
   },
   {
-   "fetchedAt": "2026-11-27T14:59:03.960Z",
+   "fetchedAt": "2026-11-28T14:08:39.320Z",
    "id": "weather",
    "name": "Open-Meteo weather (14 districts)",
    "kind": "live",
@@ -6324,48 +6055,48 @@ globalThis.TransportGapsToday = {
    "license": "CC BY 4.0",
    "status": "ok",
    "count": 14,
-   "note": "☁️ Overcast, 0°C"
+   "note": "☁️ Overcast, -0.2°C"
   },
   {
-   "fetchedAt": "2026-11-27T14:59:03.960Z",
+   "fetchedAt": "2026-11-28T14:08:39.320Z",
    "id": "dwd",
    "name": "DWD official weather warnings (via Bright Sky)",
    "kind": "official",
    "url": "https://brightsky.dev/",
    "license": "DWD open data",
    "status": "ok",
-   "count": 3
+   "count": 1
   },
   {
-   "fetchedAt": "2026-11-27T14:59:03.960Z",
+   "fetchedAt": "2026-11-28T14:08:39.320Z",
    "id": "news-tz",
    "name": "tz.de München (headlines)",
    "kind": "lead",
    "url": "https://www.tz.de/muenchen/rssfeed.rdf",
    "note": "Headline + link only; never treated as confirmed.",
    "status": "ok",
-   "count": 4
+   "count": 3
   },
   {
-   "fetchedAt": "2026-11-27T14:59:03.960Z",
+   "fetchedAt": "2026-11-28T14:08:39.320Z",
    "id": "roads",
    "name": "Munich roadworks (Mobilitätsreferat open data)",
    "kind": "official",
    "url": "https://opendata.muenchen.de/dataset/baustellen_4_weeks_opendata",
    "license": "dl-de/by-2-0",
    "status": "ok",
-   "count": 955,
-   "note": "2670 works active today, 955 affect the road · records from 2026-11-27"
+   "count": 907,
+   "note": "2577 works active today, 907 affect the road · records from 2026-11-28"
   },
   {
-   "fetchedAt": "2026-11-27T14:59:03.960Z",
+   "fetchedAt": "2026-11-28T14:08:39.320Z",
    "id": "departures",
    "name": "MVG live departures (17 hubs)",
    "kind": "live",
    "url": "https://www.mvg.de/",
-   "note": "17/17 hubs · delayed/disrupted: U3, U6, S1, S2, S3, S5, S6, S8",
+   "note": "17/17 hubs · delayed/disrupted: S8, 12, 17, 21, 51, 130, 139, 144",
    "status": "ok",
-   "count": 68
+   "count": 59
   }
  ],
  "problems": [],
